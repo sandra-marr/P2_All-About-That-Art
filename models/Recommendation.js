@@ -16,16 +16,16 @@ Recommendation.init(
       allowNull: false,
     },
     location: {
-       title: {
-          type: DataTypes.STRING,
-          allowNull: false,
-       },
+      title: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
     },
     type: {
-       title: {
-          type: DataTypes.STRING,
-          allowNull: false,
-       },
+      title: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
     },
   },
   {
