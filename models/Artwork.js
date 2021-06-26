@@ -15,24 +15,14 @@ Artwork.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    category_id:{
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'category',
-        key: 'id',
-      },
+    category:{
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
-        key: 'id',
-      },
-    },
-    image_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'image',
         key: 'id',
       },
     },
