@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Artwork extends Model {}
+class Image extends Model {}
 
-Artwork.init(
+Image.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -17,26 +17,16 @@ Artwork.init(
     },
     data: {
       type: DataTypes.BLOB('long'), //A BLOB is binary large object that can hold a variable amount of data.
+      allowNull: true,
+    },
+    link: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
-    category_id:{
+    art_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'category',
-        key: 'id',
-      },
-    },
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id',
-      },
-    },
-    image_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'image',
+        model: 'artwork',
         key: 'id',
       },
     },
@@ -46,8 +36,8 @@ Artwork.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'artwork',
+    modelName: 'image',
   }
 );
 
-module.exports = Artwork;
+module.exports = Image;

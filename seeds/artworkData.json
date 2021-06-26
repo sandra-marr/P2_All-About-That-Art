@@ -1,70 +1,59 @@
 [
     {
       "description": "This is a painting of my cat, Midnight. She is cute and cuddly.",
-      "category_id": 1,
-      "user_id": 2,
-      "image_id": 1
+      "category": "painting",
+      "user_id": 2
     },
     {
       "description": "This is a painting of a sad cat.", 
-      "category_id": 1,
-      "user_id": 2,
-      "image_id": 2
+      "category": "painting",
+      "user_id": 2
     },
     {
       "description": "This is a painting of a lighning cat!",
-      "category_id": 1,
-      "user_id": 2,
-      "image_id": 3
+      "category": "painting",
+      "user_id": 2
     },
     {
       "description": "This is a painting of a lighthouse",
-      "category_id": 1,
-      "user_id": 1,
-      "image_id": 4
+      "category": "painting",
+      "user_id": 1
     },
     {
-      "description": "This is a painting of a sailboar",
-      "category_id": 1,
-      "user_id": 1,
-      "image_id": 5
+      "description": "This is a painting of a sailboat",
+      "category": "painting",
+      "user_id": 1
     },
     {
       "description": "This is a painting of the mountains",
-      "category_id": 1,
-      "user_id": 1,
-      "image_id": 6
+      "category": "painting",
+      "user_id": 1
     },
     {
       "description": "This is a sculpture of a lego man and a snail.",
-      "category_id": 2,
-      "user_id": 3,
-      "image_id": 7
+      "category": "sculpture",
+      "user_id": 3
     },
     {
       "description": "This is a clay sculpture of a fish and stuff.",
-      "category_id": 2,
-      "user_id": 3,
-      "image_id": 8
+      "category": "sculpture",
+      "user_id": 3
     },
     {
       "description": "This is a vintage car.",
-      "category_id": 3,
-      "user_id": 4,
-      "image_id": 9
+      "category": "photograph",
+      "user_id": 4
     },
     {
       "description": "This is another vintage car.",
-      "category_id": 3,
-      "user_id": 4,
-      "image_id": 10
+      "category": "photograph",
+      "user_id": 4
     },
     {
       "description": "This is an old VW beetle.",
-      "category_id": 3,
-      "user_id": 4,
-      "image_id": 11
-    },  
+      "category": "photograph",
+      "user_id": 4
+    }
 ]
 
   

@@ -1,12 +1,12 @@
 const sequelize = require('../config/connection');
-const { User, Artwork, Category, Comment, BlogPost, Image, Recommendation } = require('../models');
+const { User, Artwork, Comment, BlogPost, Image, Recommendation } = require('../models');
 
 const userData = require('./userData.json');
 const artworkData = require('./artworkData.json');
 const blogPostData = require('./blogPostData.json');
-const categoryData = require('./categoryData.json');
 const commentData = require('./commentData.json');
 const recommendationData = require('./recommendationData.json');
+const imageData = require('./imageData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -22,11 +22,6 @@ const seedDatabase = async () => {
   });
 
   const blogs = await BlogPost.bulkCreate(blogPostData, {
-    individualHooks: true,
-    returning: true,
-  });
-
-  const categories = await Category.bulkCreate(categoryData, {
     individualHooks: true,
     returning: true,
   });

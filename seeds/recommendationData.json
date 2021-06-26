@@ -1,0 +1,86 @@
+[
+    {
+        "title": "Metropolitan Museum of Art",
+        "location": "New York City",
+        "type": "museum",
+        "link": "https://www.metmuseum.org/"
+    },
+    {
+        "title": "Art Institute of Chicago",
+        "location": "Chicago",
+        "type": "museum",
+        "link": "https://www.artic.edu/"
+    },
+    {
+        "title": "National Gallery of Art",
+        "location": "Washington, D.C",
+        "type": "museum",
+        "link": "https://www.nga.gov/"
+    },
+    {
+        "title": "Museum of Fine Arts",
+        "location": "Boston",
+        "type": "museum",
+        "link": "https://www.mfa.org/"
+    },
+    {
+        "title": "Smithsonian American Art Museum",
+        "location": "Washington, D.C",
+        "type": "museum",
+        "link": "https://americanart.si.edu/"
+    },
+    {
+        "title": "Museum of Modern Art",
+        "location": "New York City",
+        "type": "museum",
+        "link": "https://www.moma.org/"
+    },
+    {
+        "title": "Los Angeles County Museum of Art",
+        "location": "Los Angeles",
+        "type": "museum",
+        "link": "https://www.lacma.org/"
+    },
+    {
+        "title": "Philadelphia Museum of Art",
+        "location": "Philadelphia",
+        "type": "museum",
+        "link": "https://philamuseum.org/"
+    },
+    {
+        "title": "Museum of Fine Arts",
+        "location": "Houston",
+        "type": "museum",
+        "link": "https://www.mfah.org/"
+    },
+    {
+        "title": "J Paul Getty Museum",
+        "location": "Los Angeles",
+        "type": "museum",
+        "link": "https://www.getty.edu/museum/"
+    },
+    {
+        "title": "AMcE Creative Arts",
+        "location": "Seattle",
+        "type": "gallery",
+        "link": "https://amcecreativearts.com/"
+    },
+    {
+        "title": "Bonfire Gallery",
+        "location": "Seattle",
+        "type": "gallery",
+        "link": "https://www.thisisbonfire.com/"
+    },
+    {
+        "title": "Core Gallery",
+        "location": "Seattle",
+        "type": "gallery",
+        "link": "https://www.coregallery.org/"
+    },
+    {
+        "title": "Fountainhead Gallery",
+        "location": "Seattle",
+        "type": "gallery",
+        "link": "https://www.fountainheadgallery.com/"
+    }
+]
