@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Comment extends Model {}
+class Artwork extends Model {}
 
-Comment.init(
+Artwork.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,14 +11,20 @@ Comment.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    comment_body: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    comment_date: {
-      type: DataTypes.DATEONLY,
+    data: {
+      type: DataTypes.BLOB('long'), //A BLOB is binary large object that can hold a variable amount of data.
       allowNull: false,
-      defaultValue: DataTypes.NOW,
+    },
+    category_id:{
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'category',
+        key: 'id',
+      },
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -27,30 +33,21 @@ Comment.init(
         key: 'id',
       },
     },
-    art_id: {
+    image_id: {
       type: DataTypes.INTEGER,
-      allowNull: true,
       references: {
-        model: 'artwork',
+        model: 'image',
         key: 'id',
       },
     },
-    blog_post_id: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: 'artwork',
-        key: 'id',
-      },
-    }
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'comment',
+    modelName: 'artwork',
   }
 );
 
-module.exports = Comment;
+module.exports = Artwork;

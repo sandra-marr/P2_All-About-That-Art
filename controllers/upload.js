@@ -15,7 +15,7 @@ const uploadFiles = async (req, res) => {
       data: fs.readFileSync(
         __basedir + "./public/assets/images/" + req.file.filename
       ),
-    }).then((image) => {
+    }).then((artwork) => {
       fs.writeFileSync(
         __basedir + "./public/assets/tmp/" + artwork.name,
         artwork.data

@@ -25,7 +25,7 @@ BlogPost.init(
       references: {
         model: 'user',
         key: 'id',
-        },
+      },
     },
   },
   {
