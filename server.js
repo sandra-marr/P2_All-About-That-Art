@@ -5,6 +5,12 @@ const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
 
+// adding in multer and cloudinary
+const cloudinary = require('cloudinary').v2;
+const { CloudinaryStorage } = require('../../');
+const multer = require('multer');
+
+
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
@@ -38,4 +44,20 @@ app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
+});
+
+
+
+
+const storage = new CloudinaryStorage({
+  cloudinary: cloudinary,
+  params: {
+    folder: () => 'test-folder',
+  },
+});
+
+const parser = multer({ storage: storage });
+
+app.post('/upload', parser.single('image'), function (req, res) {
+  res.json(req.file);
 });

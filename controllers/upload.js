@@ -1,5 +1,6 @@
 const fs = require("fs");
-const { Artwork } = require("../models");
+const { Image } = require("../models");
+
 
 const uploadFiles = async (req, res) => {
   try {
@@ -9,16 +10,17 @@ const uploadFiles = async (req, res) => {
       return res.send(`You must select a file.`);
     }
 
-    Artwork.create({ //need to add inthe user_id and category_id here??
+    Image.create({
       type: req.file.mimetype,
       name: req.file.originalname,
       data: fs.readFileSync(
         __basedir + "./public/assets/images/" + req.file.filename
       ),
-    }).then((artwork) => {
+      art_id: req.artworkData.id,
+    }).then((image) => {
       fs.writeFileSync(
-        __basedir + "./public/assets/tmp/" + artwork.name,
-        artwork.data
+        __basedir + "./public/assets/tmp/" + image.name,
+        image.data
       );
 
       return res.send(`File has been uploaded.`);
