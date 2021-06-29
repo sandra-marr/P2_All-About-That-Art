@@ -2,7 +2,30 @@ const router = require('express').Router();
 const { Artwork, BlogPost, Comment, Recommendation, User, Image } = require('../models');
 const withAuth = require('../utils/auth');
 
-
+router.get('/', async (req, res) => {
+    try {
+      // Get all projects and JOIN with user data
+      const artworkData = await Artwork.findAll({
+        include: [
+          {
+            model: User,
+            attributes: ['description'],
+          },
+        ],
+      });
+  
+      // Serialize data so the template can read it
+      const art = artworkData.map((artwork) => artwork.get({ plain: true }));
+  
+      // Pass serialized data and session flag into template
+      res.render('homepage', { 
+        art, 
+        logged_in: req.session.logged_in 
+      });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
 
 router.get('/profile', withAuth, async (req, res) => {
     try {
