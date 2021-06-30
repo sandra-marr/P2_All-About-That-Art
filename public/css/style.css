@@ -1,0 +1,75 @@
+* {
+    font-family: 'Karla', 'sans-serif';
+}
+
+/* Header image with slight scrim overlay so overlaying text is visible/readable */
+.header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url(/header_images/lucas-benjamin-wQLAGv4_OYs-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    /* height: 100vh; */
+}
+
+.header-inner {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 300px 10px 50px;
+}
+
+/* All About That Art header text */
+.header h1 {
+    font-size: 65px;
+    letter-spacing: 1.3px;
+    font-weight: 700px;
+    color: white;
+    font-family: 'Karla';
+}
+
+/* Sign up to view local artist text */
+.header h2 {
+    font-size: 26px;
+    letter-spacing: 1.3px;
+    font-weight: 500px;
+    color: white;
+    font-family: 'Karla';
+}
+
+/* Call To Action(CTA) button underneath header text */
+.uk-button-default {
+    color: white;
+    border-radius: 3px;
+}
+
+/* Changed button hover to white for now */
+.uk-button-default:hover {
+    color: white;
+}
+
+/* First section for purpose, who we are, etc. */
+.uk-section.uk-section-large.uk-section-muted {
+    background-color: white;
+    color: #011418;
+}
+
+/* Navbar link text color */
+.uk-navbar-nav > li > a {
+    color: #011418;
+    transition: none;
+}
+
+/* Logo/possible change to Title? */
+.uk-navbar-item.uk-logo {
+    color: #011418;
+}
+
+/* Hamburger menu icon color */
+.uk-navbar-toggle {
+    color: #011418;
+}
+
+/* Hamburger menu icon side bar */
+.uk-offcanvas-bar {
+    background-color: #011418;
+    opacity: 0.9;
+}
+
