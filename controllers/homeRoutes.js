@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
         include: [
           {
             model: User,
-            attributes: ['description'],
+            attributes: ['id'],
           },
         ],
       });
@@ -47,24 +47,89 @@ router.get('/profile', withAuth, async (req, res) => {
   });
 
 
-//   router.get('/artists', withAuth, async (req, res) => {
-//     try {
-//       // Find the logged in user based on the session ID
-//       const userData = await User.findByPk(req.session.user_id, {
-//         attributes: { exclude: ['password'] },
-//         // include: [{ model: Artwork }],
-//       });
+  router.get('/artist/:id', async (req, res) => {
+    try {
+      const artistData = await User.findByPk(req.params.id);
   
-//       const user = userData.get({ plain: true });
+      const artist = artistData.get({ plain: true });
+      // Send over the 'loggedIn' session variable to the 'homepage' template
+      res.render('artist', { artist, loggedIn: req.session.loggedIn });
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  });
   
-//       res.render('artists', {
-//         ...user,
-//         logged_in: true
-//       });
-//     } catch (err) {
-//       res.status(500).json(err);
-//     }
-//   });
+
+router.get('/gallery', async (req, res) => {
+    try {
+      const galleryData = await Artwork.findAll({
+        include: [
+          {
+            model: Artwork,
+            attributes: ['category'],
+          },
+        ],
+      });
+  
+      const galleries = galleryData.map((gallery) =>
+        gallery.get({ plain: true })
+      );
+      // Send over the 'loggedIn' session variable to the 'gallery' template
+      res.render('gallery', {
+        galleries,
+        loggedIn: req.session.loggedIn,
+      });
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  });
+
+  router.get('/artwork/:id', async (req, res) => {
+    try {
+      const dbArtworkData = await Artwork.findByPk(req.params.id);
+  
+      const artwork = dbArtworkData.get({ plain: true });
+      // Send over the 'loggedIn' session variable to the 'artwork' template
+      res.render('artwork', { painting, loggedIn: req.session.loggedIn });
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  });
+
+
+  router.get('/recommendations', async (req, res) => {
+    try {
+      // Get all projects and JOIN with user data
+      const recommendationsData = await Artwork.findAll({
+        include: [
+          {
+            model: Recommendation,
+            attributes : [
+                'id',
+                'title',
+                'location',
+                'type',
+                'link',
+            ]
+          },
+        ],
+      });
+  
+      // Serialize data so the template can read it
+      const recommendations = recommendationsData.map((recommendation) => recommendation.get({ plain: true }));
+  
+      // Pass serialized data and session flag into template
+      res.render('recommendations', { 
+        recommendations, 
+        logged_in: req.session.logged_in 
+      });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
 
 
 router.get('/login', (req, res) => {
@@ -76,3 +141,5 @@ router.get('/login', (req, res) => {
   // Otherwise, render the 'login' template
   res.render('login');
 });
+
+module.exports = router;
