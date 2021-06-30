@@ -92,7 +92,7 @@ router.get('/gallery', async (req, res) => {
   
       const artwork = dbArtworkData.get({ plain: true });
       // Send over the 'loggedIn' session variable to the 'artwork' template
-      res.render('artwork', { painting, loggedIn: req.session.loggedIn });
+      res.render('artwork', { artwork, loggedIn: req.session.loggedIn });
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
