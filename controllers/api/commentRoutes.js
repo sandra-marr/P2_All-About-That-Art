@@ -2,10 +2,21 @@ const router = require('express').Router();
 const withAuth = require('../../utils/auth');
 const { Artwork, BlogPost, Comment, Recommendation, User, Image } = require('../../models');
 
-//create a new blogPost
-router.post('/blogPost/new', withAuth, async (req, res) => {
+
+//create a new comment
+router.post('/comment/new', withAuth, async (req, res) => {
     try {
-      const newPost = await BlogPost.create({
+      const newComment = await Comment.create({
+          include: [
+            {
+                model: Artwork,
+                attributes: [
+                  'id',
+                  'user_id',
+                ],
+              },
+
+          ],
         ...req.body,
         user_id: req.session.user_id,
       });
@@ -18,35 +29,28 @@ router.post('/blogPost/new', withAuth, async (req, res) => {
   
  
   
-  // view a post by the post id and join with  user model
-  router.get('/blogPost/:id',withAuth, async (req, res) => {
+  // view comments and join with  Artwork model
+  router.get('/Artwork/:id',withAuth, async (req, res) => {
 
     try {
-      const postData = await BlogPost.findByPk(req.params.id, { 
+      const commentData = await Comment.findAll({ 
         include: [ 
             {
-                model: BlogPost,
+                model: Artwork,
                 attributes: [
                   'id',
-                  'post_body',
-                  'post_date',
-                  'user_id',
                 ],
               },
-          {
-            model: User,
-            attributes: [
-              'id',
-              'user_name',
             ],
-          },
-        ],
+            where: {
+                art_id: req.params.id,   
+            },
       });
   
-      const posts = postData.get({ plain: true });
+      const comment = commentData.map((comment) => comment.get({ plain: true }));
   
-      res.render('artists', { 
-        posts, 
+      res.render('gallery', { 
+        comment, 
         
       });
       console.log(res);
@@ -61,7 +65,7 @@ router.post('/blogPost/new', withAuth, async (req, res) => {
   router.put('/blogPost/:id', withAuth, async (req,res) => {
     try {
   
-      const postData = await BlogPost.update(
+      const postData = await Post.update(
         {
           post_body: req.body.post_body,
         },
@@ -81,7 +85,7 @@ router.post('/blogPost/new', withAuth, async (req, res) => {
   // delete posts by post id
   router.delete('/blogPost/:id', withAuth, async (req, res) => {
     try {
-      const blogPostData = await BlogPost.destroy({
+      const blogPostData = await Post.destroy({
         where: {
           id: req.params.id,
           user_id: req.session.user_id,
