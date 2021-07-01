@@ -26,6 +26,12 @@ Artwork.init(
         key: 'id',
       },
     },
+    path: {
+      type: DataTypes.BLOB('long'),
+    },
+    public_id: {
+      type: DataTypes.STRING,
+    }
   },
   {
     sequelize,
