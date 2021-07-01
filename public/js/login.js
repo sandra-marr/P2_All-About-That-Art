@@ -1,3 +1,15 @@
+/* Selecting both id's togglePassword and password */
+const togglePassword = document.querySelector('#togglePassword');
+const password = document.querySelector('#password');
+
+/* Attaching an event listener to the togglePassword icon */
+/* Toggle type of password field & icon class */
+togglePassword.addEventListener('click', function (eyeball)  {
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    this.classList.toggle('bi-eye');
+});
+
 const loginFormHandler = async (event) => {
     event.preventDefault();
   

@@ -73,3 +73,28 @@
     opacity: 0.9;
 }
 
+/* Background of login/sign up pages  */
+/* .form.uk-section,.uk-section-xlarge,.uk-section-muted,.uk-flex,.uk-flex-center {
+    background-image: url(/images/lucas-benjamin-wQLAGv4_OYs-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-color: #011418;
+} */
+
+/* log in/sign up form border radius */
+.uk-margin.uk-margin-auto.uk-width-xlarge.uk-card.uk-card-default.uk-card-body {
+    border-radius: 6px;
+}
+
+/* form input fields/button/checkbox */
+.uk-button.uk-button-secondary.uk-button-large.uk-width-1-1.uk-text-bold, 
+.uk-input.uk-form-large, .uk-checkbox {
+    border-radius: 3px;
+}
+
+/* eye icon on password field */
+#togglePassword {
+    margin-left: -35px;
+    cursor: pointer;
+}
