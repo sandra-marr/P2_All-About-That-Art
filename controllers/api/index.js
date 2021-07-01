@@ -2,7 +2,7 @@ const router = require('express').Router();
 const userRoutes = require('./userRoutes');
 const artistRoutes = require('./artistRoutes');
 const galleryRoutes = require('./galleryRoutes');
-const blogPostRoutes = require('./blogPostRoutes');
+const blogPostRoutes = require('./blogPostsRoutes');
 const commentRoutes = require('./commentRoutes');
 
 
