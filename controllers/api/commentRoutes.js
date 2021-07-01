@@ -61,20 +61,20 @@ router.post('/comment/new', withAuth, async (req, res) => {
   
 
 
-  // edit blogPost by id 
-  router.put('/blogPost/:id', withAuth, async (req,res) => {
+  // edit comments by id 
+  router.put('/comment/:id', withAuth, async (req,res) => {
     try {
   
-      const postData = await Post.update(
+      const commentData = await Comment.update(
         {
-          post_body: req.body.post_body,
+            comment_body: req.body.comment_body,
         },
         {
         where: {
           id: req.params.id,
         }});
   
-        res.status(200).json(postData);
+        res.status(200).json(commentData);
     } catch (err) {
       res.status(500).json(err);
     }
@@ -82,22 +82,22 @@ router.post('/comment/new', withAuth, async (req, res) => {
 
 
 
-  // delete posts by post id
-  router.delete('/blogPost/:id', withAuth, async (req, res) => {
+  // delete comments by id
+  router.delete('/comment/:id', withAuth, async (req, res) => {
     try {
-      const blogPostData = await Post.destroy({
+      const commentData = await Comment.destroy({
         where: {
           id: req.params.id,
           user_id: req.session.user_id,
         },
       });
   
-      if (!blogPostData) {
-        res.status(404).json({ message: 'No post found with this id!' });
+      if (!commentData) {
+        res.status(404).json({ message: 'No comment found with this id!' });
         return;
       }
   
-      res.status(200).json(blogPostData);
+      res.status(200).json(commentData);
     } catch (err) {
       res.status(500).json(err);
     }
