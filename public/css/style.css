@@ -13,11 +13,10 @@ body {
   width: 100%;
 }
 
-#profile-sec {
+#profilePic-sec {
   height: 200px;
   width: 200px;
   position: absolute;
-  transform: (-50%, -50%);
   border-radius: 50%;
   overflow: hidden;
   border: 1px solid gray;
@@ -36,12 +35,18 @@ body {
   height: 40px;
   width: 100%;
   position: absolute;
-  bottom: 0;
-  /* left: 50%; */
+  top: 160px;
   transform: translateX(-50%);
   text-align: center;
   line-height: 30px;
-  font-size: 15px;
+  font-size: 14px;
+  background: #2d9ff7;
+  color: #103b5c;
+  cursor: pointer;
+  display: none;
+}
+#upload:hover {
+  opacity: 0.5;
 }
 
 #artistHeader {
