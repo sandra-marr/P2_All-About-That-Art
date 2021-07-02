@@ -7,19 +7,19 @@ const parser = multer({storage: storage});
 router.post('/', parser.single('image'), async (req, res) => {
 
     try { 
-        const uploadArt = await cloudinary.uploader.upload(req.file.path) //cannot read property uploader of undefined.
+        const uploadArt = await cloudinary.uploader.upload(req.file.path)
 
+        // const newArtwork = await Artwork.create({
+        //     description: req.body.description,
+        //     category: req.body.category,
+        //     user_id: req.session.user_id,
+        //     path: uploadArt.secure_url,
+        //     public_id: uploadArt.public_id,
+        // })
 
-        const newArtwork = await Artwork.create({
-            description: req.body.description,
-            category: req.body.category,
-            user_id: req.session.user_id,
-            path: req.secure_url,
-            public_id: req.public_id,
-        })
+        res.status(200).json(uploadArt.secure_url, uploadArt.public_id);
+        console.log(res)
 
-    res.status(200).json(res);
-    console.log(res)
     } catch (err) {
         console.log(err)
     res.status(500).json(err);
