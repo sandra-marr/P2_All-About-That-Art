@@ -1,5 +1,27 @@
-<div>
-<img src="{{paintings.path}}"/>
-<img src="{{sculptures.path}}"/>
-<img src="{{photographs.path}}"/>
+<div class="uk-section uk-section-muted uk-section-xlarge uk-flex" uk-height-viewport>
+    <div class="uk-container">
+        {{!-- <h1 class="uk-text-center uk-margin-large-bottom">Section Primary with cards</h1> --}}
+        <div class="uk-grid-match uk-child-width-expand@m uk-grid-large" uk-grid>
+            <div>
+                <h2 class="uk-text-center uk-margin-medium-bottom">Paintings</h2>
+                <div class="gallery-cards uk-card uk-card-default uk-card-body uk-height-large">
+                    <img src="{{paintings.path}}"/>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="uk-text-center uk-margin-medium-bottom">Sculptures</h2>
+                <div class="gallery-cards uk-card uk-card-default uk-card-body uk-height-large">
+                    <img src="{{sculptures.path}}"/>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="uk-text-center uk-margin-medium-bottom">Photography</h2>
+                <div class="gallery-cards uk-card uk-card-default uk-card-body uk-height-large">
+                    <img src="{{photographs.path}}"/>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
