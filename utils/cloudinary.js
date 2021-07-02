@@ -14,10 +14,10 @@ const storage = new CloudinaryStorage({
   params: {
     folder: 'AllAboutThatArt',
     allowedFormats: ['png', 'jpeg', 'jpg'],
-    public_id: (req, file, cb) => {
-      cb(null, `${Date.now()}-AATA-${file.originalname}`);
+    public_id: (req, file) => {
+      `${Date.now()}-AATA-${file.originalname}`;
     },
   }
 });
 
-module.export = { cloudinary, storage };
+module.exports = { cloudinary, storage };

@@ -4,21 +4,23 @@ const { cloudinary, storage } = require('../../utils/cloudinary.js');
 const multer = require('multer');
 const parser = multer({storage: storage});
 
-router.post('/upload', parser.single('image'), async (req, res) => {
+router.post('/', parser.single('image'), async (req, res) => {
 
     try { 
-        const uploadArtwork = await cloudinary.uploader.upload(req.file.path)
-        
+        const uploadArt = await cloudinary.uploader.upload(req.file.path) //cannot read property uploader of undefined.
+
+
         const newArtwork = await Artwork.create({
             description: req.body.description,
             category: req.body.category,
             user_id: req.session.user_id,
-            path: res.secure_url,
-            public_id: res.public_id,
+            path: req.secure_url,
+            public_id: req.public_id,
         })
 
     res.status(200).json(newArtwork);
     } catch (err) {
+        console.log(err)
     res.status(500).json(err);
     }
 });
