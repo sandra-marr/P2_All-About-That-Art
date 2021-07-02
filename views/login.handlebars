@@ -1,0 +1,44 @@
+<!-- xlarge section, flex container, flex items along main axis -->
+<div class="form uk-section uk-section-xlarge uk-section-muted uk-flex uk-flex-center" uk-height-viewport>
+    <!-- fills 100% of available width -->
+    <div class="uk-width-1-1">
+        <!-- align & centers content inside -->
+        <div class="uk-container">
+            <!-- margin adds top/bottom padding, auto horizontally centers flex elements, fixed xl width, sets up card for form, body creates padding between card & content -->
+            <div class="uk-margin uk-margin-auto uk-width-xlarge uk-card uk-card-default uk-card-body">
+                        
+                <!-- Title of sign up card -->
+                <h3 class="uk-card-title uk-text-center uk-text-bold">Welcome back!</h3>
+                <br>
+                <form>
+                    <div class="uk-margin">
+                        <!-- spans entirety of card -->
+                        <div class="uk-inline uk-width-1-1">
+                            <span class="uk-form-icon" uk-icon="icon: mail"></span>
+                            <input class="uk-input uk-form-large" type="text" placeholder="Email address">
+                        </div>
+                    </div>
+                            
+                    <div class="uk-margin">
+                        <!-- spans entirety of card -->
+                        <div class="uk-inline uk-width-1-1">
+                            <span class="uk-form-icon" uk-icon="icon: lock"></span>
+                            <input class="uk-input uk-form-large" id="password" type="password" placeholder="Password">
+                            <i class="bi bi-eye-slash" id="togglePassword"></i>
+                        </div>
+                    </div>
+                            
+                    <div class="uk-margin">
+                        <button class="uk-button uk-button-secondary uk-button-large uk-width-1-1 uk-text-bold">Login</button>
+                    </div>
+                            
+                    <div class="uk-text-small uk-text-center">
+                        Don't have an account? <a href="#">Sign Up</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/public/js/login.js"></script>
