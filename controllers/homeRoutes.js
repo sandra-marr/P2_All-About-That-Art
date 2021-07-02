@@ -25,7 +25,7 @@ router.get('/', async (req, res) => {
     } catch (err) {
       res.status(500).json(err);
     }
-  });
+});
 
 router.get('/profile', withAuth, async (req, res) => {
     try {
@@ -44,33 +44,26 @@ router.get('/profile', withAuth, async (req, res) => {
     } catch (err) {
       res.status(500).json(err);
     }
-  });
+});
 
 
-  router.get('/artist/:id', async (req, res) => {
-    try {
-      const artistData = await User.findByPk(req.params.id);
-  
-      const artist = artistData.get({ plain: true });
-      // Send over the 'loggedIn' session variable to the 'homepage' template
-      res.render('artist', { artist, loggedIn: req.session.loggedIn });
-    } catch (err) {
-      console.log(err);
-      res.status(500).json(err);
-    }
-  });
-  
+router.get('/artists/:id', async (req, res) => {
+  try {
+    const artistData = await User.findByPk(req.params.id);
+
+    const artist = artistData.get({ plain: true });
+    // Send over the 'loggedIn' session variable to the 'homepage' template
+    res.render('artists', { artist, loggedIn: req.session.loggedIn });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 
 router.get('/gallery', async (req, res) => {
     try {
-      const galleryData = await Artwork.findAll({
-        include: [
-          {
-            model: Artwork,
-            attributes: ['category'],
-          },
-        ],
-      });
+      const galleryData = await Artwork.findAll({});
   
       const galleries = galleryData.map((gallery) =>
         gallery.get({ plain: true })
@@ -99,24 +92,10 @@ router.get('/gallery', async (req, res) => {
     }
   });
 
-
   router.get('/recommendations', async (req, res) => {
     try {
-      // Get all projects and JOIN with user data
-      const recommendationsData = await Artwork.findAll({
-        include: [
-          {
-            model: Recommendation,
-            attributes : [
-                'id',
-                'title',
-                'location',
-                'type',
-                'link',
-            ]
-          },
-        ],
-      });
+      
+      const recommendationsData = await Recommendation.findAll({});
   
       // Serialize data so the template can read it
       const recommendations = recommendationsData.map((recommendation) => recommendation.get({ plain: true }));

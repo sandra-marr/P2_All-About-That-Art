@@ -4,7 +4,7 @@ const { Artwork, BlogPost, Comment, Recommendation, User, Image } = require('../
 
 
 //create a new recommendation 
-router.post('/recommendation/new', withAuth, async (req, res) => {
+router.post('/new', withAuth, async (req, res) => {
     try {
       const newRecommendation = await Recommendation.create({
           
@@ -21,7 +21,7 @@ router.post('/recommendation/new', withAuth, async (req, res) => {
  
   
   // view recommendation 
-  router.get('/recommendation',withAuth, async (req, res) => {
+  router.get('/',withAuth, async (req, res) => {
 
     try {
       const recommendationData = await Recommendation.findAll();
@@ -41,7 +41,7 @@ router.post('/recommendation/new', withAuth, async (req, res) => {
 
 
   // edit recommendation by id 
-  router.put('/recommendation/:id', withAuth, async (req,res) => {
+  router.put('/:id', withAuth, async (req,res) => {
     try {
   
       const recommendationData = await Recommendation.update(
@@ -65,7 +65,7 @@ router.post('/recommendation/new', withAuth, async (req, res) => {
 
 
   // delete recommendation by id
-  router.delete('/recommendation/:id', withAuth, async (req, res) => {
+  router.delete('/:id', withAuth, async (req, res) => {
     try {
       const recommendationData = await Recommendation.destroy({
         where: {

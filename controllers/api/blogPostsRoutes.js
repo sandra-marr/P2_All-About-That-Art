@@ -3,7 +3,7 @@ const withAuth = require('../../utils/auth');
 const { Artwork, BlogPost, Comment, Recommendation, User, Image } = require('../../models');
 
 //create a new blogPost
-router.post('/blogPost/new', withAuth, async (req, res) => {
+router.post('/new', withAuth, async (req, res) => {
     try {
       const newPost = await BlogPost.create({
         ...req.body,
@@ -19,7 +19,7 @@ router.post('/blogPost/new', withAuth, async (req, res) => {
  
   
   // view a post by the post id and join with  user model
-  router.get('/blogPost/:id',withAuth, async (req, res) => {
+  router.get('/:id',withAuth, async (req, res) => {
 
     try {
       const postData = await BlogPost.findByPk(req.params.id, { 
@@ -58,7 +58,7 @@ router.post('/blogPost/new', withAuth, async (req, res) => {
 
 
   // edit blogPost by id 
-  router.put('/blogPost/:id', withAuth, async (req,res) => {
+  router.put('/:id', withAuth, async (req,res) => {
     try {
   
       const postData = await BlogPost.update(
@@ -79,7 +79,7 @@ router.post('/blogPost/new', withAuth, async (req, res) => {
 
 
   // delete posts by post id
-  router.delete('/blogPost/:id', withAuth, async (req, res) => {
+  router.delete('/:id', withAuth, async (req, res) => {
     try {
       const blogPostData = await BlogPost.destroy({
         where: {

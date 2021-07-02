@@ -4,7 +4,7 @@ const { Artwork, BlogPost, Comment, Recommendation, User, Image } = require('../
 
 
 //create a new comment
-router.post('/comment/new', withAuth, async (req, res) => {
+router.post('/new', withAuth, async (req, res) => {
     try {
       const newComment = await Comment.create({
           include: [
@@ -62,7 +62,7 @@ router.post('/comment/new', withAuth, async (req, res) => {
 
 
   // edit comments by id 
-  router.put('/comment/:id', withAuth, async (req,res) => {
+  router.put('/:id', withAuth, async (req,res) => {
     try {
   
       const commentData = await Comment.update(
@@ -83,7 +83,7 @@ router.post('/comment/new', withAuth, async (req, res) => {
 
 
   // delete comments by id
-  router.delete('/comment/:id', withAuth, async (req, res) => {
+  router.delete('/:id', withAuth, async (req, res) => {
     try {
       const commentData = await Comment.destroy({
         where: {

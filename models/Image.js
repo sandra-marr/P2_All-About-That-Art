@@ -21,7 +21,7 @@ Image.init(
     },
     link: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     art_id: {
       type: DataTypes.INTEGER,
