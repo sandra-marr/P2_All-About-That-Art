@@ -3,6 +3,8 @@ const withAuth = require('../../utils/auth');
 const { Artwork, BlogPost, Comment, Recommendation, User, Image } = require('../../models');
 
 
+//we might not need any of these recommendation routes
+
 //create a new recommendation 
 router.post('/new', withAuth, async (req, res) => {
     try {
@@ -17,28 +19,6 @@ router.post('/new', withAuth, async (req, res) => {
       res.status(500).json(err);
     }
   });
-  
- 
-  
-  // view recommendation 
-  router.get('/',withAuth, async (req, res) => {
-
-    try {
-      const recommendationData = await Recommendation.findAll();
-  
-      const recommendation = recommendationData.map((recommendation) => recommendation.get({ plain: true }));
-  
-      res.render('Recommendation', { 
-        recommendation, 
-        
-      });
-      console.log(res);
-    } catch (err) {
-      res.status(500).json(err);
-    };
-  });
-  
-
 
   // edit recommendation by id 
   router.put('/:id', withAuth, async (req,res) => {

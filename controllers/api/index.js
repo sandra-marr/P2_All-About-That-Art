@@ -8,7 +8,7 @@ const commentRoutes = require('./commentRoutes');
 
 
 router.use('/users', userRoutes);
-router.use('/artists', artistRoutes);
+router.use('/artist', artistRoutes);
 router.use('/galleries', galleryRoutes);
 router.use('/upload', uploadRoutes);
 router.use('/blogPosts', blogPostRoutes);

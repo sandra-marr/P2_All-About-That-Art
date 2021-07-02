@@ -19,7 +19,7 @@
     <link rel ="stylesheet" type="text/css" href="/css/style.css">
 
     <!-- Link to jQuery -->
-    <script src="jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 
     <!-- Link to uikit js -->
     <script src="/js/uikit.min.js"></script>
@@ -38,17 +38,22 @@
         <div class="uk-navbar-left">
             <ul class="uk-navbar-nav">
                 <a href="" class="uk-navbar-item uk-logo">LOGO</a>
-                <li class="uk-visible@m"><a href="#">Home</a></li>
-                <li class="uk-visible@m"><a href="#">Artist</a></li>
-                <li class="uk-visible@m"><a href="#">Gallery</a></li>
-                <li class="uk-visible@m"><a href="#">Recommendations</a></li>
+                <li class="uk-visible@m"><a href="/">Home</a></li>
+                <li class="uk-visible@m"><a href="/artist">Artist</a></li>
+                <li class="uk-visible@m"><a href="/gallery">Gallery</a></li>
+                <li class="uk-visible@m"><a href="/recommendations">Recommendations</a></li>
             </ul>
         </div>
 
         <div class="uk-navbar-right">
             <ul class="uk-navbar-nav uk-visible@m">
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Sign Up</a></li>
+                {{#if logged_in}}
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/logout">Logout</a></li>
+                {{else}}
+                <li><a href="/login">Login</a></li>
+                <li><a href="/signup">Sign Up</a></li>
+                {{/if}}
             </ul>
 
             <!-- Mobile view hamburger menu icon -->
@@ -64,17 +69,23 @@
             <div class="uk-navbar-toggle">
                 <ul class="uk-nav uk-nav-offcanvas">
                     <br><br><br>
-                    <li><a href="#home">Home</a></li>
+                    <li><a href="/">Home</a></li>
                     <br>
-                    <li><a href="#artist">Artist</a></li>
+                    <li><a href="/artist">Artist</a></li>
                     <br>
-                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="/gallery">Gallery</a></li>
                     <br>
-                    <li><a href="#recommendations">Recommendations</a></li>
+                    <li><a href="/recommendations">Recommendations</a></li>
                     <br>
-                    <li><a href="#login">Login</a></li>
+                     {{#if logged_in}}
+                     <li><a href="/dashboard">Dashboard</a></li>
                     <br>
-                    <li><a href="#signup">Sign Up</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                     {{else}}
+                    <li><a href="/login">Login</a></li>
+                    <br>
+                    <li><a href="/signup">Sign Up</a></li>
+                    {{/if}}
                 </ul>
             </div>
         </div>
@@ -95,6 +106,9 @@
 
 <!-- Link to uikit js-->
 <script type="text/javascript" src="/js/uikit.min.js"></script>
+
+
+
 </body>
 
 </html>
