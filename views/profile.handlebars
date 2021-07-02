@@ -1,0 +1,17 @@
+<div>
+    {{user.user_name}}
+    {{user.bio}}
+    {{#each user.artworks as |artwork|}}
+    <img src="{{artwork.path}}"/>
+    {{/each}}
+
+    {{#if user.linkedIn}}
+    linkedIn: 
+    {{user.linkedIn}}
+    {{/if}}
+
+    {{#if user.instagram}}
+    Instagram:
+    {{user.instagram}}
+    {{/if}}
+</div>

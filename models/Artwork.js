@@ -27,7 +27,7 @@ Artwork.init(
       },
     },
     path: {
-      type: DataTypes.BLOB('long'),
+      type: DataTypes.STRING,
     },
     public_id: {
       type: DataTypes.STRING,

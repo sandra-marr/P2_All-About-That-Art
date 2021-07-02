@@ -1,5 +1,5 @@
 <!-- xlarge section, flex container, flex items along main axis -->
-<div class="form uk-section uk-section-xlarge uk-section-muted uk-flex uk-flex-center" uk-height-viewport>
+<div class="form uk-section uk-section-xlarge uk-section-muted uk-flex uk-flex-center uk-height-viewport">
     <!-- fills 100% of available width -->
     <div class="uk-width-1-1">
         <!-- align & centers content inside -->
@@ -15,7 +15,7 @@
                         <!-- spans entirety of card -->
                         <div class="uk-inline uk-width-1-1">
                             <span class="uk-form-icon" uk-icon="icon: mail"></span>
-                            <input class="uk-input uk-form-large" type="text" placeholder="Email address">
+                            <input class="uk-input uk-form-large" type="text" placeholder="Email address" id="email-login">
                         </div>
                     </div>
                             
@@ -29,11 +29,11 @@
                     </div>
                             
                     <div class="uk-margin">
-                        <button class="uk-button uk-button-secondary uk-button-large uk-width-1-1 uk-text-bold">Login</button>
+                        <button class="uk-button uk-button-secondary uk-button-large uk-width-1-1 uk-text-bold login-form">Login</button>
                     </div>
                             
                     <div class="uk-text-small uk-text-center">
-                        Don't have an account? <a href="#">Sign Up</a>
+                        Don't have an account? <a href="/signup">Sign Up</a>
                     </div>
                 </form>
             </div>
@@ -41,4 +41,4 @@
     </div>
 </div>
 
-<script src="/public/js/login.js"></script>
+<script src="/js/login.js"></script>
