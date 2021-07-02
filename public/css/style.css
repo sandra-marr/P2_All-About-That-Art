@@ -18,7 +18,7 @@
 
 /* All About That Art header text */
 .header h1 {
-    font-size: 65px;
+    font-size: 75px;
     letter-spacing: 1.3px;
     font-weight: 700px;
     color: white;
@@ -27,7 +27,7 @@
 
 /* Sign up to view local artist text */
 .header h2 {
-    font-size: 26px;
+    font-size: 32px;
     letter-spacing: 1.3px;
     font-weight: 500px;
     color: white;
