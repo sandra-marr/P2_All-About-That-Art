@@ -4,7 +4,7 @@
 
 /* Header image with slight scrim overlay so overlaying text is visible/readable */
 .header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url(/header_images/lucas-benjamin-wQLAGv4_OYs-unsplash.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url(/public/assets/header_images/lucas-benjamin-wQLAGv4_OYs-unsplash.jpg);
     background-size: cover;
     background-position: center;
     /* height: 100vh; */
