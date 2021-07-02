@@ -48,8 +48,8 @@
         <div class="uk-navbar-right">
             <ul class="uk-navbar-nav uk-visible@m">
                 {{#if logged_in}}
-                <li><a href="/dashboard">Login</a></li>
-                <li><a href="/logout">Sign Up</a></li>
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/logout">Logout</a></li>
                 {{else}}
                 <li><a href="/login">Login</a></li>
                 <li><a href="/signup">Sign Up</a></li>
@@ -77,9 +77,15 @@
                     <br>
                     <li><a href="/recommendations">Recommendations</a></li>
                     <br>
+                     {{#if logged_in}}
+                     <li><a href="/dashboard">Dashboard</a></li>
+                    <br>
+                    <li><a href="/logout">Logout</a></li>
+                     {{else}}
                     <li><a href="/login">Login</a></li>
                     <br>
                     <li><a href="/signup">Sign Up</a></li>
+                    {{/if}}
                 </ul>
             </div>
         </div>
@@ -91,7 +97,7 @@
     </main>
 
     <!-- Smooth scroll -->
-    <footer class="uk-text-center uk-margin-large">
+    <footer class="uk-text-center uk-margin-xsmall uk-section-default">
         <a href="#" uk-scroll>To Top</a>
     </footer>
 

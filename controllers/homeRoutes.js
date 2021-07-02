@@ -42,7 +42,8 @@ router.get('/artist', async (req, res) => {
     const artists = artistData.map((artist) => artist.get({ plain: true }));
 
     res.render('artists', { 
-      artists, 
+      artists,
+      logged_in: req.session.logged_in 
     });
   } catch (err) {
     res.status(500).json(err);
@@ -73,7 +74,10 @@ router.get('/gallery', async (req, res) => {
     const photographs = photographyData.get({ plain: true });
   
     res.render('gallery', {
-      paintings, sculptures, photographs
+      paintings, 
+      sculptures, 
+      photographs, 
+      logged_in: req.session.logged_in 
     });
   } catch (err) {
     console.log(err);
@@ -94,7 +98,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
 
     res.render('dashboard', {
       ...user,
-      logged_in: true
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
@@ -112,6 +116,7 @@ router.get('/recommendations', async (req, res) => {
     // Pass serialized data and session flag into template
     res.render('recommendations', { 
       recommendation: recommendations,
+      logged_in: req.session.logged_in 
     });
   } catch (err) {
     res.status(500).json(err);

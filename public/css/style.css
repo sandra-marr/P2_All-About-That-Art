@@ -4,7 +4,7 @@
 
 /* Header image with slight scrim overlay so overlaying text is visible/readable */
 .header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url(./assets/header_images/lucas-benjamin-wQLAGv4_OYs-unsplash.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url(/assets/header_images/lucas-benjamin-wQLAGv4_OYs-unsplash.jpg);
     background-size: cover;
     background-position: center;
     /* height: 100vh; */
@@ -18,7 +18,7 @@
 
 /* All About That Art header text */
 .header h1 {
-    font-size: 65px;
+    font-size: 75px;
     letter-spacing: 1.3px;
     font-weight: 700px;
     color: white;
@@ -27,7 +27,7 @@
 
 /* Sign up to view local artist text */
 .header h2 {
-    font-size: 26px;
+    font-size: 32px;
     letter-spacing: 1.3px;
     font-weight: 500px;
     color: white;
