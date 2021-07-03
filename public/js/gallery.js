@@ -47,8 +47,8 @@ const photographsHandler = async (event) => {
 };
   
 document
-    .querySelector('.sculptures')
-    .addEventListener('click', sculpturesHandler);
+    .querySelector('.paintings')
+    .addEventListener('click', paintingsHandler);
 
 document
     .querySelector('.sculptures')
