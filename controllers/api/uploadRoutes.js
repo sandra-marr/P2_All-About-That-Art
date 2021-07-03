@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const Artwork = require('../../models/Artwork.js');
-const { cloudinary, storage } = require('../../utils/cloudinary.js');
+const { cloudinary, storage } = require('../../utils/cloudinary');
 const multer = require('multer');
 const parser = multer({storage: storage});
 
