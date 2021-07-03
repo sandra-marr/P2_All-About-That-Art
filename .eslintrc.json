@@ -9,6 +9,7 @@
     "es6": true
   },
   "rules": {
+    "parser": "babel-eslint",
     "no-duplicate-case": "error",
     "no-empty": "error",
     "no-extra-semi": "error",
