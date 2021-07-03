@@ -4,7 +4,7 @@
 
 /* Header image with slight scrim overlay so overlaying text is visible/readable */
 .header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url(/assets/header_images/lucas-benjamin-wQLAGv4_OYs-unsplash.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url(/assets/header_images/SteveJohnsonPexels.png);
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -37,13 +37,16 @@
 
 /* Call To Action(CTA) button underneath header text */
 .uk-button-default {
-    color: white;
+    color: #011418;
+    background-color: white;;
     border-radius: 3px;
 }
 
 /* Changed button hover to white for now */
 .uk-button-default:hover {
     color: white;
+    background-color: #011418;
+    border-color: #011418;
 }
 
 /* First section for purpose, who we are, etc. */

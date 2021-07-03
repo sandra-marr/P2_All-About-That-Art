@@ -22,7 +22,7 @@ router.get('/', async (req, res) => {
       // Pass serialized data and session flag into template
       res.render('home', { 
         art, 
-        logged_in: req.session.logged_in 
+        // logged_in: req.session.logged_in 
       });
       console.log(res);
     } catch (err) {
@@ -134,7 +134,6 @@ router.get('/login', (req, res) => {
 });
 
 router.get('/signup', (req, res) => {
-
   res.render('signup');
 });
 
