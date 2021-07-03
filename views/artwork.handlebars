@@ -1,0 +1,29 @@
+<div class="uk-section uk-section-muted uk-section-xlarge uk-flex uk-height-viewport">
+    <div class="uk-container uk-margin-large">
+        <h1 class="uk-heading-divider ">{{artwork.description}}</h1>
+
+        <div class="uk-cover-container">
+    
+            <img src="{{artwork.path}}" alt="{{artwork.description}}" uk-cover>
+        </div>
+        <form >
+            <fieldset class="uk-fieldset">
+                <legend class="uk-legend">Add a Comment</legend>
+                <div class="uk-margin">
+                    <textarea class="uk-textarea" rows="5" placeholder="Textarea"></textarea>
+                    <button class="uk-button uk-button-default newComment">Submit comment</button>
+                </div>
+            </fieldset>
+
+        </form>
+
+
+    </div>
+
+
+    <div class="uk-container .uk-margin-large">
+        <h1 class="uk-heading-divider ">Comments</h1>
+    </div>
+
+    
+</div>
