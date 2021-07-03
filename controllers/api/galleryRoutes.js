@@ -57,17 +57,4 @@ router.get('/gallery-photography', async (req, res) => {
   }
 });
 
-router.get('/artwork/:id', async (req, res) => {
-  try {
-    const dbArtworkData = await Artwork.findByPk(req.params.id);
-
-    const artwork = dbArtworkData.get({ plain: true });
-    // Send over the 'loggedIn' session variable to the 'artwork' template
-    res.render('artwork', { artwork, loggedIn: req.session.loggedIn });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
-
 module.exports = router;
