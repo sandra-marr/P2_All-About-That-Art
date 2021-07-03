@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Artwork , User } = require('../../models');
+const { Artwork , User, Comment } = require('../../models');
 const { cloudinary, storage } = require('../../utils/cloudinary.js');
 
 router.put('/update', async (req, res) => {
@@ -30,7 +30,15 @@ router.get('/artwork/:id', async (req, res) => {
         include: [
             {model: User, 
             exclude: 'password'},
-        ]
+        ],
+        include: [
+          { model: Comment, 
+            include: [
+              {model: User, 
+              exclude: 'password'}
+            ] 
+          },
+      ]
     });
   
       if(!artworkData) {
