@@ -10,8 +10,8 @@
             <fieldset class="uk-fieldset">
                 <legend class="uk-legend">Add a Comment</legend>
                 <div class="uk-margin">
-                    <textarea class="uk-textarea" rows="5" placeholder="Textarea"></textarea>
-                    <button class="uk-button uk-button-default newComment">Submit comment</button>
+                    <textarea class="uk-textarea" rows="5" placeholder="Textarea" id="text"></textarea>
+                    <button class="uk-button uk-button-default" id="newComment">Submit comment</button>
                 </div>
             </fieldset>
 
@@ -23,7 +23,17 @@
 
     <div class="uk-container .uk-margin-large">
         <h1 class="uk-heading-divider ">Comments</h1>
+        <div>
+    {{#each comments as |comment|}}
+    <div>
+        <p>{{comment.comment_body}}</p>
+        
+        <p>made by:  {{comment.user_id}}</p>
+    </div>
+    {{/each}}
+</div>
     </div>
 
     
 </div>
+<script src="/public/js/artwork.js"></script>
