@@ -1,8 +1,6 @@
 const paintingsHandler = async (event) => {
     event.preventDefault();
 
-    console.log("clicked")
-  
     const response = await fetch(`/api/galleries/matrix-painting`, {
     method: 'GET',
     });
@@ -17,8 +15,6 @@ const paintingsHandler = async (event) => {
 const sculpturesHandler = async (event) => {
     event.preventDefault();
 
-    console.log("clicked")
-  
     const response = await fetch(`/api/galleries/matrix-sculpture`, {
     method: 'GET',
     });
@@ -33,8 +29,6 @@ const sculpturesHandler = async (event) => {
 const photographsHandler = async (event) => {
     event.preventDefault();
 
-    console.log("clicked")
-  
     const response = await fetch(`/api/galleries/matrix-photograph`, {
     method: 'GET',
     });
