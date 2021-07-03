@@ -1,41 +1,117 @@
-<!-- Ajax script here? or use cloudinary?-->
-<div class="uk-container">
-    <div class="uk-column-1-3">
-        <!-- profile picture section -->
+   <!-- Ajax script here? or use cloudinary?-->
+    <div class="sticky" style="z-index: 980;" uk-sticky="left: #offset">
         <section id="profilePictureSec">
-            <div id="profilePic-sec">
-                <h2 class="uk-heading-medium"></h2>
-          
-            <!-- src should be the pic user adds -->
-            <img src="" id="photo" alt="usersPhoto">
-            <input id="picFile" type="file">
-            <label for="picFile" id="upload">Upload Picture</label>
-              </div>
+            <div class="uk-container">
+                <div class="uk-column-1-2">
+                    <!-- profile picture section -->
+                    <div id="profilePic-sec">
+                        <h2 class="uk-heading-medium"></h2>
+                        <!-- src should be the pic user adds -->
+                        <img src="" id="photo" alt="usersPhoto">
+                        <input id="picFile" type="file">
+                        <label for="picFile" id="upload">Upload Picture</label>
+                    </div>
         </section>
         <!-- artist bio section -->
         <section id="artistBioSec">
             <div class="bioSection">
-                <h2 class="uk-heading-medium" id="artistHeader">{{ Artist }} </h2>
-                <ul class="uk-iconnav-vertical">
-        {{!-- connect buttons to user's socials --}}
-                    <li><a href="#" class="uk-icon-button uk-margin-small-right" uk-icon="icon: instagram"></a></li>
-                    <li><a href="#" class="uk-icon-button uk-margin-small-right" uk-icon="icon: twitter"></a></li>
-                    <li><a href="#" class="uk-icon-button uk-margin-small-right" uk-icon="icon: facebook"></a></li>
-                </ul>
-                <!-- email button? or contact button for user to contact artist -->
+                <h2 class="uk-heading-medium" id="artistHeader">{{#each artists as |artist|}}</h2>
+                <h3 class="uk-heading-medium" id="artistUsername">{{artist.user_name}}</h3>
+                <h3 class="uk-heading-medium" id="artistMedia">{{artist.media}}</h3>
+                <div class="socialButtons">
+                    <a href="" class="uk-icon-button uk-margin-small-right" uk-icon="twitter"></a>
+                    <a href="" class="uk-icon-button  uk-margin-small-right" uk-icon="facebook"></a>
+                    <a href="" class="uk-icon-button  uk-margin-small-right" uk-icon="instagram"></a>
+                    <a href="mailto:{{ email }}" class="uk-icon-button  uk-margin-small-right" uk-icon="mail"></a>
+                </div>
+                <p class="aboutTxt">{{artist.bio}}
+                </p>
+                  {{/each}}
             </div>
-            <div>
-                <h3 class="aboutMe">About me</h3>
-                <p>""</p>
+    </section>
+</div>
+    <!--container for gallery-->
+    <section class="uk-container uk-container-xsmall gallery-section">
+        <div class="card-container uk-flex uk-flex-wrap-between uk-grid-column-medium uk-child-width-1-3@m uk-grid-row-medium"
+            uk-grid>           
+            <!-- card 1 -->
+            <div class="entireCard uk-card uk-card-hover uk-card-small">
+                <div class="uk-card-media-top">
+                    {{#each user.artworks as |artwork|}}
+                    <img src="{{artwork.path}}" alt="">
+                    {{/each}}
+                </div>
+                <div class="uk-card-body">
+                    <h3 class="uk-card-title">Media Top</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                    </p>
+                </div>
             </div>
-  </section>
-        <!--container for gallery-->
-        <section>
-
-        </section>
-{{!--  --}}
-    </div>
-    <section>
-
+            <!-- card 2 -->
+            <div class="entireCard uk-card uk-card-hover uk-card-small">
+                <div class="uk-card-body">
+                    <h3 class="uk-card-title">Media Bottom</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                    </p>
+                </div>
+                <div class="uk-card-media-bottom">
+                    {{#each user.artworks as |artwork|}}
+                    <img src="{{artwork.path}}" alt="">
+                    {{/each}}
+                </div>
+            </div>
+            <!-- card 3 -->
+            <div class="entireCard uk-card uk-card-hover uk-card-small">
+                <div class="uk-card-media-top">
+                    {{#each user.artworks as |artwork|}}
+                    <img src="{{artwork.path}}" alt="">
+                    {{/each}}
+                </div>
+                <div class="uk-card-body">
+                    <h3 class="uk-card-title">Media Top</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                    </p>
+                </div>
+            </div>
+            <!-- card 4 -->
+            <div class="entireCard uk-card uk-card-hover uk-card-small">
+                <div class="uk-card-body">
+                    <h3 class="uk-card-title">Media Bottom</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                    </p>
+                </div>
+                <div class="uk-card-media-bottom">
+                    {{#each user.artworks as |artwork|}}
+                    <img src="{{artwork.path}}" alt="">
+                    {{/each}}
+                </div>
+            </div>
+            <!--card 5-->
+            <div class="entireCard uk-card uk-card-hover uk-card-small">
+                <div class="uk-card-media-top">
+                    {{#each user.artworks as |artwork|}}
+                    <img src="{{artwork.path}}" alt="">
+                    {{/each}}
+                </div>
+                <div class="uk-card-body">
+                    <h3 class="uk-card-title">Media Top</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                    </p>
+                </div>
+            </div>
+            <!-- card 6 -->
+            <div class="entireCard uk-card uk-card-hover uk-card-small">
+                <div class="uk-card-body">
+                    <h3 class="uk-card-title">Media Bottom</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                    </p>
+                </div>
+                <div class="uk-card-media-bottom">
+                    {{#each user.artworks as |artwork|}}
+                    <img src="{{artwork.path}}" alt="">
+                    {{/each}}
+                </div>
+            </div>
+        </div>
     </section>
 </div>

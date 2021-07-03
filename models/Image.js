@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Recommendation extends Model {}
+class Image extends Model {}
 
-Recommendation.init(
+Image.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,21 +11,24 @@ Recommendation.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    title: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    location: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    type: {
-      type: DataTypes.STRING,
-      allowNull: false,
+    data: {
+      type: DataTypes.BLOB('long'), //A BLOB is binary large object that can hold a variable amount of data.
+      allowNull: true,
     },
     link: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
+    },
+    art_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'artwork',
+        key: 'id',
+      },
     },
   },
   {
@@ -33,8 +36,8 @@ Recommendation.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'recommendation',
+    modelName: 'image',
   }
 );
 
-module.exports = Recommendation;
+module.exports = Image;

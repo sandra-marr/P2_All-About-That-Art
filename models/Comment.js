@@ -22,28 +22,28 @@ Comment.init(
     },
     user_id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       references: {
         model: 'user',
         key: 'id',
-        },
-    },
-    art_post_id: {
-        type: DataTypes.INTEGER,
-        allowNull: true,
-        references: {
-          model: 'artwork',
-          key: 'id',
-          },
       },
+    },
+    art_id: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'artwork',
+        key: 'id',
+      },
+    },
     blog_post_id: {
-        type: DataTypes.INTEGER,
-        allowNull: true,
-        references: {
-          model: 'artwork',
-          key: 'id',
-          },
-      }
-      
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'artwork',
+        key: 'id',
+      },
+    }
   },
   {
     sequelize,

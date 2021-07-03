@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>All About That Art</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to uikit css -->
+    <link rel="stylesheet" href="/css/uikit.min.css">
+
+    <!-- Link to google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Link to custom css file -->
+    <link rel ="stylesheet" type="text/css" href="/css/style.css">
+
+    <!-- Link to jQuery -->
+    <script src="jquery.js"></script>
+
+    <!-- Link to uikit js -->
+    <script src="/js/uikit.min.js"></script>
+
+    <!-- Link to bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <!-- Link to uikit icons -->
+    <script src="/js/uikit-icons.min.js"></script>
+</head>
+
+<body>
+    <!-- Start of Navigation -->
+    <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+
+        <div class="uk-navbar-left">
+            <ul class="uk-navbar-nav">
+                <a href="" class="uk-navbar-item uk-logo">LOGO</a>
+                <li class="uk-visible@m"><a href="#">Home</a></li>
+                <li class="uk-visible@m"><a href="#">Artist</a></li>
+                <li class="uk-visible@m"><a href="#">Gallery</a></li>
+                <li class="uk-visible@m"><a href="#">Recommendations</a></li>
+            </ul>
+        </div>
+
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@m">
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Sign Up</a></li>
+            </ul>
+
+            <!-- Mobile view hamburger menu icon -->
+            <a href="#offcanvas-usage" uk-toggle class="uk-navbar-toggle uk-hidden@m" uk-navbar-toggle-icon></a>
+        </div>
+    </nav>
+    <!-- End of Navigation -->
+
+    <!-- Handles mobile responsive view -->
+    <div id="offcanvas-usage" uk-offcanvas>
+        <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <div class="uk-navbar-toggle">
+                <ul class="uk-nav uk-nav-offcanvas">
+                    <br><br><br>
+                    <li><a href="#home">Home</a></li>
+                    <br>
+                    <li><a href="#artist">Artist</a></li>
+                    <br>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <br>
+                    <li><a href="#recommendations">Recommendations</a></li>
+                    <br>
+                    <li><a href="#login">Login</a></li>
+                    <br>
+                    <li><a href="#signup">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>  
+
+    <!-- Renders the sub layout -->
+    <main class="container-body">
+        {{{ body }}}
+    </main>
+
+    <!-- Smooth scroll -->
+    <footer class="uk-text-center uk-margin-large">
+        <a href="#" uk-scroll>To Top</a>
+    </footer>
+
+<!-- Link to jQuery before uikit js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Link to uikit js-->
+<script type="text/javascript" src="/js/uikit.min.js"></script>
+</body>
+
+</html>
