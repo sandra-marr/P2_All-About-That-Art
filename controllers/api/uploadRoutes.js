@@ -18,7 +18,6 @@ router.post('/', parser.single('image'), async (req, res) => {
         res.status(200).json({uploadArt, newArtwork});
 
     } catch (err) {
-        console.log(err)
     res.status(500).json(err);
     }
 });

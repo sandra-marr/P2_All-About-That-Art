@@ -50,7 +50,6 @@ router.post('/new', withAuth, async (req, res) => {
       const comment = commentData.map((comment) => comment.get({ plain: true }));
   
       res.status(200).json(comment);
-      console.log(res);
     } catch (err) {
       res.status(500).json(err);
     };

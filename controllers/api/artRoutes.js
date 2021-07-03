@@ -18,10 +18,8 @@ router.put('/update', async (req, res) => {
             });
 
         res.status(200).json(newArtwork);
-        console.log(res)
 
     } catch (err) {
-        console.log(err)
     res.status(500).json(err);
     }
 });
@@ -58,7 +56,6 @@ router.delete('/delete/:id', async (req, res) => {
 
         res.status(200).json({ removeArt, deleteArtData});
     } catch (err) {
-        console.log(err);
         res.status(500).json(err);
     };
     
