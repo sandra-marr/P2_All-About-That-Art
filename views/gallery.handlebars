@@ -2,21 +2,21 @@
     <div class="uk-container">
         {{!-- <h1 class="uk-text-center uk-margin-large-bottom">Section Primary with cards</h1> --}}
         <div class="uk-grid-match uk-child-width-expand@m uk-grid-large" uk-grid>
-            <div>
+            <div class="paintings">
                 <h2 class="uk-text-center uk-margin-medium-bottom">Paintings</h2>
                 <div class="gallery-cards uk-card uk-card-default uk-card-body uk-height-large">
                     <img src="{{paintings.path}}"/>
                 </div>
             </div>
 
-            <div>
+            <div class="sculptures">
                 <h2 class="uk-text-center uk-margin-medium-bottom">Sculptures</h2>
                 <div class="gallery-cards uk-card uk-card-default uk-card-body uk-height-large">
                     <img src="{{sculptures.path}}"/>
                 </div>
             </div>
 
-            <div>
+            <div class="photographs">
                 <h2 class="uk-text-center uk-margin-medium-bottom">Photography</h2>
                 <div class="gallery-cards uk-card uk-card-default uk-card-body uk-height-large">
                     <img src="{{photographs.path}}"/>
@@ -25,3 +25,5 @@
         </div>
     </div>
 </div>
+
+ <script src="/js/gallery.js"></script>
