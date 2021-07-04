@@ -164,3 +164,48 @@ body {
 .gallery-cards {
   border-radius: 6px;
 }
+
+/* social buttons */
+.socialButtons {
+  position: absolute;
+  top: 370px;
+  left: 50px;
+  font-size: 18px;
+}
+
+.aboutTxt {
+  position: absolute;
+  top: 400px;
+  right: 300px;
+  left: 90px;
+  font-size: 16px;
+  text-align: justify;
+  margin-right: 460px;
+  padding-left: 9px;
+  margin-bottom: 60px;
+  padding-right: 180px;
+}
+
+/* card container */
+.card-container div {
+  left: 200px;
+  top: -80px;
+}
+
+.entireCard {
+  box-shadow: 10px 10px 5px #103b5c;
+  margin-top: 100px;
+}
+#artistUsername {
+  position: absolute;
+  top: 280px;
+  left: 90px;
+  font-size: 12px;
+}
+
+#artistMedia {
+  position: absolute;
+  top: 303px;
+  left: 90px;
+  font-size: 12px;
+}
