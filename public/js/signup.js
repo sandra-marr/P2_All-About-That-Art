@@ -10,31 +10,6 @@ togglePassword.addEventListener('click', function (eyeball)  {
     this.classList.toggle('bi-eye');
 });
 
-// const loginFormHandler = async (event) => {
-//     event.preventDefault();
-  
-//     // Collect values from the login form
-//     const email = document.querySelector('#email-login').value.trim();
-//     const password = document.querySelector('#password').value.trim();
-  
-//     if (email && password) {
-//       // Send a POST request to the API endpoint
-//       const response = await fetch('/api/users/login', {
-//         method: 'POST',
-//         body: JSON.stringify({ email, password }),
-//         headers: { 'Content-Type': 'application/json' },
-//       });
-  
-//       if (response.ok) {
-//         console.log(response);
-//         // If successful, redirect the browser to the dashboard page
-//         document.location.redirect('/dashboard');
-//       } else {
-//         alert(response.statusText);
-//       }
-//     }
-//   };
-  
   const signupFormHandler = async (event) => {
     event.preventDefault();
   
@@ -56,10 +31,6 @@ togglePassword.addEventListener('click', function (eyeball)  {
       }
     }
   };
-  
-  // document
-  //   .querySelector('.login-form')
-  //   .addEventListener('submit', loginFormHandler);
   
   document
     .querySelector('.signup-form')
