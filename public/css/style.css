@@ -61,10 +61,13 @@
     transition: none;
 }
 
-/* Logo/possible change to Title? */
+/* Logo */
 .uk-navbar-item.uk-logo {
-    color: #011418;
+    margin-left: -10px;
+    display: block;
+    position:relative;
 }
+
 
 /* Hamburger menu icon color */
 .uk-navbar-toggle {
