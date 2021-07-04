@@ -1,6 +1,6 @@
 /* Selecting both id's togglePassword and password */
 const togglePassword = document.querySelector('#togglePassword');
-const password = document.querySelector('#password');
+const password = document.querySelector('#password-signup');
 
 /* Attaching an event listener to the togglePassword icon */
 /* Toggle type of password field & icon class */
