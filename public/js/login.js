@@ -28,7 +28,7 @@ const loginFormHandler = async (event) => {
       if (response.ok) {
         console.log(response);
         // If successful, redirect the browser to the profile page
-        document.location.replace('/dashboard');
+        document.location.replace('/home');
       } else {
         alert(response.statusText);
       }
@@ -37,5 +37,5 @@ const loginFormHandler = async (event) => {
   
   document
     .querySelector('.login-form')
-    .addEventListener('click', loginFormHandler);
+    .addEventListener('submit', loginFormHandler);
   
