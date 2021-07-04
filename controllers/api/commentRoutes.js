@@ -49,11 +49,7 @@ router.post('/new', withAuth, async (req, res) => {
   
       const comment = commentData.map((comment) => comment.get({ plain: true }));
   
-      res.render('gallery', { 
-        comment, 
-        
-      });
-      console.log(res);
+      res.status(200).json(comment);
     } catch (err) {
       res.status(500).json(err);
     };

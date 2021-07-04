@@ -14,8 +14,6 @@ router.get('/', async (req, res) => {
         ]
       });
 
-      console.log(artworkData);
-
       // Serialize data so the template can read it
       const art = artworkData.get({ plain: true });
   
@@ -24,7 +22,7 @@ router.get('/', async (req, res) => {
         art, 
         logged_in: req.session.logged_in 
       });
-      console.log(res);
+  
     } catch (err) {
       res.status(500).json(err);
     }
@@ -80,7 +78,6 @@ router.get('/gallery', async (req, res) => {
       logged_in: req.session.logged_in 
     });
   } catch (err) {
-    console.log(err);
     res.status(500).json(err);
   }
 });
@@ -131,6 +128,18 @@ router.get('/login', (req, res) => {
   }
   // Otherwise, render the 'login' template
   res.render('login');
+});
+
+
+router.get('/signup', (req, res) => {
+
+  if (req.session.logged_in) {
+    res.render('dashboard', 
+    {logged_in: req.session.logged_in});
+  } else {
+  res.render('signup', 
+  {logged_in: req.session.logged_in});
+  }
 });
 
 module.exports = router;
