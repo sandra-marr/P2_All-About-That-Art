@@ -1,28 +1,15 @@
-const picDiv = document.querySelector("#profilePic-sec");
-const picture = document.querySelector("#photo");
-const file = document.querySelector("#file");
-const uploadBtn = document.querySelector("#upload");
+const artist = async (event) => {
+  event.preventDefault();
 
-// hides upload language if user hovers
+  const response = await fetch(`/api/artist`, {
+    method: "GET",
+  });
 
-picDiv.addEventListener("mouseenter", function () {
-  uploadBtn.style.display = "inline-block";
-});
-
-picDiv.addEventListener("mouseleave", function () {
-  uploadBtn.style.display = "none";
-});
-
-file.addEventListener("changePic", function () {
-  const chosenPic = this.files[0];
-
-  if (chosenPic) {
-    const reader = new FileReader();
-
-    reader.addEventListener("loadFile", function () {
-      picture.setAttribute("src", reader.result);
-    });
-
-    reader.readAsDataURL(chosenPic);
+  if (response.ok) {
+    document.location.replace("/api/artist");
+  } else {
+    alert("Failed to get artist");
   }
-});
+};
+
+document.querySelector(".artist).addEventListener("click", artist);
