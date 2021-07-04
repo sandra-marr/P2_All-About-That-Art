@@ -15,7 +15,9 @@ router.get('/profile/:id', async (req, res) => {
   
       res.render('profile', { user });
     //   res.status(200).json(user)
+    console.log(res)
     } catch (err) {
+      console.log(err)
       res.status(500).json(err);
     }
 });

@@ -34,14 +34,14 @@
 </div>
 
 <div class="uk-section uk-section-large uk-section-secondary">
-    <div class="uk-container">
+    <div class="uk-container artwork" data-id="{{art.user_id}}">
 
         <h3 class="uk-text-center">Featured Artist</h3>
         <br><br><br>
 
-        <div class="uk-grid uk-child-width-1-1@m" uk-grid>
+        <div class="uk-grid uk-child-width-1-1@m" data-id="{{art.user_id}}" uk-grid>
             <div>
-               <img data-src="{{art.path}}" width="600" height="400" alt="" uk-img>
+               <img data-id="{{art.user_id}}" data-src="{{art.path}}" width="600" height="400" alt="" uk-img>
             </div>
 
             <p class="uk-text-center">{{art.user.user_name}}</p>
@@ -51,3 +51,4 @@
         </div>
     </div>
 </div>
+ <script src="/js/home.js"></script>
