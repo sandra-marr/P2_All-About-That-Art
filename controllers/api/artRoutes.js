@@ -26,27 +26,37 @@ router.put('/update', async (req, res) => {
 
 router.get('/artwork/:id', async (req, res) => {
     try {
-      const artworkData = await Artwork.findByPk(req.params.id, {
+      const artData = await Artwork.findByPk(req.params.id, {
         include: [
             {model: User, 
             exclude: 'password'},
-        ],
-        include: [
-          { model: Comment, 
-            include: [
-              {model: User, 
-              exclude: 'password'}
-            ] 
-          },
-      ]
-    });
+      
+            { model: Comment, 
+              attributes: [
+                'comment_body',
+                'comment_date',
+                'art_id',
+                'user_id'
+              ],
+              include: [
+                {model: User, 
+                attributes: [
+                  'user_name'
+                ]}
+              ] 
+            },
+        ]
+        
+      });
+
+      const art = artData.get({ plain: true });
   
-      if(!artworkData) {
+      if(!artData) {
         res.status(404).json({message: "there is no artwork with that id" })
       } else {
-        // res.status(200).json(artworkData);
+        // res.status(200).json(art)
         res.render('artwork', { 
-          artworkData, 
+          art, 
           loggedIn: req.session.loggedIn });
       }
     } catch (err) {

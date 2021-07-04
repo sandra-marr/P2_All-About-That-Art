@@ -1,10 +1,9 @@
 <div class="uk-section uk-section-muted uk-section-xlarge uk-flex uk-height-viewport">
     <div class="uk-container uk-margin-large">
-        <h1 class="uk-heading-divider ">{{artwork.description}}</h1>
+        <h1 class="uk-heading-divider ">{{art.description}}</h1>
 
         <div class="uk-cover-container">
-    
-            <img src="{{artwork.path}}" alt="{{artwork.description}}" uk-cover>
+            <img src="{{art.path}}" alt="{{art.description}}"/>
         </div>
         <form >
             <fieldset class="uk-fieldset">
@@ -24,7 +23,7 @@
     <div class="uk-container .uk-margin-large">
         <h1 class="uk-heading-divider ">Comments</h1>
         <div>
-    {{#each comments as |comment|}}
+    {{#each art.comments as |comment|}}
     <div>
         <p>{{comment.comment_body}}</p>
         

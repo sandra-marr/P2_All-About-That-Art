@@ -18,15 +18,15 @@
 
         <div class="uk-grid-match uk-child-width-1-3@m" uk-grid>
             <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus aut rem omnis cum sunt aperiam, neque repellat similique dolore! Quisquam. </p>
+                <p>We are all about that art and allowing people to use art as a means of therapy. While art therapy might be considered beneficial for just the artist, we believe that sharing art with the world also benefits others. We intend to create a safe place for artists and viewers to create, share, and provide thoughts on various pieces virtually. By connecting with art online, art therapy is always at your fingertips.</p>
             </div>
 
             <div>
-                <p class="uk-text-center">Possible Image Here ? </p>
+                <img style="height: 200px; max-width: 300px !important" class="uk-align-center" src="/assets/header_images/kelli-tungay-Sj0nhVIb4eY-unsplash.jpg"/>
             </div>
 
             <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam impedit tenetur accusamus ab fugit illo tempore corporis quasi optio commodi.</p>
+                <p>Thank you for dropping in. To view artwork, please visit our gallery page. If there are particular artists that you would like to learn about, visit the artist page to read through biographies. Finally to contribute, either as an artist or a viewer, signup for a free account. Enjoy!</p>
             </div>
 
         </div>
@@ -37,16 +37,14 @@
     <div class="uk-container artwork" data-id="{{art.user_id}}">
 
         <h3 class="uk-text-center">Featured Artist</h3>
-        <br><br><br>
+        <br><br>
 
         <div class="uk-grid uk-child-width-1-1@m" data-id="{{art.user_id}}" uk-grid>
-            <div>
-               <img data-id="{{art.user_id}}" data-src="{{art.path}}" width="600" height="400" alt="" uk-img>
+            <p class="uk-text-center">Meet {{art.user.user_name}}, who prefers {{art.category}} as a media in exressing his creativity.</p>
+            <div >
+               <img class="uk-align-center" data-id="{{art.user_id}}" data-src="{{art.path}}" width="600" height="400" alt="" uk-img>
             </div>
-
-            <p class="uk-text-center">{{art.user.user_name}}</p>
-            <p class="uk-text-center">{{art.category}}</p>
-            <p class="uk-text-center">{{art.description}}</p>
+            <p class="uk-text-center">Description: {{art.description}}</p>
 
         </div>
     </div>
