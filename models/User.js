@@ -21,6 +21,11 @@ User.init(
       allowNull: false,
       unique: true,
     },
+    isArtist: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      default: true,
+    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -35,6 +40,22 @@ User.init(
       validate: {
         len: [8],
       },
+    },
+    bio: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    media: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    linkedIn: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    instagram: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
   },
   {

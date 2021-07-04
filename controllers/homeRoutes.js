@@ -7,22 +7,18 @@ const {
   User,
   Image,
 } = require("../models");
+const { sequelize } = require("../models/Artwork");
 const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
-    const artworkData = await Artwork.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ["id"],
-        },
-      ],
+    const artworkData = await Artwork.findOne({
+      order: sequelize.random(), //currently pulling a random piece of artwork to feature. GOAL is to pull highest ranked artwork to feature.
+      include: [{ model: User, attributes: ["user_name"] }],
     });
 
     // Serialize data so the template can read it
-    const art = artworkData.map((artwork) => artwork.get({ plain: true }));
+    const art = artworkData.get({ plain: true });
 
     // Pass serialized data and session flag into template
     res.render("home", {
@@ -34,65 +30,75 @@ router.get("/", async (req, res) => {
   }
 });
 
-// router.get('/profile', withAuth, async (req, res) => {
-//     try {
-//       // Find the logged in user based on the session ID
-//       const userData = await User.findByPk(req.session.user_id, {
-//         attributes: { exclude: ['password'] },
-//         include: [{ model: Artwork }],
-//       });
-
-//       const user = userData.get({ plain: true });
-
-//       res.render('profile', {
-//         ...user,
-//         logged_in: true
-//       });
-//     } catch (err) {
-//       res.status(500).json(err);
-//     }
-// });
-
-router.get("/artists/:id", async (req, res) => {
+router.get("/artist", async (req, res) => {
   try {
-    const artistData = await User.findByPk(req.params.id);
+    const artistData = await User.findAll({
+      where: {
+        isArtist: true,
+      },
+    });
 
-    const artist = artistData.get({ plain: true });
-    // Send over the 'loggedIn' session variable to the 'homepage' template
-    res.render("artists", { artist, loggedIn: req.session.loggedIn });
+    const artists = artistData.map((artist) => artist.get({ plain: true }));
+
+    res.render("artists", {
+      artists,
+      logged_in: req.session.logged_in,
+    });
   } catch (err) {
-    console.log(err);
     res.status(500).json(err);
   }
 });
 
 router.get("/gallery", async (req, res) => {
   try {
-    const galleryData = await Artwork.findAll({});
+    const paintingData = await Artwork.findOne({
+      where: { category: "painting" },
+      order: sequelize.random(),
+    });
 
-    const galleries = galleryData.map((gallery) =>
-      gallery.get({ plain: true })
-    );
-    // Send over the 'loggedIn' session variable to the 'gallery' template
+    const sculptureData = await Artwork.findOne({
+      where: { category: "sculpture" },
+      order: sequelize.random(),
+    });
+
+    const photographyData = await Artwork.findOne({
+      where: { category: "photograph" },
+      order: sequelize.random(),
+    });
+
+    const paintings = paintingData.get({ plain: true });
+
+    const sculptures = sculptureData.get({ plain: true });
+
+    const photographs = photographyData.get({ plain: true });
+
     res.render("gallery", {
-      galleries,
-      loggedIn: req.session.loggedIn,
+      paintings,
+      sculptures,
+      photographs,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
-    console.log(err);
     res.status(500).json(err);
   }
 });
 
-router.get("/artwork/:id", async (req, res) => {
+//dashboard is intended to be the user interface for updating their bio or uploading artwork. This should come up after logging in.
+router.get("/dashboard", withAuth, async (req, res) => {
   try {
-    const dbArtworkData = await Artwork.findByPk(req.params.id);
+    // Find the logged in user based on the session ID
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ["password"] },
+      include: [{ model: Artwork }],
+    });
 
-    const artwork = dbArtworkData.get({ plain: true });
-    // Send over the 'loggedIn' session variable to the 'artwork' template
-    res.render("artwork", { artwork, loggedIn: req.session.loggedIn });
+    const user = userData.get({ plain: true });
+
+    res.render("dashboard", {
+      ...user,
+      logged_in: req.session.logged_in,
+    });
   } catch (err) {
-    console.log(err);
     res.status(500).json(err);
   }
 });
@@ -108,7 +114,7 @@ router.get("/recommendations", async (req, res) => {
 
     // Pass serialized data and session flag into template
     res.render("recommendations", {
-      recommendations,
+      recommendation: recommendations,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -118,12 +124,20 @@ router.get("/recommendations", async (req, res) => {
 
 router.get("/login", (req, res) => {
   // If the user is already logged in, redirect to the profile page.
-  if (req.session.loggedIn) {
-    res.redirect("/profile");
+  if (req.session.logged_in) {
+    res.redirect("/dashboard");
     return;
   }
   // Otherwise, render the 'login' template
   res.render("login");
+});
+
+router.get("/signup", (req, res) => {
+  if (req.session.logged_in) {
+    res.render("dashboard", { logged_in: req.session.logged_in });
+  } else {
+    res.render("signup", { logged_in: req.session.logged_in });
+  }
 });
 
 module.exports = router;

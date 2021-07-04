@@ -44,12 +44,11 @@ router.post('/new', withAuth, async (req, res) => {
       });
   
       const posts = postData.get({ plain: true });
-  
-      res.render('artists', { 
-        posts, 
+      res.status(200).json(postData);
+      // res.render('artists', { 
+      //   posts, 
         
-      });
-      console.log(res);
+      // });
     } catch (err) {
       res.status(500).json(err);
     };

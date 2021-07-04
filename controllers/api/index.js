@@ -5,13 +5,15 @@ const galleryRoutes = require('./galleryRoutes');
 const uploadRoutes = require('./uploadRoutes');
 const blogPostRoutes = require('./blogPostsRoutes');
 const commentRoutes = require('./commentRoutes');
+const artRoutes = require('./artRoutes');
 
 
 router.use('/users', userRoutes);
-router.use('/artists', artistRoutes);
+router.use('/artist', artistRoutes);
 router.use('/galleries', galleryRoutes);
 router.use('/upload', uploadRoutes);
 router.use('/blogPosts', blogPostRoutes);
 router.use('/comment', commentRoutes);
+router.use('/art', artRoutes);
 
 module.exports = router;
