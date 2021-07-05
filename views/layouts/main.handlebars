@@ -3,6 +3,8 @@
 
 <head>
     <title>All About That Art</title>
+    <!-- favicon link here -->
+    <link rel="icon" type="image/png type" sizes="32x32" href="/assets/images/paintstrokelogo.png">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,21 +39,21 @@
 
         <div class="uk-navbar-left">
             <ul class="uk-navbar-nav">
-                <a href="" class="uk-navbar-item uk-logo">LOGO</a>
+                <a class="uk-navbar-item uk-logo" href="#"><img src="/assets/images/paintstrokelogo.png" height="40" width="80"></a>
                 <li class="uk-visible@m"><a href="/">Home</a></li>
                 <li class="uk-visible@m"><a href="/artist">Artist</a></li>
                 <li class="uk-visible@m"><a href="/gallery">Gallery</a></li>
                 <li class="uk-visible@m"><a href="/recommendations">Recommendations</a></li>
             </ul>
         </div>
-
+        <!-- href="/api/users/logout"  to line 54 deleted for testing-->
         <div class="uk-navbar-right">
             <ul class="uk-navbar-nav uk-visible@m">
                 {{#if logged_in}}
                 <li><a href="/dashboard">Dashboard</a></li>
-                <li><a href="/api/users/logout" id="logout">Logout</a></li>
+                <li><a id="logout">Logout</a></li>
                 {{else}}
-                <li><a href="/login" >Login</a></li>
+                <li><a href="/login">Login</a></li>
                 <li><a href="/signup">Sign Up</a></li>
                 {{/if}}
             </ul>
@@ -63,6 +65,7 @@
     <!-- End of Navigation -->
 
     <!-- Handles mobile responsive view -->
+    <!-- href="/api/users/logout"  to line 86 deleted for testing-->
     <div id="offcanvas-usage" uk-offcanvas>
         <div class="uk-offcanvas-bar">
             <button class="uk-offcanvas-close" type="button" uk-close></button>
@@ -80,7 +83,7 @@
                      {{#if logged_in}}
                      <li><a href="/dashboard">Dashboard</a></li>
                     <br>
-                    <li><a href="/api/users/logout" id="logout">Logout</a></li>
+                    <li><a id="logout">Logout</a></li>
                      {{else}}
                     <li><a href="/login">Login</a></li>
                     <br>
@@ -106,10 +109,11 @@
 
 <!-- Link to uikit js-->
 <script type="text/javascript" src="/js/uikit.min.js"></script>
-<script type="text/javascript" src="/js/logout.js"></script>
 
-
-
+<!-- Render script for logged in users only -->
+{{#if logged_in}}
+<script type="text/javascript" src="/public/js/logout.js"></script>
+{{/if}}
 </body>
 
 </html>
