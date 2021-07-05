@@ -4,11 +4,21 @@
 
 /* Header image with slight scrim overlay so overlaying text is visible/readable */
 .header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url(/assets/header_images/girl-2696947_1920.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url(/assets/header_images/pexels-steve-johnson-1545505.jpg);
     background-size: cover;
     background-position: center;
-    /* width: 100%; */
-    /* height: 100vh; */
+    background-repeat: no-repeat;
+}
+
+.header:after{
+    content:"";
+    display:block;
+    height: 50px;
+    background-image:url('https://ecorelos.com/wp-content/uploads/2020/04/torn-border2.png');
+    position: static;
+    bottom: 100px;
+    width:300%;
+    left:-500px;    
 }
 
 .header-inner {
@@ -19,7 +29,7 @@
 
 /* All About That Art header text */
 .header h1 {
-    font-size: 80px;
+    font-size: 100px;
     letter-spacing: 1px;
     font-weight: 700;
     color: white;
@@ -28,9 +38,9 @@
 
 /* Sign up to view local artist text */
 .header h2 {
-    font-size: 42px;
+    font-size: 40px;
     letter-spacing: 1px;
-    font-weight: 500px;
+    font-weight: 500;
     color: white;
     font-family: 'Karla';
 }
@@ -44,9 +54,9 @@
 
 /* Changed button hover to white for now */
 .uk-button-default:hover {
-    color: white;
-    background-color: #011418;
-    border-color: #011418;
+    color: #09558F;
+    background-color: white;
+    border-color: #09558F;
 }
 
 
@@ -103,20 +113,45 @@
 
 
 .mission {
+    color: #09558F;
     font-size: 32px;
     line-height: 1.2;
+    font-weight: 700;
+}
+
+.purpose1 {
+    color: #09558F;
+    font-size: 14px;
 }
 
 .purpose2 {
     font-size: 48px;
+    font-weight: 700;
+    color: #011418;
+}
+
+.about {
+    font-weight: 200;
+    color: #011418;
 }
 
 .featured {
     font-size: 48px;
+    font-weight: 500;
+    color: white;
 }
 
 .featured-image {
     border-radius: 10px;
+}
+
+.featured-artist {
+    background-color: #011418;
+    color: white;
+}
+
+.featured-head-text, .featured-description {
+    font-weight: 200;
 }
 
 .lastButton {
@@ -157,4 +192,15 @@
 
 .places {
     font-weight: 700;
+}
+
+.join {
+    font-size: 48px;
+    weight: 500;
+    color: #09558F;
+}
+
+.join2 {
+    font-weight: 200;
+    color: #011418;
 }
