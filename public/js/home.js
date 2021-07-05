@@ -23,3 +23,4 @@ const artworkHandler = async (event) => {
 document
     .querySelector('.artwork')
     .addEventListener('click', artworkHandler);
+

@@ -1,6 +1,6 @@
 /* Selecting both id's togglePassword and password */
 const togglePassword = document.querySelector('#togglePassword');
-const password = document.querySelector('#password');
+const password = document.querySelector('#password-signup');
 
 /* Attaching an event listener to the togglePassword icon */
 /* Toggle type of password field & icon class */
@@ -10,31 +10,6 @@ togglePassword.addEventListener('click', function (eyeball)  {
     this.classList.toggle('bi-eye');
 });
 
-const loginFormHandler = async (event) => {
-    event.preventDefault();
-  
-    // Collect values from the login form
-    const email = document.querySelector('#email-login').value.trim();
-    const password = document.querySelector('#password').value.trim();
-  
-    if (email && password) {
-      // Send a POST request to the API endpoint
-      const response = await fetch('/api/users/login', {
-        method: 'POST',
-        body: JSON.stringify({ email, password }),
-        headers: { 'Content-Type': 'application/json' },
-      });
-  
-      if (response.ok) {
-        console.log(response);
-        // If successful, redirect the browser to the profile page
-        document.location.redirect('/dashboard');
-      } else {
-        alert(response.statusText);
-      }
-    }
-  };
-  
   const signupFormHandler = async (event) => {
     event.preventDefault();
   
@@ -50,16 +25,12 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/dashboard');
+        document.location.replace('/');
       } else {
         alert(response.statusText);
       }
     }
   };
-  
-  document
-    .querySelector('.login-form')
-    .addEventListener('click', loginFormHandler);
   
   document
     .querySelector('.signup-form')

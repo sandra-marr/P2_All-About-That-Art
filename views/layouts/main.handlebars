@@ -3,6 +3,8 @@
 
 <head>
     <title>All About That Art</title>
+    <!-- favicon link here -->
+    <link rel="icon" type="image/png type" sizes="32x32" href="/assets/images/paintstrokelogo.png">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +15,7 @@
     <!-- Link to google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@500;700;800&display=swap" rel="stylesheet">
 
     <!-- Link to custom css file -->
     <link rel ="stylesheet" type="text/css" href="/css/style.css">
@@ -29,6 +31,9 @@
 
     <!-- Link to uikit icons -->
     <script src="/js/uikit-icons.min.js"></script>
+
+    <!-- Animate On Scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
 </head>
 
 <body>
@@ -37,21 +42,21 @@
 
         <div class="uk-navbar-left">
             <ul class="uk-navbar-nav">
-                <a href="" class="uk-navbar-item uk-logo">LOGO</a>
+                <a class="uk-navbar-item uk-logo" href="#"><img src="/assets/images/paintstrokelogo.png" height="40" width="80"></a>
                 <li class="uk-visible@m"><a href="/">Home</a></li>
                 <li class="uk-visible@m"><a href="/artist">Artist</a></li>
                 <li class="uk-visible@m"><a href="/gallery">Gallery</a></li>
                 <li class="uk-visible@m"><a href="/recommendations">Recommendations</a></li>
             </ul>
         </div>
-
+        <!-- href="/api/users/logout"  to line 54 deleted for testing-->
         <div class="uk-navbar-right">
             <ul class="uk-navbar-nav uk-visible@m">
                 {{#if logged_in}}
                 <li><a href="/dashboard">Dashboard</a></li>
-                <li><a href="/api/users/logout" id="logout">Logout</a></li>
+                <li><a id="logout">Logout</a></li>
                 {{else}}
-                <li><a href="/login" >Login</a></li>
+                <li><a href="/login">Login</a></li>
                 <li><a href="/signup">Sign Up</a></li>
                 {{/if}}
             </ul>
@@ -63,6 +68,7 @@
     <!-- End of Navigation -->
 
     <!-- Handles mobile responsive view -->
+    <!-- href="/api/users/logout"  to line 86 deleted for testing-->
     <div id="offcanvas-usage" uk-offcanvas>
         <div class="uk-offcanvas-bar">
             <button class="uk-offcanvas-close" type="button" uk-close></button>
@@ -80,7 +86,7 @@
                      {{#if logged_in}}
                      <li><a href="/dashboard">Dashboard</a></li>
                     <br>
-                    <li><a href="/api/users/logout" id="logout">Logout</a></li>
+                    <li><a id="logout">Logout</a></li>
                      {{else}}
                     <li><a href="/login">Login</a></li>
                     <br>
@@ -96,19 +102,24 @@
         {{{ body }}}
     </main>
 
-    <!-- Smooth scroll -->
-    <footer class="uk-text-center uk-margin-xsmall uk-section-default">
-        <a href="#" uk-scroll>To Top</a>
-    </footer>
+{{!-- <a class="toTop" href="#" uk-scroll><i class="bi bi-arrow-up-circle"></i></a> --}}
+     
 
 <!-- Link to jQuery before uikit js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <!-- Link to uikit js-->
 <script type="text/javascript" src="/js/uikit.min.js"></script>
-<script type="text/javascript" src="/js/logout.js"></script>
 
+<!-- Render script for logged in users only -->
+{{#if logged_in}}
+<script type="text/javascript" src="/public/js/logout.js"></script>
+{{/if}}
 
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+</script>
 
 </body>
 
