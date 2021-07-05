@@ -25,7 +25,7 @@ togglePassword.addEventListener('click', function (eyeball)  {
       });
   
       if (response.ok) {
-        document.location.replace('/home');
+        document.location.replace('/');
       } else {
         alert(response.statusText);
       }
