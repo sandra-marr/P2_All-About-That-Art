@@ -3,7 +3,7 @@
         <h1>We Are <br>All About That Art</h1>
         <h2>Sign up to view local artists</h2>
         <p class="uk-margin uk-margin-medium-top">
-            <a class="uk-button uk-button-default" id="signup" href="/signup">Sign Up</a>
+            <a class="uk-button uk-button-large uk-button-default" id="signup" href="/signup">Sign Up</a>
         </p>
     </div>
 </header>
@@ -51,11 +51,11 @@
         <br><br>
 
         <div class="uk-grid uk-child-width-1-1@m" data-id="{{art.user_id}}" uk-grid>
-            <p class="uk-text-center">Meet {{art.user.user_name}}, who prefers {{art.category}} as a media in expressing their creativity.</p>
+            <p class="uk-text-center uk-text-large">Meet {{art.user.user_name}}, who prefers {{art.category}} as a media in expressing their creativity.</p>
             <div>
                <img class="featured-image uk-align-center" data-id="{{art.user_id}}" data-src="{{art.path}}" width="600" height="400" alt="" uk-img>
             </div>
-            <p class="uk-text-center">Description: {{art.description}}</p>
+            <p class="uk-text-center">Description: <br>{{art.description}}</p>
         </div>
     </div>
 </div>
@@ -78,6 +78,3 @@
 </div>
 
 <script src="/js/home.js"></script>
-
-
-   

@@ -39,7 +39,7 @@
 .uk-button-default {
     color: #011418;
     background-color: white;;
-    border-radius: 12px;
+    border-radius: 20px;
 }
 
 /* Changed button hover to white for now */
@@ -80,24 +80,15 @@
     opacity: 0.9;
 }
 
-/* Background of login/sign up pages  */
-/* .form.uk-section,.uk-section-xlarge,.uk-section-muted,.uk-flex,.uk-flex-center {
-    background-image: url(/images/lucas-benjamin-wQLAGv4_OYs-unsplash.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    background-color: #011418;
-} */
-
 /* log in/sign up form border radius */
 .uk-margin.uk-margin-auto.uk-width-xlarge.uk-card.uk-card-default.uk-card-body {
-    border-radius: 15px;
+    border-radius: 20px;
 }
 
 /* form input fields/button/checkbox */
 .uk-button.uk-button-secondary.uk-button-large.uk-width-1-1.uk-text-bold, 
 .uk-input.uk-form-large, .uk-checkbox {
-    border-radius: 15px;
+    border-radius: 20px;
 }
 
 /* eye icon on password field */
@@ -131,11 +122,39 @@
 .lastButton {
     color: white;
     background-color: #011418;
-    border-radius: 15px;
+    border-radius: 20px;
 }
 
 .lastButton:hover {
     color: #011418;
     background-color: white;
     border-color: #011418;
+}
+
+.recs {
+    border-radius: 20px;
+    opacity: 0.8;
+}
+
+.recTitle {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.locations {
+    font-weight: 500;
+    font-size: 18px;
+    color: #2e2e2e;
+}
+
+.links {
+    color: #696969;
+}
+
+.links:hover {
+    color: black;
+}
+
+.places {
+    font-weight: 700;
 }
