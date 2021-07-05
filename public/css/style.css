@@ -15,8 +15,8 @@
     display:block;
     height: 50px;
     background-image:url('https://ecorelos.com/wp-content/uploads/2020/04/torn-border2.png');
-    position: absolute;
-    bottom: 130px;
+    position: static;
+    bottom: 100px;
     width:300%;
     left:-500px;    
 }
@@ -138,11 +138,20 @@
 .featured {
     font-size: 48px;
     font-weight: 500;
-    color: #011418;
+    color: white;
 }
 
 .featured-image {
     border-radius: 10px;
+}
+
+.featured-artist {
+    background-color: #011418;
+    color: white;
+}
+
+.featured-head-text, .featured-description {
+    font-weight: 200;
 }
 
 .lastButton {

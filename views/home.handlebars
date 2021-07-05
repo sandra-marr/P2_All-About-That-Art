@@ -44,18 +44,18 @@
     </div>
 </div>
 
-<div class="uk-section uk-section-medium uk-section-secondary">
+<div class="featured-artist uk-section uk-section-medium uk-section-default">
     <div class="uk-container artwork" data-id="{{art.user_id}}">
 
         <h3 class="featured uk-text-large uk-text-center uk-margin-small-bottom">Featured Artist</h3>
         <br><br>
 
         <div class="uk-grid uk-child-width-1-1@m" data-id="{{art.user_id}}" uk-grid>
-            <p class="uk-text-center uk-text-large">Meet {{art.user.user_name}}, who prefers {{art.category}} as a media in expressing their creativity.</p>
+            <p class="featured-head-text uk-text-center uk-text-large">Meet {{art.user.user_name}}, who prefers {{art.category}} as a media in expressing their creativity.</p>
             <div>
                <img class="featured-image uk-align-center" data-id="{{art.user_id}}" data-src="{{art.path}}" width="600" height="400" alt="" uk-img>
             </div>
-            <p class="uk-text-center">Description: <br>{{art.description}}</p>
+            <p class="featured-description uk-text-center">Description: <br>{{art.description}}</p>
         </div>
     </div>
 </div>
