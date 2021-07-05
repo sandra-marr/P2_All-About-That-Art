@@ -4,10 +4,10 @@
 
 /* Header image with slight scrim overlay so overlaying text is visible/readable */
 .header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url(/assets/header_images/tim-mossholder-bo3SHP58C3g-unsplash.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url(/assets/header_images/girl-2696947_1920.jpg);
     background-size: cover;
     background-position: center;
-    width: 100%;
+    /* width: 100%; */
     /* height: 100vh; */
 }
 
@@ -19,7 +19,7 @@
 
 /* All About That Art header text */
 .header h1 {
-    font-size: 75px;
+    font-size: 96px;
     letter-spacing: 1.3px;
     font-weight: 700px;
     color: white;
@@ -28,7 +28,7 @@
 
 /* Sign up to view local artist text */
 .header h2 {
-    font-size: 32px;
+    font-size: 42px;
     letter-spacing: 1.3px;
     font-weight: 500px;
     color: white;
@@ -39,7 +39,7 @@
 .uk-button-default {
     color: #011418;
     background-color: white;;
-    border-radius: 3px;
+    border-radius: 12px;
 }
 
 /* Changed button hover to white for now */
@@ -69,7 +69,6 @@
     position:relative;
 }
 
-
 /* Hamburger menu icon color */
 .uk-navbar-toggle {
     color: #011418;
@@ -92,13 +91,13 @@
 
 /* log in/sign up form border radius */
 .uk-margin.uk-margin-auto.uk-width-xlarge.uk-card.uk-card-default.uk-card-body {
-    border-radius: 6px;
+    border-radius: 15px;
 }
 
 /* form input fields/button/checkbox */
 .uk-button.uk-button-secondary.uk-button-large.uk-width-1-1.uk-text-bold, 
 .uk-input.uk-form-large, .uk-checkbox {
-    border-radius: 3px;
+    border-radius: 15px;
 }
 
 /* eye icon on password field */
@@ -108,14 +107,35 @@
 }
 
 .gallery-cards {
-    border-radius: 6px;
+    border-radius: 10px;
 }
 
 
 .mission {
-    font-size: 38px;
+    font-size: 32px;
+    line-height: 1.2;
 }
 
-.purpose {
-    font-size: 38px;
+.purpose2 {
+    font-size: 48px;
+}
+
+.featured {
+    font-size: 48px;
+}
+
+.featured-image {
+    border-radius: 10px;
+}
+
+.lastButton {
+    color: white;
+    background-color: #011418;
+    border-radius: 15px;
+}
+
+.lastButton:hover {
+    color: #011418;
+    background-color: white;
+    border-color: #011418;
 }
