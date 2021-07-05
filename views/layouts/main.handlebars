@@ -31,6 +31,9 @@
 
     <!-- Link to uikit icons -->
     <script src="/js/uikit-icons.min.js"></script>
+
+    <!-- Animate On Scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
 </head>
 
 <body>
@@ -99,10 +102,8 @@
         {{{ body }}}
     </main>
 
-    <!-- Smooth scroll -->
-    <footer class="uk-text-center uk-margin-xsmall uk-section-default">
-        <a href="#" uk-scroll>To Top</a>
-    </footer>
+{{!-- <a class="toTop" href="#" uk-scroll><i class="bi bi-arrow-up-circle"></i></a> --}}
+     
 
 <!-- Link to jQuery before uikit js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -114,6 +115,12 @@
 {{#if logged_in}}
 <script type="text/javascript" src="/public/js/logout.js"></script>
 {{/if}}
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+</script>
+
 </body>
 
 </html>
