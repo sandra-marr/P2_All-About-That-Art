@@ -115,10 +115,14 @@
 
 
 .mission {
+    color: #09558F;
     font-size: 32px;
     line-height: 1.2;
 }
 
+.purpose1 {
+    color: #09558F;
+}
 .purpose2 {
     font-size: 48px;
 }
