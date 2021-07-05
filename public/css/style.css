@@ -4,12 +4,10 @@
 
 /* Header image with slight scrim overlay so overlaying text is visible/readable */
 .header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url(/assets/header_images/pexels-steve-johnson-1545505.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url(/assets/header_images/pexels-steve-johnson-1545505.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* border-bottom-left-radius: 50% 5%; */
-    /* border-bottom-right-radius: 80% 10%; */
 }
 
 .header:after{
@@ -18,7 +16,7 @@
     height: 50px;
     background-image:url('https://ecorelos.com/wp-content/uploads/2020/04/torn-border2.png');
     position: absolute;
-    bottom: 110px;
+    bottom: 130px;
     width:300%;
     left:-500px;    
 }
@@ -139,6 +137,8 @@
 
 .featured {
     font-size: 48px;
+    font-weight: 500;
+    color: #011418;
 }
 
 .featured-image {
@@ -187,6 +187,7 @@
 
 .join {
     font-size: 48px;
+    weight: 500;
     color: #09558F;
 }
 
