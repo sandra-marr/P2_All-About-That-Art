@@ -1,15 +1,28 @@
-const artist = async (event) => {
+// document.querySelector(".uk-link-Cards").addEventListener("click", event =>{
+//   console.log('target', event.target)
+//   console.log('currentTarget:' event.currentTarget);
+// });
+
+const artistProf = async (event) => {
   event.preventDefault();
 
-  const response = await fetch(`/api/artist`, {
-    method: "GET",
-  });
+  if (event.target.hasAttribute("data-id")) {
+    const id = event.target.getAttribute("data-id");
 
-  if (response.ok) {
-    document.location.replace("/api/artist");
+    console.log(id);
+
+    const response = await fetch(`/api/artist/profile/${id}`, {
+      method: "GET",
+    });
+
+    if (response.ok) {
+      document.location.replace(`/api/artist/profile/${id}`);
+    } else {
+      alert("Failed to load artist.");
+    }
   } else {
-    alert("Failed to get artist");
+    alert("no data id.");
   }
 };
 
-document.querySelector(".artist).addEventListener("click", artist);
+document.querySelector("#entireCard").addEventListener("click", artistProf);

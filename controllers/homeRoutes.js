@@ -55,7 +55,7 @@ router.get("/gallery", async (req, res) => {
       where: { category: "painting" },
       order: sequelize.random(),
     });
-
+    ``;
     const sculptureData = await Artwork.findOne({
       where: { category: "sculpture" },
       order: sequelize.random(),

@@ -2,9 +2,9 @@
     <h1 class="uk-heading-medium uk-text-center">Our Artists</h1>
    <div class="uk-link-toggle mason uk-child-width-1-2@s uk-child-width-1-3@m uk-grid-medium uk-grid-row-large uk-flex uk-padding-large" data-uk-scrollspy="target: > div; cls:uk-animation-slide-bottom-medium; delay: 400;" uk-grid="masonry: true">
         {{#each artists as |artist|}}
-        <div class="artwork" id="artistId" data-id="{{artist.id}}">
-             <a class="uk-link-toggle" href="#">
-            <div class="uk-link-Cards uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle uk-flex-column uk-padding" data-id="{{artist.id}}">
+        <a class="uk-link-toggle"  href="">  
+        <div class="artwork" data-id="{{artist.id}}">         
+            <div class="uk-link-Cards uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle uk-flex-column uk-padding" id='entireCard' data-id="{{artist.id}}">
                 <h3>{{artist.user_name}}</h3>
                 Artist Bio:
                 <p class="text-align-left">{{artist.bio}}</p>
@@ -16,4 +16,6 @@
         </a>
     </div>
 </div>
+
+<script src="/js/artist.js"></script>
 
