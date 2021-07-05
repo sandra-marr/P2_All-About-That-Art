@@ -23,14 +23,14 @@
                     <form>
                         <fieldset class="uk-fieldset">
                             <div class="uk-margin">
-                                <textarea class="uk-textarea" rows="5" placeholder="Textarea"></textarea>
+                                <textarea class="uk-textarea" rows="5" placeholder="Textarea" id="text"></textarea>
                             </div>
                         </fieldset>
                     </form>
                 </div>
                 <div class="uk-modal-footer uk-text-right">
                     <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
-                    <button class="uk-button uk-button-primary" type="button">Save</button>
+                    <button class="uk-button uk-button-primary" type="button" id="updateBio">Save</button>
                 </div>
             </div>
         </div>
@@ -85,9 +85,9 @@
                         </div>
 
                         <div class="uk-margin">
-                            <label class="uk-form-label" for="form-stacked-select">Artwork Category</label>
+                            <label class="uk-form-label" for="category">Artwork Category</label>
                             <div class="uk-form-controls">
-                                <select class="uk-select" id="form-stacked-select">
+                                <select class="uk-select" id="category">
                                     <option>Painting</option>
                                     <option>Sculpture</option>
                                     <option>Photography</option>
@@ -99,9 +99,11 @@
                 </div>
                 <div class="uk-modal-footer uk-text-right">
                     <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
-                    <button class="uk-button uk-button-primary" type="button">Save</button>
+                    <button class="uk-button uk-button-primary" type="button" id="addNewArt">Save</button>
                 </div>
             </div>
         </div>
 
 </div>
+
+<script src="/public/js/dashboard.js"></script>

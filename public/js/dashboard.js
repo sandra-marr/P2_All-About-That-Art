@@ -18,21 +18,42 @@ const newArtHandler = async (event) => {
   
       if (response.ok) {
 
-        const nextResponse = await fetch('/api/art', {
-            method: 'PUT',
-            body: JSON.stringify({ response }), 
-            headers: {
-                'Content-Type': 'application/json',
-            }}) 
-      } if(nextResponse.ok) {
-        document.location.replace('/dashboard');
+        console.log(response);
+        document.location.reload();
       } else {
-        alert('Failed to create post');
+        alert(response.statusText);
       }
+
     }
   };
   
+
+
+  const updateBio = async (event) => {
+    event.preventDefault();
+    const newBio = document.querySelector('#text').value;
+  
+    if (newBio) {
+      const response = await fetch('/api/artist/updateBio', {
+          method: 'PUT',
+          body: JSON.stringify({newBio}),
+          headers: { 'Content-Type': 'application/json' },
+        });
+        if (response.ok) {
+          console.log(response);
+          document.location.reload();
+        } else {
+          alert(response.statusText);
+        }
+  
+    }
+  
+  }; 
   
   document
-    .querySelector('.new-post-form')
-    .addEventListener('submit', newPostHandler);
+    .querySelector('#addNewArt')
+    .addEventListener('click', newArtHandler);
+
+    document
+    .querySelector('#updateBio')
+    .addEventListener('click', updateBio);
