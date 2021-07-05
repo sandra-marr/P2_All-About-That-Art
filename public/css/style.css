@@ -15,10 +15,10 @@
 .header:after{
     content:"";
     display:block;
-    height: 45px;
+    height: 50px;
     background-image:url('https://ecorelos.com/wp-content/uploads/2020/04/torn-border2.png');
     position: absolute;
-    bottom: 150px;
+    bottom: 110px;
     width:300%;
     left:-500px;    
 }
@@ -31,7 +31,7 @@
 
 /* All About That Art header text */
 .header h1 {
-    font-size: 80px;
+    font-size: 100px;
     letter-spacing: 1px;
     font-weight: 700;
     color: white;
@@ -40,9 +40,9 @@
 
 /* Sign up to view local artist text */
 .header h2 {
-    font-size: 42px;
+    font-size: 40px;
     letter-spacing: 1px;
-    font-weight: 500px;
+    font-weight: 500;
     color: white;
     font-family: 'Karla';
 }
@@ -56,9 +56,9 @@
 
 /* Changed button hover to white for now */
 .uk-button-default:hover {
-    color: white;
-    background-color: #011418;
-    border-color: #011418;
+    color: #09558F;
+    background-color: white;
+    border-color: #09558F;
 }
 
 
@@ -118,13 +118,23 @@
     color: #09558F;
     font-size: 32px;
     line-height: 1.2;
+    font-weight: 700;
 }
 
 .purpose1 {
     color: #09558F;
+    font-size: 14px;
 }
+
 .purpose2 {
     font-size: 48px;
+    font-weight: 700;
+    color: #011418;
+}
+
+.about {
+    font-weight: 200;
+    color: #011418;
 }
 
 .featured {
@@ -173,4 +183,14 @@
 
 .places {
     font-weight: 700;
+}
+
+.join {
+    font-size: 48px;
+    color: #09558F;
+}
+
+.join2 {
+    font-weight: 200;
+    color: #011418;
 }
