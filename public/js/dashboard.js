@@ -31,10 +31,11 @@ const newArtHandler = async (event) => {
 
   const updateBio = async (event) => {
     event.preventDefault();
-    const newBio = document.querySelector('#text').value;
+    const newBio = document.querySelector('#text').value.trim();
+    
   
     if (newBio) {
-      const response = await fetch('/api/artist/updateBio', {
+      const response = await fetch(`/api/artist/updateBio`, {
           method: 'PUT',
           body: JSON.stringify({newBio}),
           headers: { 'Content-Type': 'application/json' },
