@@ -1,91 +1,41 @@
+/* Colors I am using:
+dark blue #011418;
+lighter blue #09558F;
+white
+*/
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Karla", "sans-serif";
-}
-
-img {
-  height: 200px;
-}
-
-body {
-  height: 100vh;
-  width: 100%;
-}
-
-#profilePic-sec {
-  top: 70px;
-  height: 200px;
-  width: 200px;
-  position: absolute;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 1px solid gray;
-}
-
-#photo {
-  height: 100%;
-  width: 100%;
-}
-
-#picFile {
-  display: none;
-}
-
-#upload {
-  height: 40px;
-  width: 100%;
-  position: absolute;
-  top: 160px;
-  transform: translateX(-50%);
-  text-align: center;
-  line-height: 30px;
-  font-size: 14px;
-  background: #2d9ff7;
-  color: #103b5c;
-  cursor: pointer;
-  display: none;
-}
-#upload:hover {
-  opacity: 0.5;
-}
-
-#artistHeader {
-  position: absolute;
-  top: 290px;
-  left: 50px;
-  font-size: 18px;
+    font-family: 'Karla', 'sans-serif';
 }
 
 /* Header image with slight scrim overlay so overlaying text is visible/readable */
-.header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url(/assets/header_images/pexels-steve-johnson-1545505.jpg);
+.homeHeader {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(/assets/header_images/pexels-steve-johnson-1545505.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.header:after{
+/* Torn page effect under header image */
+.homeHeader:after{
     content:"";
     display:block;
     height: 50px;
     background-image:url('https://ecorelos.com/wp-content/uploads/2020/04/torn-border2.png');
     position: static;
     bottom: 100px;
-    width:300%;
-    left:-500px;    
+    width:100%;
 }
 
-.header-inner {
-  max-width: 80%;
-  margin: 0 auto;
-  padding: 300px 10px 50px;
+.headAlign {
+    max-width: 85%;
+    margin: 0 auto;
+    padding: 300px 10px 50px;
 }
 
 /* All About That Art header text */
-.header h1 {
-    font-size: 100px;
+.topText {
+    font-size: 112px;
     letter-spacing: 1px;
     font-weight: 700;
     color: white;
@@ -93,133 +43,155 @@ body {
 }
 
 /* Sign up to view local artist text */
+
 .header h2 {
-<<<<<<< HEAD
-  font-size: 40px;
-  letter-spacing: 1px;
-  font-weight: 500;
-  color: white;
-  font-family: "Karla";
-=======
     font-size: 40px;
+
+.head2 {
+    font-size: 35px;
     letter-spacing: 1px;
     font-weight: 500;
     color: white;
     font-family: 'Karla';
->>>>>>> develop
 }
 
 /* Call To Action(CTA) button underneath header text */
-.uk-button-default {
-  color: #011418;
-  background-color: white;
-  border-radius: 20px;
+.cta {
+    color: #011418;
+    background-color: white;;
+    border-color: white;
+    border-radius: 12px;
+    transition: all 0.5s;
+    font-size: 20px;
 }
+
 
 /* Changed button hover to white for now */
 .uk-button-default:hover {
-<<<<<<< HEAD
-  color: #09558f;
-  background-color: white;
-  border-color: #09558f;
-=======
     color: #09558F;
     background-color: white;
     border-color: #09558F;
->>>>>>> develop
+/* CTA button hover */
+.cta:hover {
+    color: white;
+    background-color: #011418;
+    border-color: #011418;
 }
 
-/* First section for purpose, who we are, etc. */
-.uk-section.uk-section-large.uk-section-muted {
-  background-color: white;
-  color: #011418;
+.topnav {
+    background-color: transparent;
+    font-family: 'Karla';
 }
 
 /* Navbar link text color */
 .uk-navbar-nav > li > a {
-  color: #011418;
-  transition: none;
+    color: #011418;
+    transition: none;
 }
+
+.uk-navbar-nav > li > a:hover {
+    color: #09558F;
+    font-weight: bold;
+} 
 
 /* Logo */
 .uk-navbar-item.uk-logo {
-  margin-left: -10px;
-  display: block;
-  position: relative;
+    margin-left: -10px;
+    display: block;
+    position:relative;
 }
 
 /* Hamburger menu icon color */
 .uk-navbar-toggle {
-  color: #011418;
+    color: #011418;
+}
+
+.uk-navbar-toggle:hover {
+    color: #09558F;
 }
 
 /* Hamburger menu icon side bar */
 .uk-offcanvas-bar {
-  background-color: #011418;
-  opacity: 0.9;
+    background-color: #011418;
+    opacity: 0.9;
+}
+/* First section home page */
+.first-section {
+    background-color: white;
+    color: #011418;
 }
 
 /* log in/sign up form border radius */
-.uk-margin.uk-margin-auto.uk-width-xlarge.uk-card.uk-card-default.uk-card-body {
-  border-radius: 20px;
+.loginForm, .signupForm {
+    border-radius: 15px;
+}
+
+.welcomeBack, .signUpForFree {
+    font-size: 36px;
 }
 
 /* form input fields/button/checkbox */
-.uk-button.uk-button-secondary.uk-button-large.uk-width-1-1.uk-text-bold,
-.uk-input.uk-form-large,
-.uk-checkbox {
-  border-radius: 20px;
+.uk-button.uk-button-secondary.uk-button-large.uk-width-1-1.uk-text-bold, 
+.uk-input.uk-form-large, .uk-checkbox {
+    border-radius: 12px;
 }
 
 /* eye icon on password field */
 #togglePassword {
-  margin-left: -35px;
-  cursor: pointer;
+    margin-left: -35px;
+    cursor: pointer;
+}
+
+.login-background, .signUpBackground {
+    background-color: #011418;
+    font-family: 'Karla';
+}
+
+.signUpButton, .loginButton {
+    background-color: #09558F;
 }
 
 .gallery-cards {
-  border-radius: 10px;
+    border-radius: 12px;
 }
 
+/* Home page first section */
 .mission {
-<<<<<<< HEAD
-  color: #09558f;
-  font-size: 32px;
-  line-height: 1.2;
-  font-weight: 700;
-=======
-
     color: #09558F;
     font-size: 32px;
     line-height: 1.2;
     font-weight: 700;
->>>>>>> develop
 }
 
+/* First section, first line */
 .purpose1 {
-  color: #09558f;
-  font-size: 14px;
+    color: #09558F;
+    font-size: 18px;
+    font-weight: 200;
 }
 
+/* First section, second line */
 .purpose2 {
-  font-size: 48px;
-  font-weight: 700;
-  color: #011418;
+    font-size: 56px;
+    font-weight: 700;
+    color: #011418;
 }
 
 .about {
     font-weight: 200;
+    font-size: 24px;
     color: #011418;
 }
 
+/* Featured artist section */
 .featured {
-    font-size: 48px;
+    font-size: 56px;
     font-weight: 500;
     color: white;
 }
 
 .featured-image {
-  border-radius: 10px;
+    border-radius: 12px;
 }
 
 .featured-artist {
@@ -227,58 +199,82 @@ body {
   color: white;
 }
 
-.featured-head-text,
-.featured-description {
-  font-weight: 200;
+.featured-head-text, .featured-description {
+    font-weight: 200;
+    font-size: 24px;
 }
 
-.lastButton {
-  color: white;
-  background-color: #011418;
-  border-radius: 20px;
-}
-
-.lastButton:hover {
-  color: #011418;
-  background-color: white;
-  border-color: #011418;
-}
-
-.recs {
-  border-radius: 20px;
-  opacity: 0.8;
-}
-
-.recTitle {
-  font-weight: 700;
-  font-size: 20px;
-}
-
-.locations {
-  font-weight: 500;
-  font-size: 18px;
-  color: #2e2e2e;
-}
-
-.links {
-  color: #696969;
-}
-
-.links:hover {
-  color: black;
-}
-
-.places {
-    font-weight: 700;
-}
-
+/* Last section */
 .join {
-    font-size: 48px;
-    weight: 500;
+    font-size: 56px;
+    font-weight: 700;
     color: #09558F;
 }
 
 .join2 {
     font-weight: 200;
+    font-size: 24px;
     color: #011418;
+}
+
+.lastButton {
+    color: white;
+    background-color: #09558F;
+    border-color: #09558F;
+    border-radius: 12px;
+    font-size: 20px;
+}
+
+.lastButton:hover {
+    color: white;
+    background-color: #011418;
+    border-color: #011418;
+}
+
+/* Rec page */
+.recommendation {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url(/assets/header_images/pexels-steve-johnson-1545505.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.recommendation:after{
+    content:"";
+    display:block;
+    height: 50px;
+    background-image:url('https://ecorelos.com/wp-content/uploads/2020/04/torn-border2.png');
+    position: relative;
+    bottom: -75px;
+    width:100%;
+}
+
+.recCards {
+    border-radius: 12px;
+    opacity: 0.8;
+}
+
+.recTitle {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.reclocations {
+    font-weight: 500;
+    font-size: 20px;
+    color: #011418;
+}
+
+.reclinks {
+    color: #011418;
+}
+
+.reclinks:hover {
+    color: #09558F;
+}
+
+.recPlaces {
+    color: white;
+    font-weight: 700;
+    font-size: 56px;
 }

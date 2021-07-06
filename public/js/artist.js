@@ -1,10 +1,3 @@
-// document.querySelector(".uk-link-Cards").addEventListener("click", event =>{
-//   console.log('target', event.target)
-//   console.log('currentTarget:' event.currentTarget);
-// });
-
-const { values } = require("sequelize/types/lib/operators");
-
 const artistProf = async (event) => {
   event.preventDefault();
 
@@ -20,9 +13,7 @@ const artistProf = async (event) => {
     } else {
       alert("Failed to load artist.");
     }
-  } else {
-    alert("no data id.");
   }
 };
 
-document.querySelector("#entireCard").addEventListener("click", artistProf);
+document.querySelector(".artwork").addEventListener("click", artistProf);
