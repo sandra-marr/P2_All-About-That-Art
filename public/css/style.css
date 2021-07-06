@@ -60,22 +60,21 @@ body {
 
 /* Header image with slight scrim overlay so overlaying text is visible/readable */
 .header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)),
-    url(/assets/header_images/pexels-steve-johnson-1545505.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url(/assets/header_images/pexels-steve-johnson-1545505.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.header:after {
-  content: "";
-  display: block;
-  height: 50px;
-  background-image: url("https://ecorelos.com/wp-content/uploads/2020/04/torn-border2.png");
-  position: static;
-  bottom: 100px;
-  width: 300%;
-  left: -500px;
+.header:after{
+    content:"";
+    display:block;
+    height: 50px;
+    background-image:url('https://ecorelos.com/wp-content/uploads/2020/04/torn-border2.png');
+    position: static;
+    bottom: 100px;
+    width:300%;
+    left:-500px;    
 }
 
 .header-inner {
@@ -86,20 +85,28 @@ body {
 
 /* All About That Art header text */
 .header h1 {
-  font-size: 100px;
-  letter-spacing: 1px;
-  font-weight: 700;
-  color: white;
-  font-family: "Karla";
+    font-size: 100px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: white;
+    font-family: 'Karla';
 }
 
 /* Sign up to view local artist text */
 .header h2 {
+<<<<<<< HEAD
   font-size: 40px;
   letter-spacing: 1px;
   font-weight: 500;
   color: white;
   font-family: "Karla";
+=======
+    font-size: 40px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: white;
+    font-family: 'Karla';
+>>>>>>> develop
 }
 
 /* Call To Action(CTA) button underneath header text */
@@ -111,9 +118,15 @@ body {
 
 /* Changed button hover to white for now */
 .uk-button-default:hover {
+<<<<<<< HEAD
   color: #09558f;
   background-color: white;
   border-color: #09558f;
+=======
+    color: #09558F;
+    background-color: white;
+    border-color: #09558F;
+>>>>>>> develop
 }
 
 /* First section for purpose, who we are, etc. */
@@ -169,10 +182,18 @@ body {
 }
 
 .mission {
+<<<<<<< HEAD
   color: #09558f;
   font-size: 32px;
   line-height: 1.2;
   font-weight: 700;
+=======
+
+    color: #09558F;
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 700;
+>>>>>>> develop
 }
 
 .purpose1 {
@@ -187,14 +208,14 @@ body {
 }
 
 .about {
-  font-weight: 200;
-  color: #011418;
+    font-weight: 200;
+    color: #011418;
 }
 
 .featured {
-  font-size: 48px;
-  font-weight: 500;
-  color: white;
+    font-size: 48px;
+    font-weight: 500;
+    color: white;
 }
 
 .featured-image {
@@ -248,28 +269,16 @@ body {
 }
 
 .places {
-  font-weight: 700;
-}
-
-.uk-card-media-bottom {
-  width: 100%;
-  height: 15vw;
-  object-fit: cover;
-}
-
-uk-card-media-top {
-  width: 100%;
-  height: 15vw;
-  object-fit: cover;
+    font-weight: 700;
 }
 
 .join {
-  font-size: 48px;
-  weight: 500;
-  color: #09558f;
+    font-size: 48px;
+    weight: 500;
+    color: #09558F;
 }
 
 .join2 {
-  font-weight: 200;
-  color: #011418;
+    font-weight: 200;
+    color: #011418;
 }
