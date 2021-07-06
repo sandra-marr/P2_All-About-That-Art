@@ -10,7 +10,7 @@ white
 
 /* Header image with slight scrim overlay so overlaying text is visible/readable */
 .header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url(/assets/header_images/pexels-steve-johnson-1545505.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(/assets/header_images/pexels-steve-johnson-1545505.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -44,8 +44,8 @@ white
 }
 
 /* Sign up to view local artist text */
-.header h2 {
-    font-size: 40px;
+.head2 {
+    font-size: 35px;
     letter-spacing: 1px;
     font-weight: 500;
     color: white;
@@ -56,15 +56,16 @@ white
 .cta {
     color: #011418;
     background-color: white;;
+    border-color: white;
     border-radius: 12px;
     transition: all 0.5s;
 }
 
 /* CTA button hover */
 .cta:hover {
-    color: #09558F;
-    background-color: white;
-    border-color: #09558F;
+    color: white;
+    background-color: #011418;
+    border-color: #011418;
 }
 
 .topnav {
@@ -205,13 +206,14 @@ white
 
 .lastButton {
     color: white;
-    background-color: #011418;
+    background-color: #09558F;
+    border-color: #09558F;
     border-radius: 12px;
 }
 
 .lastButton:hover {
-    color: #011418;
-    background-color: white;
+    color: white;
+    background-color: #011418;
     border-color: #011418;
 }
 
