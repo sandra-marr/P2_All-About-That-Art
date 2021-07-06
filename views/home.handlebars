@@ -11,8 +11,8 @@
 <div class="uk-section uk-section-large uk-section-muted">
     <div class="uk-container">
         <div>
-            <p class="purpose1 uk-text-center uk-margin-remove-bottom uk-text-small">Who We Are</p>
-            <p class="purpose2 uk-text-lead uk-text-center uk-text-large">Lorem ipsum <br> Lorem ipsum dolor sit amet.</p>
+            <p class="purpose1 uk-text-center uk-margin-remove-bottom uk-text-small">What Are We About?</p>
+            <p class="purpose2 uk-text-lead uk-text-center uk-text-large">Our Mission <br> Lorem ipsum dolor sit amet.</p>
             <br>
         </div>
 
@@ -22,7 +22,7 @@
                 <span><img src="/assets/icons/inspiration.png" height="64" width="64"></span>
                 </div>
                 <p class="mission uk-text-large uk-margin-small-bottom uk-text-light">Art as Therapy</p>
-                <p class="uk-text-light">We are all about that art and allowing people to use art as a means of therapy. While art therapy might be considered beneficial for just the artist, we believe that sharing art with the world also benefits others.</p>
+                <p class="about uk-text-light">We are all about that art and allowing people to use art as a means of therapy. While art therapy might be considered beneficial for just the artist, we believe that sharing art with the world also benefits others.</p>
             </div>
 
             <br>
@@ -30,7 +30,7 @@
             <div data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000">
                 <span><img src="/assets/icons/giving.png" height="64" width="64"></span>
                 <p class="mission uk-text-large uk-margin-small-bottom">Promote Art</p>
-                <p class="uk-text-light">We intend to create a safe place for artists and viewers to create, share, and provide thoughts on various pieces virtually. By connecting with art online, art therapy is always at your fingertips.</p>
+                <p class="about uk-text-light">We intend to create a safe place for artists and viewers to create, share, and provide thoughts on various pieces virtually. By connecting with art online, art therapy is always at your fingertips.</p>
             </div>
 
             <br>
@@ -38,24 +38,24 @@
             <div data-aos="fade-left" data-aos-offset="200" data-aos-duration="1000">
                 <span><img src="/assets/icons/helping-hand.png" height="64" width="64"></span>
                 <p class="mission uk-text-large uk-margin-small-bottom">Art Unifies</p>
-                <p class="uk-text-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati magni tenetur voluptas, repudiandae enim necessitatibus consequuntur hic id iure pariatur! ipsum dolor sit</p>
+                <p class="about uk-text-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati magni tenetur voluptas, repudiandae enim necessitatibus consequuntur hic id iure pariatur! ipsum dolor sit</p>
             </div>
         </div>
     </div>
 </div>
 
-<div class="uk-section uk-section-medium uk-section-secondary">
+<div class="featured-artist uk-section uk-section-medium uk-section-default">
     <div class="uk-container artwork" data-id="{{art.user_id}}">
 
         <h3 class="featured uk-text-large uk-text-center uk-margin-small-bottom">Featured Artist</h3>
         <br><br>
 
         <div class="uk-grid uk-child-width-1-1@m" data-id="{{art.user_id}}" uk-grid>
-            <p class="uk-text-center uk-text-large">Meet {{art.user.user_name}}, who prefers {{art.category}} as a media in expressing their creativity.</p>
+            <p class="featured-head-text uk-text-center uk-text-large">Meet {{art.user.user_name}}, who prefers {{art.category}} as a media in expressing their creativity.</p>
             <div>
                <img class="featured-image uk-align-center" data-id="{{art.user_id}}" data-src="{{art.path}}" width="600" height="400" alt="" uk-img>
             </div>
-            <p class="uk-text-center">Description: <br>{{art.description}}</p>
+            <p class="featured-description uk-text-center">Description: <br>{{art.description}}</p>
         </div>
     </div>
 </div>
@@ -64,11 +64,11 @@
     <div class="uk-container">
         <div>
             <div data-aos="fade-down" data-aos-offset="200" data-aos-duration="1000">
-                <p class="purpose2 uk-text-lead uk-text-center uk-text-large">Join Our <br>Virtual Art Community</p>
+                <p class="join uk-text-lead uk-text-center uk-text-large">Join Our <br>Virtual Art Community</p>
             </div>
             <br>
             <div class="uk-child-width-1-1@m uk-grid-large" uk-grid>
-                <p class="uk-text-light uk-text-center">To view artwork, please visit our gallery page.<br> If there are particular artists that you would like to learn about, visit the artist page to read through biographies. <br>Finally to contribute, either as an artist or a viewer, sign up for a free account. Enjoy!</p>
+                <p class="join2 uk-text-light uk-text-center">To view artwork, please visit our gallery page.<br> If there are particular artists that you would like to learn about, visit the artist page to read through biographies. <br>Finally to contribute, either as an artist or a viewer, sign up for a free account. Enjoy!</p>
             <p class="uk-margin uk-margin-medium-top uk-text-center">
                 <a class="lastButton uk-button uk-button-default uk-button-large uk-padding-medium" id="signup" href="/signup">Join Our Art Community</a>
             </p>
