@@ -1,17 +1,53 @@
-<div>
-    {{user.user_name}}
-    {{user.bio}}
-    {{#each user.artworks as |artwork|}}
-    <img src="{{artwork.path}}"/>
-    {{/each}}
+   <!-- Ajax script here? or use cloudinary?-->
+    <div>
+        <div class="uk-container">
+            <div class="uk-column-1-1@s uk-column-1-2 uk-column-divider">
+                <img class="uk-align-center" id="profilePic-sec" src="https://img.icons8.com/ios-filled/100/000000/artist.png" height="150" width="150" alt="usersPhoto"/>
+                <h2 class="uk-align-center uk-text-center">{{user.user_name}}</h2>
+                <br><br>
+                <h3>Preferred Media: {{user.media}}</h3>
+                <p class="aboutTxt">{{user.bio}}</p>
+                <h4>Contact: </h4>
+                <div class="socialButtons">
+                    {{#if user.twitter}}
+                    <a href="{{user.twitter}}" class="uk-icon-button uk-margin-small-right" uk-icon="twitter"></a>
+                    {{/if}}
+                    {{#if user.facebook}}
+                    <a href="{{user.facebook}}" class="uk-icon-button  uk-margin-small-right" uk-icon="facebook"></a>
+                    {{/if}}
+                    {{#if user.instagram}}
+                    <a href="{{user.instagram}}" class="uk-icon-button  uk-margin-small-right" uk-icon="instagram"></a>
+                    {{/if}}
+                    {{#if user.linkedin}}
+                    <a href="{{user.linkedIn}}" class="uk-icon-button  uk-margin-small-right" uk-icon="linkedin"></a>
+                    {{/if}}
+                    {{#if user.email}}
+                    <a href="mailto:{{ user.email }}" class="uk-icon-button  uk-margin-small-right" uk-icon="mail"></a>
+                    {{/if}}
+                </div>
 
-    {{#if user.linkedIn}}
-    linkedIn: 
-    {{user.linkedIn}}
-    {{/if}}
+            </div>
+        </div>
+        <br><br>
+    <!--container for gallery-->
+    <section class="uk-container uk-container-xsmall gallery-section artwork">
+        <div class="card-container uk-flex uk-flex-wrap-between uk-grid-column-medium uk-child-width-1-3@m uk-grid-row-medium"
+            uk-grid>           
+            <!-- card 1 -->
+            {{#each user.artworks as |artwork|}}
+            <div class="entireCard uk-card uk-card-hover uk-card-small" data-id="{{artwork.id}}">
+                <div class="uk-card-media-top" data-id="{{artwork.id}}">
+                    <img src="{{artwork.path}}" data-id="{{artwork.id}}" alt="{{artwork.descrition}}">
+                </div>
+                <div class="uk-card-body">
+                    <h3 class="uk-card-title">{{artwork.name}}</h3>
+                    <p>{{artwork.description}}
+                    </p>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </section>
 
-    {{#if user.instagram}}
-    Instagram:
-    {{user.instagram}}
-    {{/if}}
-</div>
+
+<script src="/js/profile.js"></script>
