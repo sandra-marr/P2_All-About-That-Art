@@ -3,13 +3,13 @@
 //   console.log('currentTarget:' event.currentTarget);
 // });
 
+const { values } = require("sequelize/types/lib/operators");
+
 const artistProf = async (event) => {
   event.preventDefault();
 
   if (event.target.hasAttribute("data-id")) {
     const id = event.target.getAttribute("data-id");
-
-    console.log(id);
 
     const response = await fetch(`/api/artist/profile/${id}`, {
       method: "GET",
