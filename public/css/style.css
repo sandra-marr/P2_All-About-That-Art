@@ -24,8 +24,7 @@ white
     background-image:url('https://ecorelos.com/wp-content/uploads/2020/04/torn-border2.png');
     position: static;
     bottom: 100px;
-    width:300%;
-    left:-500px;    
+    width:100%;
 }
 
 .headAlign {
@@ -224,7 +223,7 @@ white
 
 /* Rec page */
 .recommendation {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(/assets/header_images/pexels-steve-johnson-1545505.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url(/assets/header_images/pexels-steve-johnson-1545505.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -237,8 +236,7 @@ white
     background-image:url('https://ecorelos.com/wp-content/uploads/2020/04/torn-border2.png');
     position: relative;
     bottom: -75px;
-    width:300%;
-    left:-500px;    
+    width:100%;
 }
 
 .recCards {
@@ -268,6 +266,7 @@ white
 .recPlaces {
     color: white;
     font-weight: 700;
+    font-size: 56px;
 }
 
 
