@@ -4,8 +4,6 @@ const artistProf = async (event) => {
   if (event.target.hasAttribute("data-id")) {
     const id = event.target.getAttribute("data-id");
 
-    console.log(id);
-
     const response = await fetch(`/api/artist/profile/${id}`, {
       method: "GET",
     });
@@ -15,9 +13,7 @@ const artistProf = async (event) => {
     } else {
       alert("Failed to load artist.");
     }
-  } else {
-    alert("no data id.");
   }
 };
 
-document.querySelector("#entireCard").addEventListener("click", artistProf);
+document.querySelector(".artwork").addEventListener("click", artistProf);

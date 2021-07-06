@@ -5,9 +5,9 @@
   font-family: "Karla", "sans-serif";
 }
 
-img {
+/* img {
   height: 200px;
-}
+} */
 
 body {
   height: 100vh;
@@ -15,17 +15,10 @@ body {
 }
 
 #profilePic-sec {
-  /* top: 90px; */
- 
   border-radius: 50%;
   overflow: hidden;
   border: 1px solid gray;
 }
-
-/* #photo {
-  height: 100%;
-  width: auto;
-} */
 
 
 
