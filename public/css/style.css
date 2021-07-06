@@ -1,3 +1,9 @@
+/* Colors I am using:
+dark blue #011418;
+lighter blue #09558F;
+white
+*/
+
 * {
     font-family: 'Karla', 'sans-serif';
 }
@@ -10,6 +16,7 @@
     background-repeat: no-repeat;
 }
 
+/* Torn page effect under header image */
 .header:after{
     content:"";
     display:block;
@@ -22,7 +29,7 @@
 }
 
 .header-inner {
-    max-width: 80%;
+    max-width: 85%;
     margin: 0 auto;
     padding: 300px 10px 50px;
 }
@@ -46,24 +53,22 @@
 }
 
 /* Call To Action(CTA) button underneath header text */
-.uk-button-default {
+.cta {
     color: #011418;
     background-color: white;;
-    border-radius: 20px;
+    border-radius: 12px;
+    transition: all 0.5s;
 }
 
-/* Changed button hover to white for now */
-.uk-button-default:hover {
+/* CTA button hover */
+.cta:hover {
     color: #09558F;
     background-color: white;
     border-color: #09558F;
 }
 
-
-/* First section for purpose, who we are, etc. */
-.uk-section.uk-section-large.uk-section-muted {
-    background-color: white;
-    color: #011418;
+.topnav {
+    background-color: transparent;
 }
 
 /* Navbar link text color */
@@ -71,6 +76,11 @@
     color: #011418;
     transition: none;
 }
+
+.uk-navbar-nav > li > a:hover {
+    color: #09558F;
+    font-weight: bold;
+} 
 
 /* Logo */
 .uk-navbar-item.uk-logo {
@@ -84,21 +94,30 @@
     color: #011418;
 }
 
+.uk-navbar-toggle:hover {
+    color: #09558F;
+}
+
 /* Hamburger menu icon side bar */
 .uk-offcanvas-bar {
     background-color: #011418;
     opacity: 0.9;
 }
+/* First section home page */
+.first-section {
+    background-color: white;
+    color: #011418;
+}
 
 /* log in/sign up form border radius */
-.uk-margin.uk-margin-auto.uk-width-xlarge.uk-card.uk-card-default.uk-card-body {
-    border-radius: 20px;
+.loginForm, .signupForm {
+    border-radius: 15px;
 }
 
 /* form input fields/button/checkbox */
 .uk-button.uk-button-secondary.uk-button-large.uk-width-1-1.uk-text-bold, 
 .uk-input.uk-form-large, .uk-checkbox {
-    border-radius: 20px;
+    border-radius: 12px;
 }
 
 /* eye icon on password field */
@@ -108,10 +127,10 @@
 }
 
 .gallery-cards {
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
-
+/* Home page first section */
 .mission {
     color: #09558F;
     font-size: 32px;
@@ -119,13 +138,16 @@
     font-weight: 700;
 }
 
+/* First section, first line */
 .purpose1 {
     color: #09558F;
-    font-size: 14px;
+    font-size: 18px;
+    font-weight: 200;
 }
 
+/* First section, second line */
 .purpose2 {
-    font-size: 48px;
+    font-size: 56px;
     font-weight: 700;
     color: #011418;
 }
@@ -135,6 +157,7 @@
     color: #011418;
 }
 
+/* Featured artist section */
 .featured {
     font-size: 48px;
     font-weight: 500;
@@ -142,7 +165,7 @@
 }
 
 .featured-image {
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 .featured-artist {
@@ -154,46 +177,7 @@
     font-weight: 200;
 }
 
-.lastButton {
-    color: white;
-    background-color: #011418;
-    border-radius: 20px;
-}
-
-.lastButton:hover {
-    color: #011418;
-    background-color: white;
-    border-color: #011418;
-}
-
-.recs {
-    border-radius: 20px;
-    opacity: 0.8;
-}
-
-.recTitle {
-    font-weight: 700;
-    font-size: 20px;
-}
-
-.locations {
-    font-weight: 500;
-    font-size: 18px;
-    color: #2e2e2e;
-}
-
-.links {
-    color: #696969;
-}
-
-.links:hover {
-    color: black;
-}
-
-.places {
-    font-weight: 700;
-}
-
+/* Last section */
 .join {
     font-size: 48px;
     weight: 500;
@@ -204,3 +188,46 @@
     font-weight: 200;
     color: #011418;
 }
+
+.lastButton {
+    color: white;
+    background-color: #011418;
+    border-radius: 12px;
+}
+
+.lastButton:hover {
+    color: #011418;
+    background-color: white;
+    border-color: #011418;
+}
+
+/* Rec page */
+.recs {
+    border-radius: 12px;
+    opacity: 0.8;
+}
+
+.recTitle {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.locations {
+    font-weight: 500;
+    font-size: 20px;
+    color: #011418;
+}
+
+.links {
+    color: #09558F;
+}
+
+.links:hover {
+    color: #011418;
+}
+
+.places {
+    font-weight: 700;
+}
+
+
