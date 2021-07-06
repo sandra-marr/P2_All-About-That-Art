@@ -42,7 +42,7 @@
 
         <div class="uk-navbar-left">
             <ul class="uk-navbar-nav">
-                <a class="uk-navbar-item uk-logo" href="#"><img src="/assets/images/paintstrokelogo.png" height="40" width="80"></a>
+                <a class="uk-navbar-item uk-logo" href="/"><img src="/assets/images/paintstrokelogo.png" id="logo"></a>
                 <li class="uk-visible@m"><a href="/">Home</a></li>
                 <li class="uk-visible@m"><a href="/artist">Artist</a></li>
                 <li class="uk-visible@m"><a href="/gallery">Gallery</a></li>
@@ -113,7 +113,7 @@
 
 <!-- Render script for logged in users only -->
 {{#if logged_in}}
-<script type="text/javascript" src="/public/js/logout.js"></script>
+<script type="text/javascript" src="/js/logout.js"></script>
 {{/if}}
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
