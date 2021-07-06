@@ -4,21 +4,12 @@ const { Artwork, BlogPost, Comment, Recommendation, User, Image } = require('../
 
 
 //create a new comment
-router.post('/new', withAuth, async (req, res) => {
+router.post('/new/:id', withAuth, async (req, res) => {
     try {
       const newComment = await Comment.create({
-          include: [
-            {
-                model: Artwork,
-                attributes: [
-                  'id',
-                  'user_id',
-                ],
-              },
-
-          ],
-        ...req.body,
+        comment_body: req.body.comment_body,
         user_id: req.session.user_id,
+        art_id: req.params.id,
       });
   
       res.status(200).json(newComment);
@@ -26,8 +17,7 @@ router.post('/new', withAuth, async (req, res) => {
       res.status(500).json(err);
     }
   });
-  
- 
+
   
   // view comments and join with  Artwork model
   router.get('/Artwork/:id',withAuth, async (req, res) => {

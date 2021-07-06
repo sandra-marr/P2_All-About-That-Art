@@ -4,12 +4,17 @@
 <div class="uk-container uk-margin-large">
     <div>
         <!-- profile pic  --> 
-        <img class="uk-align-left uk-margin-remove-adjacent" src="/assets/images/Avatar.PNG" alt="Avatar">
+        <div>
+            <img class="uk-align-left uk-margin-remove-adjacent" src="/assets/images/Avatar.PNG" height="150" width="150" alt="Avatar">
 
-        <form>
-        <input id="picFile" type="file">
-        <label for="picFile" id="upload">Upload Picture</label>
-        </form>
+            <p>To upload a profile image, select a file with the button below:</p>
+
+            <div class="js-upload" uk-form-custom>
+                <input type="file" multiple>
+                <button class="uk-button uk-button-default" type="button" tabindex="-1">Upload</button>
+            </div>
+        </div>
+
         <!-- Bio  -->
         <h2>About me</h2>
         <h3>{{user.user_name}}</h3>
@@ -111,4 +116,4 @@
 
 </div>
 
-<script src="/public/js/dashboard.js"></script>
+<script src="/js/dashboard.js"></script>
