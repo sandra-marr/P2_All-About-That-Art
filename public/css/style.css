@@ -15,48 +15,19 @@ body {
 }
 
 #profilePic-sec {
-  top: 70px;
-  height: 200px;
-  width: 200px;
-  position: absolute;
+  /* top: 90px; */
+ 
   border-radius: 50%;
   overflow: hidden;
   border: 1px solid gray;
 }
 
-#photo {
+/* #photo {
   height: 100%;
-  width: 100%;
-}
+  width: auto;
+} */
 
-#picFile {
-  display: none;
-}
 
-#upload {
-  height: 40px;
-  width: 100%;
-  position: absolute;
-  top: 160px;
-  transform: translateX(-50%);
-  text-align: center;
-  line-height: 30px;
-  font-size: 14px;
-  background: #2d9ff7;
-  color: #103b5c;
-  cursor: pointer;
-  display: none;
-}
-#upload:hover {
-  opacity: 0.5;
-}
-
-#artistHeader {
-  position: absolute;
-  top: 290px;
-  left: 50px;
-  font-size: 18px;
-}
 
 /* Header image with slight scrim overlay so overlaying text is visible/readable */
 .header {
@@ -132,6 +103,11 @@ body {
   margin-left: -10px;
   display: block;
   position: relative;
+}
+
+#logo {
+  height: 80px;
+  width: 80px;
 }
 
 /* Hamburger menu icon color */

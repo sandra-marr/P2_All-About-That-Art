@@ -1,8 +1,3 @@
-// document.querySelector(".uk-link-Cards").addEventListener("click", event =>{
-//   console.log('target', event.target)
-//   console.log('currentTarget:' event.currentTarget);
-// });
-
 const artistProf = async (event) => {
   event.preventDefault();
 
