@@ -69,6 +69,7 @@ white
 
 .topnav {
     background-color: transparent;
+    font-family: 'Karla';
 }
 
 /* Navbar link text color */
@@ -114,6 +115,10 @@ white
     border-radius: 15px;
 }
 
+.welcomeBack, .signUpForFree {
+    font-size: 36px;
+}
+
 /* form input fields/button/checkbox */
 .uk-button.uk-button-secondary.uk-button-large.uk-width-1-1.uk-text-bold, 
 .uk-input.uk-form-large, .uk-checkbox {
@@ -124,6 +129,15 @@ white
 #togglePassword {
     margin-left: -35px;
     cursor: pointer;
+}
+
+.login-background, .signUpBackground {
+    background-color: #011418;
+    font-family: 'Karla';
+}
+
+.signUpButton, .loginButton {
+    background-color: #09558F;
 }
 
 .gallery-cards {
