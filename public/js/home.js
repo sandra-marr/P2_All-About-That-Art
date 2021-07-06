@@ -4,7 +4,7 @@ const artworkHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
 
-    console.log(id);
+  
 
     const response = await fetch(`/api/artist/profile/${id}`, {
       method: 'GET',
@@ -15,9 +15,7 @@ const artworkHandler = async (event) => {
       } else {
         alert('Failed to load artist.');
       }
-    } else {
-      alert('no data id.');
-    }
+  } 
 };
   
 document
