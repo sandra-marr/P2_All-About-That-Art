@@ -133,10 +133,10 @@ img {
 
 /* form input fields/button/checkbox */
 
-.uk-button.uk-button-secondary.uk-button-large.uk-width-1-1.uk-text-bold, 
-.uk-input.uk-form-large, .uk-checkbox {
-    border-radius: 10px;
-
+.uk-button.uk-button-secondary.uk-button-large.uk-width-1-1.uk-text-bold,
+.uk-input.uk-form-large,
+.uk-checkbox {
+  border-radius: 10px;
 }
 
 /* eye icon on password field */
@@ -156,12 +156,9 @@ img {
   background-color: #09558f;
 }
 
-
-
 .gallery-cards {
   border-radius: 12px;
 }
-
 
 /* Home page first section */
 .mission {
@@ -284,65 +281,63 @@ img {
 }
 
 .recPlaces {
-
-    color: white;
-    font-weight: 700;
-    font-size: 56px;
+  color: white;
+  font-weight: 700;
+  font-size: 56px;
 }
 
 /* Gallery Page Styling */
 
 .chooseCategory {
-    font-weight: 500;
-    font-size: 60px;
-    color: white;
+  font-weight: 500;
+  font-size: 60px;
+  color: white;
 }
 
 .sectionCategory {
-    font-weight: 500;
-    font-size: 50px;
-    color: white;
+  font-weight: 500;
+  font-size: 50px;
+  color: white;
 }
 
 .sectionCategory:hover {
-    font-weight: 700;
-    font-size: 50px;
+  font-weight: 700;
+  font-size: 50px;
 }
 
 .gallery-cards {
-    border-radius: 10px;
+  border-radius: 10px;
 }
 
 .galleryBackground {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url(/assets/header_images/pexels-steve-johnson-1545505.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)),
+    url(/assets/header_images/pexels-steve-johnson-1545505.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-  color: white;
+/* color: white;
   font-weight: 700;
   font-size: 56px;
-}
+} */
 
 #entireCard {
   border-radius: 12%;
   opacity: 0.8;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 350px;
-  max-height: 650px;
+  max-height: 600px;
   margin: auto;
   text-align: center;
   width: 100%;
   height: auto;
   transform: scale(1);
   transition: all 0.9s ease 0s;
-  padding: 0;
 }
 #entireCard:hover {
   cursor: pointer;
 }
-
 .artwork span {
   text-align: center;
   font-size: 21px;
@@ -350,15 +345,20 @@ img {
   font-weight: bold;
   color: #09558f;
 }
-
+#bioSec {
+  text-align: center;
+  font-size: 21px;
+  cursor: none;
+  font-weight: bold;
+  color: #09558f;
+}
 #userName {
   text-align: center;
-  font-size: 26px;
   cursor: none;
   top: 25px;
   left: 0;
   font-weight: bold;
-  padding: -10px;
+  padding: -40%;
 }
 
 .bioTxt {
@@ -375,12 +375,134 @@ img {
 
 .artSecHeading {
   font-weight: bold;
+  text-align: center;
+  color: white;
 }
 
-.profilePic-Artist img {
+.profilePicArtist {
+  height: 40px;
+  width: 100%;
+  position: absolute;
+  top: 160px;
+  transform: translateX(-50%);
+  text-align: center;
+  line-height: 30px;
+  font-size: 14px;
+  color: #103b5c;
+  cursor: none;
+  display: none;
+}
+
+.artSec {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)),
+    url(/assets/header_images/pexels-steve-johnson-1545505.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#artistDashboard {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)),
+    url(/assets/header_images/pexels-steve-johnson-1545505.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gallerySection {
+  color: #103b5c;
+}
+#profilePg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)),
+    url(/assets/header_images/pexels-steve-johnson-1545505.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#artCardBody #artworkTitle {
+  color: #09558f;
+  font-size: 25px;
+  text-align: center;
+}
+#entireArtCard {
+  border-radius: 12%;
+  padding: 10px;
+  overflow: hidden;
+  margin-right: 50px;
+  max-width: auto;
+  max-height: 370px;
+  width: 260px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
+}
+
+#artInfo {
+  text-align: center;
+  color: #103b5c;
+  font-size: 18px;
+  padding-bottom: 150px;
+}
+
+.profileHeaders {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.artistFonts {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}
+
+#artworkProfileSec {
   height: auto;
-  max-width: 100%;
-  width: 50px;
-  height: 50px;
+  width: auto;
+  max-width: 300px;
+  max-height: 300px;
+  padding-top: 20px;
 }
 
+#profilePicArtist {
+  max-height: auto;
+  max-width: auto;
+  height: 165px;
+  width: 170px;
+  border-radius: 50%;
+  background-color: white;
+  bottom: -25px;
+  position: relative;
+}
+
+.profilePicSec {
+  padding: -30%;
+}
+
+button#goBack {
+  color: white;
+  position: relative;
+  top: 30px;
+}
+
+h3.artistFonts {
+  font-size: 20px;
+  position: relative;
+  bottom: 100px;
+}
+h2.profileHeaders {
+  position: relative;
+  top: 10px;
+}
+
+#artCardBody {
+  text-align: center;
+  font-size: 21px;
+  cursor: none;
+  font-weight: bold;
+  color: #09558f;
+  pointer-events: none;
+}
+
+#entireArtCard:hover {
+  cursor: pointer;
+}
