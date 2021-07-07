@@ -3,11 +3,11 @@
         <div class="uk-container">
             <div class="uk-column-1-1@s uk-column-1-2 uk-column-divider">
                 <img class="uk-align-center" id="profilePic-sec" src="https://img.icons8.com/ios-filled/100/000000/artist.png" height="150" width="150" alt="usersPhoto"/>
-                <h2 class="uk-align-center uk-text-center">{{user.user_name}}</h2>
+                <h2 class="uk-align-center uk-text-center">{{user_name}}</h2>
                 <br><br>
                 <h3>About Me </h3>
-                <h4>{{user.user_name}} </h4>
-                <p class="aboutTxt">{{user.bio}}</p>
+                <h4>{{user_name}} </h4>
+                <p class="aboutTxt">{{bio}}</p>
                  <!-- Modal to update Bio-->
             <a class="uk-button uk-button-default" href="#modal-sections" uk-toggle>Update Bio</a>
 
@@ -21,7 +21,7 @@
                         <form>
                             <fieldset class="uk-fieldset">
                                 <div class="uk-margin">
-                                    <textarea class="uk-textarea" rows="5" placeholder="Textarea" id="text"></textarea>
+                                    <textarea class="uk-textarea" rows="5" id="text">{{bio}}</textarea>
                                 </div>
                             </fieldset>
                         </form>

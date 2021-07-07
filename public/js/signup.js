@@ -12,34 +12,29 @@ togglePassword.addEventListener('click', function (eyeball)  {
 
   const signupFormHandler = async (event) => {
     event.preventDefault();
-  // console.log("I Am HERE!");
-    const name = document.querySelector('#name-signup').value.trim();
+
+    const user_name = document.querySelector('#name-signup').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
     const isArtist = document.querySelector('#isArtist').checked;
-
-    console.log(name);
-    console.log(email);
-    console.log(password);
   
-    if (name && email && password) {
-      const response = await fetch('/api/users/', {
+    if (user_name && email && password) {
+      const response = await fetch('/api/users/signup', {
         method: 'POST',
-        body: JSON.stringify({ name, email, password, isArtist}),
+        body: JSON.stringify({ user_name, email, password, isArtist}),
         headers: { 'Content-Type': 'application/json' },
       });
   
       if (response.ok) {
         document.location.replace('/dashboard')
-        
-      } else {
-        console.log(response);
-        alert(response.statusText);
-
-      }
+      } else{
+        alert("An account with that email already exists")}
+        document.location.reload();
+    } else {
+      alert("Please fill in all fields.")
     }
   };
   
   document
-    .querySelector('.signup-form')
-    .addEventListener('submit', signupFormHandler);
+    .querySelector('.signUpButton')
+    .addEventListener('click', signupFormHandler);
