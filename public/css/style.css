@@ -380,11 +380,18 @@ img {
   color: white;
 }
 
-.profilePicArtist img {
-  height: auto;
-  max-width: 100%;
-  width: 50px;
-  height: 50px;
+.profilePicArtist {
+  height: 40px;
+  width: 100%;
+  position: absolute;
+  top: 160px;
+  transform: translateX(-50%);
+  text-align: center;
+  line-height: 30px;
+  font-size: 14px;
+  color: #103b5c;
+  cursor: pointer;
+  display: none;
 }
 
 .artSec {
@@ -395,22 +402,75 @@ img {
   background-repeat: no-repeat;
 }
 
-.profilePicSec {
-  padding: -30%;
-}
-
-.imageContainer img {
-  display: block;
-  margin-left: auto;
-  margin-right: 100px;
-  width: 100%;
-  object-fit: cover;
-}
-
 #artistDashboard {
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)),
     url(/assets/header_images/pexels-steve-johnson-1545505.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.gallerySection {
+  color: #103b5c;
+}
+#profilePg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)),
+    url(/assets/header_images/pexels-steve-johnson-1545505.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#artCardBody #artworkTitle {
+  color: #09558f;
+  font-size: 25px;
+  text-align: center;
+}
+#entireArtCard {
+  border-radius: 12%;
+  padding: 10px;
+  overflow: hidden;
+  margin-right: 50px;
+  max-width: auto;
+  max-height: 370px;
+  width: 260px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
+}
+
+#artInfo {
+  text-align: center;
+  color: #103b5c;
+  font-size: 18px;
+  padding-bottom: 150px;
+}
+
+.profileHeaders {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.artistFonts {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}
+
+#artworkProfileSec {
+  height: auto;
+  width: auto;
+  max-width: 300px;
+  max-height: 300px;
+  padding-top: 20px;
+}
+
+#profilePicArtist {
+  max-height: auto;
+  max-width: auto;
+  height: 145px;
+  width: 170px;
+  border-radius: 50%;
+  background-color: white;
+  bottom: -25px;
+  position: relative;
 }

@@ -1,14 +1,15 @@
    <!-- Ajax script here? or use cloudinary?-->
-    <div>
+    <div id="profilePg">
         <div class="uk-container">
             <div class="uk-column-1-1@s uk-column-1-2 uk-column-divider">
                 <img class="uk-align-center" id="profilePicArtist" src="https://img.icons8.com/ios-filled/100/000000/artist.png" height="50" width="50" alt="usersPhoto"/>
-                <h2 class="uk-align-center uk-text-center">{{user.user_name}}</h2>
+                <h2 class="profileHeaders uk-align-center uk-text-center">{{user.user_name}}</h2>
                 <br><br>
-                <h3>Preferred Media: {{user.media}}</h3>
-                <p class="aboutTxt">{{user.bio}}</p>
-                <h4>Contact: </h4>
-                <div class="socialButtons">
+                <h3 class="artistFonts">Preferred Media: {{user.media}}</h3>
+                <h3 class="profileHeaders">About the Artist</h3>
+                <p class="artistFonts">{{user.bio}}</p>
+                <h4 class="profileHeaders">Contact: </h4>
+                <div class="socialButtons uk-flex uk-flex-center">
                     {{#if user.twitter}}
                     <a href="{{user.twitter}}" class="uk-icon-button uk-margin-small-right" uk-icon="twitter"></a>
                     {{/if}}
@@ -25,29 +26,29 @@
                     <a href="mailto:{{ user.email }}" class="uk-icon-button  uk-margin-small-right" uk-icon="mail"></a>
                     {{/if}}
                 </div>
-
             </div>
         </div>
-        <br><br>
+        <br>
     <!--container for gallery-->
-    <section class="uk-container uk-container-xsmall gallery-section artwork">
-        <div class="card-container uk-flex uk-flex-wrap-between uk-grid-column-medium uk-child-width-1-3@m uk-grid-row-medium"
+    <div class="uk-container uk-container-small gallerySection artwork">
+        <div class="cardContainer uk-flex uk-flex-wrap-between uk-grid-column-medium uk-child-width-1-4@m uk-grid-row-medium"
             uk-grid>           
             <!-- card 1 -->
             {{#each user.artworks as |artwork|}}
-            <div class="entireCard uk-card uk-card-hover uk-card-small" data-id="{{artwork.id}}">
+            <div class="uk-card uk-animation-fade uk-card-default uk-flex uk-flex-center uk-flex-middle uk-flex-column uk-padding uk-card-hover" id='entireArtCard' data-id="{{artwork.id}}">
                 <div class="imageContainer uk-card-media-top" data-id="{{artwork.id}}">
                     <img src="{{artwork.path}}" data-id="{{artwork.id}}" id="artworkProfileSec" alt="{{artwork.description}}">
                 </div>
-                <div class="uk-card-body">
-                    <h3 class="uk-card-title">{{artwork.name}}</h3>
-                    <p>{{artwork.description}}
-                    </p>
+                <div class="uk-card-body" id="artCardBody">
+                    <h3 class="uk-card-title" id="artworkTitle">{{artwork.name}}</h3>
+                    <span id="artInfo"><p>{{artwork.description}}
+                    </p></span>
                 </div>
             </div>
             {{/each}}
         </div>
-    </section>
+        </div>
+        </div>
             
             
 <script src="/js/profile.js"></script>
