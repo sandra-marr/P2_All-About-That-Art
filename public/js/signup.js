@@ -16,22 +16,26 @@ togglePassword.addEventListener('click', function (eyeball)  {
     const name = document.querySelector('#name-signup').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
+    const isArtist = document.querySelector('#isArtist').checked;
 
-    // console.log(name);
-    // console.log(email);
-    // console.log(password);
+    console.log(name);
+    console.log(email);
+    console.log(password);
   
     if (name && email && password) {
       const response = await fetch('/api/users/', {
         method: 'POST',
-        body: JSON.stringify({ name, email, password }),
+        body: JSON.stringify({ name, email, password, isArtist}),
         headers: { 'Content-Type': 'application/json' },
       });
   
       if (response.ok) {
-        document.location.replace('/dashboard');
+        document.location.replace('/dashboard')
+        
       } else {
+        console.log(response);
         alert(response.statusText);
+
       }
     }
   };
