@@ -84,10 +84,10 @@ router.get("/gallery", async (req, res) => {
 });
 
 //dashboard is intended to be the user interface for updating their bio or uploading artwork. This should come up after logging in.
-router.get("/dashboard/:id", withAuth, async (req, res) => {
+router.get("/dashboard", withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.params.id, {
+    const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ["password"] },
       include: [{ model: Artwork }],
     });
