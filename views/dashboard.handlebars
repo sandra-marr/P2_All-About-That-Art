@@ -5,9 +5,18 @@
                 <img class="uk-align-center" id="profilePic-sec" src="https://img.icons8.com/ios-filled/100/000000/artist.png" height="150" width="150" alt="usersPhoto"/>
                 <h2 class="uk-align-center uk-text-center">{{user_name}}</h2>
                 <br><br>
-                <h3>About Me </h3>
-                <h4>{{user_name}} </h4>
+                <h3>About Me</h3>
+                <h4>{{user_name}}</h4>
                 <p class="aboutTxt">{{bio}}</p>
+                <h4>My Contact Information</h4>
+                <div class="socialButtons">
+                    <a href="{{user.twitter}}" class="uk-icon-button uk-margin-small-right" uk-icon="twitter"></a>
+                    <a href="{{user.facebook}}" class="uk-icon-button  uk-margin-small-right" uk-icon="facebook"></a>
+                    <a href="{{user.instagram}}" class="uk-icon-button  uk-margin-small-right" uk-icon="instagram"></a>
+                    <a href="{{user.linkedIn}}" class="uk-icon-button  uk-margin-small-right" uk-icon="linkedin"></a>
+                    <a href="mailto:{{ user.email }}" class="uk-icon-button  uk-margin-small-right" uk-icon="mail"></a>
+                </div>
+
                  <!-- Modal to update Bio-->
             <a class="uk-button uk-button-default" href="#modal-sections" uk-toggle>Update Bio</a>
 
@@ -15,12 +24,29 @@
                 <div class="uk-modal-dialog">
                     <button class="uk-modal-close-default" type="button" uk-close></button>
                     <div class="uk-modal-header">
-                        <h2 class="uk-modal-title">update Bio</h2>
+                        <h2 class="uk-modal-title">update user information</h2>
                     </div>
                     <div class="uk-modal-body">
                         <form>
                             <fieldset class="uk-fieldset">
                                 <div class="uk-margin">
+                                    <label for="email">Email</label>
+                                    <input class="uk-text" rows="5" id="email"></input>
+                                </div>
+                                 <div class="uk-margin">
+                                    <label for="email">LinkedIn</label>
+                                    <input class="uk-text" rows="5" id="linkedin"></input>
+                                </div>
+                                 <div class="uk-margin">
+                                    <label for="email">Instagram</label>
+                                    <input class="uk-text" rows="5" id="instagram"></input>
+                                </div>
+                                 <div class="uk-margin">
+                                    <label for="email">Artist Account</label>
+                                    <input class="uk-checkbox" type="checkbox" id="artist"></input>
+                                </div>
+                                <div class="uk-margin">
+                                    <label for="bio">Bio</label>
                                     <textarea class="uk-textarea" rows="5" id="text">{{bio}}</textarea>
                                 </div>
                             </fieldset>
@@ -32,8 +58,7 @@
                     </div>
                 </div>
             </div>
-            
-               
+        </div>
 
             </div>
         </div>
