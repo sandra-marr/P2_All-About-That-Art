@@ -6,7 +6,7 @@
       "password": "password12345",
       "isArtist": true,
       "bio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium ipsam omnis inventore amet ratione adipisci facilis eius alias repudiandae libero officiis voluptatibus dignissimos rem dolor reprehenderit, deserunt tenetur nisi.",
-      "media": "painting",
+      "media": "Painting",
       "linkedIn": "sampleLinkedIn",
       "instagram": null
     },
@@ -17,7 +17,7 @@
       "password": "password12345",
       "isArtist": true,
       "bio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium ipsam omnis inventore amet ratione adipisci facilis eius alias repudiandae libero officiis voluptatibus dignissimos rem dolor reprehenderit, deserunt tenetur nisi.",
-      "media": "painting",
+      "media": "Painting",
       "linkedIn": null,
       "instagram": "sampleInstagram"
     },
@@ -28,7 +28,7 @@
       "password": "password12345",
       "isArtist": true,
       "bio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium ipsam omnis inventore amet ratione adipisci facilis eius alias repudiandae libero officiis voluptatibus dignissimos rem dolor reprehenderit, deserunt tenetur nisi.",
-      "media": "sculpture",
+      "media": "Sculpture",
       "linkedIn": "sampleLinkedIn",
       "instagram": "sampleInstagram"
     },
@@ -39,19 +39,19 @@
       "password": "password12345",
       "isArtist": true,
       "bio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium ipsam omnis inventore amet ratione adipisci facilis eius alias repudiandae libero officiis voluptatibus dignissimos rem dolor reprehenderit, deserunt tenetur nisi.",
-      "media": "photograph",
+      "media": "Photography",
       "linkedIn": null,
       "instagram": null
     },
     {
       "id": 5,
-      "user_name": "SAndy",
+      "user_name": "Sandy",
       "email": "sandy@sandy.com",
       "password": "password12345",
-      "isArtist": false,
-      "bio": null,
-      "media": null,
-      "linkedIn": null,
-      "instagram": null
+      "isArtist": true,
+      "bio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium ipsam omnis inventore amet ratione adipisci facilis eius alias repudiandae libero officiis voluptatibus dignissimos rem dolor reprehenderit, deserunt tenetur nisi.",
+      "media": "Photography",
+      "linkedIn": "https://www.linkedin.com/in/sandra-r-marr/",
+      "instagram": "https://www.instagram.com/srpeters44/"
     }
 ]

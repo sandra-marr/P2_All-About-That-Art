@@ -18,35 +18,6 @@ router.post('/new/:id', withAuth, async (req, res) => {
     }
   });
 
-  
-  // view comments and join with  Artwork model
-  router.get('/Artwork/:id',withAuth, async (req, res) => {
-
-    try {
-      const commentData = await Comment.findAll({ 
-        include: [ 
-            {
-                model: Artwork,
-                attributes: [
-                  'id',
-                ],
-              },
-            ],
-            where: {
-                art_id: req.params.id,   
-            },
-      });
-  
-      const comment = commentData.map((comment) => comment.get({ plain: true }));
-  
-      res.status(200).json(comment);
-    } catch (err) {
-      res.status(500).json(err);
-    };
-  });
-  
-
-
   // edit comments by id 
   router.put('/:id', withAuth, async (req,res) => {
     try {

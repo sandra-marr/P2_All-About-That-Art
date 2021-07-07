@@ -19,12 +19,9 @@ User.init(
     user_name: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
     },
     isArtist: {
       type: DataTypes.BOOLEAN,
-      allowNull: false,
-      default: true,
     },
     email: {
       type: DataTypes.STRING,
@@ -54,6 +51,14 @@ User.init(
       allowNull: true,
     },
     instagram: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    facebook: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    twitter: {
       type: DataTypes.STRING,
       allowNull: true,
     },
