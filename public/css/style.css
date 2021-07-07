@@ -338,7 +338,6 @@ img {
 #entireCard:hover {
   cursor: pointer;
 }
-
 .artwork span {
   text-align: center;
   font-size: 21px;
@@ -390,7 +389,7 @@ img {
   line-height: 30px;
   font-size: 14px;
   color: #103b5c;
-  cursor: pointer;
+  cursor: none;
   display: none;
 }
 
@@ -467,12 +466,43 @@ img {
 #profilePicArtist {
   max-height: auto;
   max-width: auto;
-  height: 145px;
+  height: 165px;
   width: 170px;
   border-radius: 50%;
   background-color: white;
   bottom: -25px;
   position: relative;
+}
+
 .profilePicSec {
   padding: -30%;
+}
+
+button#goBack {
+  color: white;
+  position: relative;
+  top: 30px;
+}
+
+h3.artistFonts {
+  font-size: 20px;
+  position: relative;
+  bottom: 100px;
+}
+h2.profileHeaders {
+  position: relative;
+  top: 10px;
+}
+
+#artCardBody {
+  text-align: center;
+  font-size: 21px;
+  cursor: none;
+  font-weight: bold;
+  color: #09558f;
+  pointer-events: none;
+}
+
+#entireArtCard:hover {
+  cursor: pointer;
 }
