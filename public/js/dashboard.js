@@ -1,5 +1,7 @@
 const newArtHandler = async (event) => {
     event.preventDefault();
+
+    const name = document.querySelector('#name').value.trim();
   
     const description = document.querySelector('#description').value.trim();
     
@@ -10,7 +12,7 @@ const newArtHandler = async (event) => {
     if (description && category && image) {
       const response = await fetch(`/api/upload`, {
         method: 'POST',
-        body: JSON.stringify({ image , description, category}),
+        body: JSON.stringify({ name, description, category, image}),
         headers: {
           'Content-Type': 'application/json',
         },
@@ -29,15 +31,16 @@ const newArtHandler = async (event) => {
   
 
 
-  const updateBio = async (event) => {
+const updateBio = async (event) => {
     event.preventDefault();
-    const newBio = document.querySelector('#text').value.trim();
+
+    const bio = document.querySelector('#text').value.trim();
     
   
-    if (newBio) {
-      const response = await fetch(`/api/artist/updateBio`, {
+    if (bio) {
+      const response = await fetch(`/api/dashboard/updateBio`, {
           method: 'PUT',
-          body: JSON.stringify({newBio}),
+          body: JSON.stringify({ bio }),
           headers: { 'Content-Type': 'application/json' },
         });
         if (response.ok) {

@@ -473,4 +473,6 @@ img {
   background-color: white;
   bottom: -25px;
   position: relative;
+.profilePicSec {
+  padding: -30%;
 }
