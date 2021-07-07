@@ -12,10 +12,14 @@ togglePassword.addEventListener('click', function (eyeball)  {
 
   const signupFormHandler = async (event) => {
     event.preventDefault();
-  
+  // console.log("I Am HERE!");
     const name = document.querySelector('#name-signup').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
+
+    // console.log(name);
+    // console.log(email);
+    // console.log(password);
   
     if (name && email && password) {
       const response = await fetch('/api/users', {
@@ -25,7 +29,7 @@ togglePassword.addEventListener('click', function (eyeball)  {
       });
   
       if (response.ok) {
-        document.location.replace('/');
+        document.location.replace('/dashboard');
       } else {
         alert(response.statusText);
       }
