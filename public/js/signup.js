@@ -22,7 +22,7 @@ togglePassword.addEventListener('click', function (eyeball)  {
     // console.log(password);
   
     if (name && email && password) {
-      const response = await fetch('/api/users', {
+      const response = await fetch('/api/users/', {
         method: 'POST',
         body: JSON.stringify({ name, email, password }),
         headers: { 'Content-Type': 'application/json' },

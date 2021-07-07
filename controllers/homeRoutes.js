@@ -1,5 +1,12 @@
 const router = require("express").Router();
-const { Artwork, BlogPost, Comment, Recommendation, User, Image, } = require("../models");
+const {
+  Artwork,
+  BlogPost,
+  Comment,
+  Recommendation,
+  User,
+  Image,
+} = require("../models");
 const { sequelize } = require("../models/Artwork");
 const withAuth = require("../utils/auth");
 
@@ -77,10 +84,10 @@ router.get("/gallery", async (req, res) => {
 });
 
 //dashboard is intended to be the user interface for updating their bio or uploading artwork. This should come up after logging in.
-router.get("/dashboard", withAuth, async (req, res) => {
+router.get("/dashboard/:id", withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id, {
+    const userData = await User.findByPk(req.params.id, {
       attributes: { exclude: ["password"] },
       include: [{ model: Artwork }],
     });
@@ -90,6 +97,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
     res.render("dashboard", {
       ...user,
       logged_in: req.session.logged_in,
+      
     });
   } catch (err) {
     res.status(500).json(err);
