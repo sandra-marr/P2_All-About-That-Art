@@ -290,13 +290,14 @@ img {
   opacity: 0.8;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 350px;
-  max-height: 450px;
+  max-height: 650px;
   margin: auto;
   text-align: center;
   width: 100%;
   height: auto;
   transform: scale(1);
   transition: all 0.9s ease 0s;
+  padding: 0;
 }
 #entireCard:hover {
   cursor: pointer;
@@ -314,9 +315,10 @@ img {
   text-align: center;
   font-size: 26px;
   cursor: none;
-  top: 0;
+  top: 25px;
   left: 0;
   font-weight: bold;
+  padding: -10px;
 }
 
 .bioTxt {
@@ -335,7 +337,9 @@ img {
   font-weight: bold;
 }
 
-.profilePic-Artist {
-  height: 50px;
+.profilePic-Artist img {
+  height: auto;
+  max-width: 100%;
   width: 50px;
+  height: 50px;
 }
