@@ -1,0 +1,58 @@
+[
+    {
+        "name": "black cat",
+        "link": "./public/assets/images/blackcat.jpeg",
+        "art_id": 1
+        
+    },
+    {
+        "name": "sad cat",
+        "link": "./public/assets/images/sadcat.jpeg", 
+        "art_id": 2
+    },
+    {
+        "name": "lightning cat",
+        "link": "./public/assets/images/lightningcat.jpeg",
+        "art_id": 3
+    },
+    {
+        "name": "lighthouse",
+        "link": "./public/assets/images/lighthouse.jpeg",
+        "art_id": 4
+    },
+    {
+        "name": "sailing",
+        "link": "./public/assets/images/sailing.jpeg",
+        "art_id": 5
+    },
+    {
+        "name": "mountains",
+        "link": "./public/assets/images/mountains.jpeg",
+        "art_id": 6
+    },
+    {
+        "name": "snail sculpture",
+        "link": "./public/assets/images/snail-sculpture.jpeg",
+        "art_id": 7
+    },
+    {
+        "name": "clay sculpture",
+        "link": "./public/assets/images/clay-sculpture.jpeg",
+        "art_id": 8
+    },
+    {
+        "name": "green vintage",
+        "link": "./public/assets/images/green-vintage-car.jpeg",
+        "art_id": 9
+    },
+    {
+        "name": "yellow taxi",
+        "link": "./public/assets/images/yellow-taxi.jpeg",
+        "art_id": 10
+    },
+    {
+        "name": "VW Beetle",
+        "link": "./public/assets/images/red_VW-bug.jpeg",
+        "art_id": 11
+    }
+]

@@ -1,0 +1,35 @@
+<div class="uk-section uk-section-muted uk-section-med uk-flex uk-height-viewport">
+    <div class="uk-container uk-margin-large">
+        <h1 class="uk-heading-divider ">{{art.name}}</h1>
+
+        <div class="uk-cover-container">
+            <img src="{{art.path}}" alt="{{art.description}}"/>
+            <p>{{art.description}}</p>
+        </div>
+        <form >
+            <fieldset class="uk-fieldset">
+                <legend class="uk-legend">Add a Comment</legend>
+                <div class="uk-margin">
+                    <textarea class="uk-textarea" rows="5" placeholder="Please share your thoughts in a meaningful and supportive manner." id="comment_body"></textarea>
+                    <button class="uk-button uk-button-default" id="newComment">Submit comment</button>
+                </div>
+            </fieldset>
+
+        </form>
+    </div>
+    <div class="uk-container .uk-margin-large">
+        <h1 class="uk-heading-divider ">Comments</h1>
+        <div>
+    {{#each art.comments as |comment|}}
+    <div>
+        <p>{{comment.comment_body}}</p>
+        
+        <p>~ {{comment.user.user_name}}</p>
+    </div>
+    {{/each}}
+</div>
+    </div>
+
+    
+</div>
+<script src="/js/artworkpage.js"></script>
