@@ -54,6 +54,14 @@ User.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
+    facebook: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    twitter: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
   },
   {
     hooks: {
