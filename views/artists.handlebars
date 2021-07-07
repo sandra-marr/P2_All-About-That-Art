@@ -1,13 +1,14 @@
-<div class="uk-section uk-section-medium uk-section-muted header">
-    <h1 class="uk-heading-medium uk-text-center">Our Artists</h1>
+<div class="artSec uk-section uk-section-medium uk-section-muted header">
+    <h1 class="artSecHeading uk-heading-medium uk-text-center">Our Artists</h1>
    <div class="uk-link-toggle mason uk-child-width-1-2@s uk-child-width-1-3@m uk-grid-medium uk-grid-row-large uk-flex uk-padding-large artwork" data-uk-scrollspy="target: > div; cls:uk-animation-slide-bottom-medium; delay: 400;" uk-grid="masonry: true">
         {{#each artists as |artist|}}
-        <div class="artwork">
+       <div class="artwork">
             <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle uk-flex-column uk-padding artwork" id='entireCard' data-id="{{artist.id}}">
-                <h3 data-id="{{artist.id}}">{{artist.user_name}}</h3>
-                Artist Bio:
-                <p class="text-align-left">{{artist.bio}}</p>
-                Artist Preferred Media:
+                <h3 id="userName" data-id="{{artist.id}}">{{artist.user_name}}</h3>
+                <img class="uk-align-center" id="profilePic-sec" src="https://img.icons8.com/ios-filled/100/000000/artist.png" height="150" width="150" alt="usersPhoto"/>
+                <article id="bioSec"><span>Artist Bio:</span>
+                <p class="bioTxt text-align-left">{{artist.bio}}</p></article>
+                <span>Artist Preferred Media:</span>
                 <p>{{artist.media}}</p>
             </div>
         </div>     

@@ -2,7 +2,7 @@
     <div>
         <div class="uk-container">
             <div class="uk-column-1-1@s uk-column-1-2 uk-column-divider">
-                <img class="uk-align-center" id="profilePic-sec" src="https://img.icons8.com/ios-filled/100/000000/artist.png" height="150" width="150" alt="usersPhoto"/>
+                <img class="uk-align-center" id="profilePic-Artist" src="https://img.icons8.com/ios-filled/100/000000/artist.png" height="50" width="50" alt="usersPhoto"/>
                 <h2 class="uk-align-center uk-text-center">{{user.user_name}}</h2>
                 <br><br>
                 <h3>Preferred Media: {{user.media}}</h3>
@@ -37,7 +37,7 @@
             {{#each user.artworks as |artwork|}}
             <div class="entireCard uk-card uk-card-hover uk-card-small" data-id="{{artwork.id}}">
                 <div class="uk-card-media-top" data-id="{{artwork.id}}">
-                    <img src="{{artwork.path}}" data-id="{{artwork.id}}" alt="{{artwork.descrition}}">
+                    <img src="{{artwork.path}}" data-id="{{artwork.id}}" alt="{{artwork.description}}">
                 </div>
                 <div class="uk-card-body">
                     <h3 class="uk-card-title">{{artwork.name}}</h3>
@@ -48,6 +48,6 @@
             {{/each}}
         </div>
     </section>
-
-
+            
+            
 <script src="/js/profile.js"></script>
