@@ -159,6 +159,7 @@ img {
 .signUpButton,.loginButton {
   background-color: #09558f;
   font-size: 20px;
+  transition: all 0.5s;
 }
 
 .featured {
@@ -200,6 +201,7 @@ img {
   border-color: #09558f;
   border-radius: 10px;
   font-size: 20px;
+  transition: all 0.5s;
 }
 
 .lastButton:hover {
@@ -258,29 +260,38 @@ img {
 }
 
 /* Gallery Handlebars Styling */
-.galleryCards {
+
+.galleryImageCard,.paintings,.sculptures,.photographs {
   border-radius: 10px;
 }
 
-.chooseCategory {
-    font-weight: 500;
-    font-size: 60px;
-    color: white;
+.galleryImage {
+  border-radius: 10px;
+} 
+
+.galleryHeader {
+  font-size: 56px;
+  font-weight: 500;
+  color: #011418;
 }
 
-.sectionCategory {
-    font-weight: 500;
-    font-size: 50px;
-    color: white;
+.categoryTitle {
+  font-size: 32px;
+  font-weight: 500;
+  color: #011418;
 }
 
-.sectionCategory:hover {
-    font-weight: 700;
-    font-size: 50px;
+.categoryTitle:hover {
+  color: #09558f;
+  cursor: pointer;
+}
+
+.galleryOverlay {
+  border-radius: 10 10 0 0;
 }
 
 /* Matrix Gallery Handlebars Styling */
-.matrixImages {
+.matrixImages,.matrixCards {
   border-radius: 10px;
 }
 
@@ -335,6 +346,7 @@ img {
   border-color: #09558f;
   border-radius: 10px;
   font-size: 20px;
+  transition: all 0.5s;
 }
 
 .artworkSubmitComment:hover {
