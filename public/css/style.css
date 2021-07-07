@@ -57,7 +57,7 @@ white
   color: #011418;
   background-color: white;
   border-color: white;
-  border-radius: 12px;
+  border-radius: 10px;
   transition: all 0.5s;
   font-size: 20px;
 }
@@ -123,7 +123,7 @@ img {
 /* log in/sign up form border radius */
 .loginForm,
 .signupForm {
-  border-radius: 15px;
+  border-radius: 12px;
 }
 
 .welcomeBack,
@@ -153,10 +153,11 @@ img {
 .signUpButton,
 .loginButton {
   background-color: #09558f;
+  font-size: 20px;
 }
 
 .gallery-cards {
-  border-radius: 12px;
+  border-radius: 10px;
 }
 
 
@@ -196,7 +197,8 @@ img {
 }
 
 .featured-image {
-  border-radius: 12px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .featured-artist {
@@ -227,7 +229,7 @@ img {
   color: white;
   background-color: #09558f;
   border-color: #09558f;
-  border-radius: 12px;
+  border-radius: 10px;
   font-size: 20px;
 }
 
@@ -257,13 +259,13 @@ img {
 }
 
 .recCards {
-  border-radius: 12px;
+  border-radius: 10px;
   opacity: 0.8;
 }
 
 .recTitle {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .reclocations {
@@ -281,7 +283,6 @@ img {
 }
 
 .recPlaces {
-
     color: white;
     font-weight: 700;
     font-size: 56px;
@@ -376,6 +377,27 @@ img {
   height: 50px;
 }
 
+/* Matrix Gallery Page Styles */
+.matrixImages {
+  border-radius: 10px;
+}
+
+.matrixImages:hover {
+  cursor: pointer;
+}
+
+.matrixCategoryHeader {
+  font-size: 56px;
+  font-weight: 700;
+  color: #011418;
+}
+
+.matrixSubCategory {
+  font-size: 24px;
+  font-weight: 300;
+  color: #09558f;
+}
+
 /* Artwork Gallery Page Styles */
 .artName {
   font-size: 56px;
@@ -409,7 +431,7 @@ img {
   color: white;
   background-color: #09558f;
   border-color: #09558f;
-  border-radius: 12px;
+  border-radius: 10px;
   font-size: 20px;
 }
 
