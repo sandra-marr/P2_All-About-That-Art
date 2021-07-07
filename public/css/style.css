@@ -133,10 +133,10 @@ img {
 
 /* form input fields/button/checkbox */
 
-.uk-button.uk-button-secondary.uk-button-large.uk-width-1-1.uk-text-bold, 
-.uk-input.uk-form-large, .uk-checkbox {
-    border-radius: 10px;
-
+.uk-button.uk-button-secondary.uk-button-large.uk-width-1-1.uk-text-bold,
+.uk-input.uk-form-large,
+.uk-checkbox {
+  border-radius: 10px;
 }
 
 /* eye icon on password field */
@@ -156,12 +156,9 @@ img {
   background-color: #09558f;
 }
 
-
-
 .gallery-cards {
   border-radius: 12px;
 }
-
 
 /* Home page first section */
 .mission {
@@ -284,60 +281,59 @@ img {
 }
 
 .recPlaces {
-
-    color: white;
-    font-weight: 700;
-    font-size: 56px;
+  color: white;
+  font-weight: 700;
+  font-size: 56px;
 }
 
 /* Gallery Page Styling */
 
 .chooseCategory {
-    font-weight: 500;
-    font-size: 60px;
-    color: white;
+  font-weight: 500;
+  font-size: 60px;
+  color: white;
 }
 
 .sectionCategory {
-    font-weight: 500;
-    font-size: 50px;
-    color: white;
+  font-weight: 500;
+  font-size: 50px;
+  color: white;
 }
 
 .sectionCategory:hover {
-    font-weight: 700;
-    font-size: 50px;
+  font-weight: 700;
+  font-size: 50px;
 }
 
 .gallery-cards {
-    border-radius: 10px;
+  border-radius: 10px;
 }
 
 .galleryBackground {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url(/assets/header_images/pexels-steve-johnson-1545505.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)),
+    url(/assets/header_images/pexels-steve-johnson-1545505.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-  color: white;
+/* color: white;
   font-weight: 700;
   font-size: 56px;
-}
+} */
 
 #entireCard {
   border-radius: 12%;
   opacity: 0.8;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 350px;
-  max-height: 650px;
+  max-height: 600px;
   margin: auto;
   text-align: center;
   width: 100%;
   height: auto;
   transform: scale(1);
   transition: all 0.9s ease 0s;
-  padding: 0;
 }
 #entireCard:hover {
   cursor: pointer;
@@ -350,15 +346,20 @@ img {
   font-weight: bold;
   color: #09558f;
 }
-
+#bioSec {
+  text-align: center;
+  font-size: 21px;
+  cursor: none;
+  font-weight: bold;
+  color: #09558f;
+}
 #userName {
   text-align: center;
-  font-size: 26px;
   cursor: none;
   top: 25px;
   left: 0;
   font-weight: bold;
-  padding: -10px;
+  padding: -40%;
 }
 
 .bioTxt {
@@ -375,12 +376,24 @@ img {
 
 .artSecHeading {
   font-weight: bold;
+  text-align: center;
 }
 
-.profilePic-Artist img {
+.profilePicArtist img {
   height: auto;
   max-width: 100%;
   width: 50px;
   height: 50px;
 }
 
+.artSec {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)),
+    url(/assets/header_images/pexels-steve-johnson-1545505.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.profilePicSec {
+  padding: -30%;
+}
