@@ -3,13 +3,17 @@ const { Artwork, BlogPost, Comment, Recommendation, User, Image } = require('../
 const withAuth = require('../../utils/auth');
 
 // update bio 
-router.put('/updateBio/', withAuth, async (req,res) => {
+router.put('/updateInfo/', withAuth, async (req,res) => {
   try {
-
-    console.log(req.body)
     const userData = await User.update(
         {
-          bio: req.body.bio
+          bio: req.body.bio,
+          emai: req.body.email,
+          linkedin: req.body.linkedin,
+          instagram: req.body.instagram,
+          facebook: req.body.facebook,
+          twitter: req.body.twitter,
+          isArtist: req.body.isArtist,
         },
         {
         where: {
@@ -18,10 +22,8 @@ router.put('/updateBio/', withAuth, async (req,res) => {
 
 
     res.status(200).json(userData);
-    console.log(userData)
 
   } catch (err) {
-    console.log(err)
     res.status(500).json(err);
   }
 });

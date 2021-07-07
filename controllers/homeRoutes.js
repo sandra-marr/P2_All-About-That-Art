@@ -99,7 +99,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
       logged_in: req.session.logged_in,
       
     });
-    console.log(user)
+  console.log(user)
   } catch (err) {
     res.status(500).json(err);
   }
@@ -144,3 +144,5 @@ router.get("/signup", (req, res) => {
 });
 
 module.exports = router;
+
+

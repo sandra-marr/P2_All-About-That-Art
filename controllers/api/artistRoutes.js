@@ -21,23 +21,4 @@ router.get('/profile/:id', async (req, res) => {
     }
 });
 
-// update bio 
-router.put('/dashboard/updateBio/:id', withAuth, async (req,res) => {
-  try {
-
-    const userBio = await User.bio.update(
-      {
-        bio: req.body.bio,
-      },
-      );
-
-      res.status(200).json(userBio);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-
-
-
 module.exports = router;

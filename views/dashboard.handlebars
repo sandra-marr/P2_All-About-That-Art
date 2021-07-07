@@ -3,22 +3,30 @@
         <div class="uk-container">
             <div class="uk-column-1-1@s uk-column-1-2 uk-column-divider">
                 <img class="uk-align-center" id="profilePic-sec" src="https://img.icons8.com/ios-filled/100/000000/artist.png" height="150" width="150" alt="usersPhoto"/>
-                <h2 class="uk-align-center uk-text-center">{{user_name}}</h2>
-                <br><br>
-                <h3>About Me</h3>
-                <h4>{{user_name}}</h4>
-                <p class="aboutTxt">{{bio}}</p>
-                <h4>My Contact Information</h4>
-                <div class="socialButtons">
-                    <a href="{{user.twitter}}" class="uk-icon-button uk-margin-small-right" uk-icon="twitter"></a>
-                    <a href="{{user.facebook}}" class="uk-icon-button  uk-margin-small-right" uk-icon="facebook"></a>
-                    <a href="{{user.instagram}}" class="uk-icon-button  uk-margin-small-right" uk-icon="instagram"></a>
-                    <a href="{{user.linkedIn}}" class="uk-icon-button  uk-margin-small-right" uk-icon="linkedin"></a>
-                    <a href="mailto:{{ user.email }}" class="uk-icon-button  uk-margin-small-right" uk-icon="mail"></a>
+                <h4>Display name: <span style="color: blue">{{user_name}}</span></h4>
+                <br> <br>
+                <h4 class="aboutTxt"> Biography: <span style="color: blue">{{bio}}</span></h4>
+                <h4>My Contact Information:</h4>
+                 <div class="socialButtons">
+                    {{#if twitter}}
+                    <a href="{{twitter}}" class="uk-icon-button uk-margin-small-right" uk-icon="twitter"></a>
+                    {{/if}}
+                    {{#if facebook}}
+                    <a href="{{facebook}}" class="uk-icon-button  uk-margin-small-right" uk-icon="facebook"></a>
+                    {{/if}}
+                    {{#if instagram}}
+                    <a href="{{instagram}}" class="uk-icon-button  uk-margin-small-right" uk-icon="instagram"></a>
+                    {{/if}}
+                    {{#if linkedin}}
+                    <a href="{{linkedIn}}" class="uk-icon-button  uk-margin-small-right" uk-icon="linkedin"></a>
+                    {{/if}}
+                    {{#if email}}
+                    <a href="mailto:{{ email }}" class="uk-icon-button  uk-margin-small-right" uk-icon="mail"></a>
+                    {{/if}}
                 </div>
 
-                 <!-- Modal to update Bio-->
-            <a class="uk-button uk-button-default" href="#modal-sections" uk-toggle>Update Bio</a>
+                 <!-- Modal to update user info-->
+            <a class="uk-button uk-button-default" href="#modal-sections" uk-toggle>Update User Information</a>
 
             <div id="modal-sections" uk-modal>
                 <div class="uk-modal-dialog">
@@ -31,19 +39,31 @@
                             <fieldset class="uk-fieldset">
                                 <div class="uk-margin">
                                     <label for="email">Email</label>
-                                    <input class="uk-text" rows="5" id="email"></input>
+                                    <input class="uk-text" value="{{email}}" id="email"></input>
                                 </div>
-                                 <div class="uk-margin">
-                                    <label for="email">LinkedIn</label>
-                                    <input class="uk-text" rows="5" id="linkedin"></input>
+                                <div class="uk-margin">
+                                    <label for="user_name">Display Name</label>
+                                    <input class="uk-text" value="{{user_name}}" id="user_name"></input>
                                 </div>
-                                 <div class="uk-margin">
-                                    <label for="email">Instagram</label>
-                                    <input class="uk-text" rows="5" id="instagram"></input>
+                                <div class="uk-margin">
+                                    <label for="linkedin">LinkedIn</label>
+                                    <input class="uk-text" value="{{linkedin}}" id="linkedin"></input>
+                                </div>
+                                <div class="uk-margin">
+                                    <label for="instagram">Instagram</label>
+                                    <input class="uk-text" value="{{instagram}}" id="instagram"></input>
+                                </div>
+                                <div class="uk-margin">
+                                    <label for="facebook">Facebook</label>
+                                    <input class="uk-text" value="{{facebook}}" id="facebook"></input>
+                                </div>
+                                <div class="uk-margin">
+                                    <label for="twitter">twitter</label>
+                                    <input class="uk-text" value="{{twitter}}" id="twitter"></input>
                                 </div>
                                  <div class="uk-margin">
                                     <label for="email">Artist Account</label>
-                                    <input class="uk-checkbox" type="checkbox" id="artist"></input>
+                                    <input class="uk-checkbox" type="checkbox" id="artist" default="{{isArtist}}"></input>
                                 </div>
                                 <div class="uk-margin">
                                     <label for="bio">Bio</label>
@@ -54,7 +74,7 @@
                     </div>
                     <div class="uk-modal-footer uk-text-right">
                         <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
-                        <button class="uk-button uk-button-primary" type="button" id="updateBio">Save</button>
+                        <button class="uk-button uk-button-primary" type="button" id="updateInfo">Save</button>
                     </div>
                 </div>
             </div>
@@ -68,10 +88,10 @@
                 <!-- Current Artwork slideshow-->
         <div class="uk-container uk-margin-large">
             <h1 class="uk-heading-small">Current Artwork </h1>
-
+            {{#if artworks.length}}   
             <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="sets: true">
                 <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@m">
-                    {{#each user.artworks as |artwork|}}
+                    {{#each artworks as |artwork|}}
                         <li>
                             <img src="{{artwork.path}}" alt="{{artwork.description}}">
                             <div class="uk-position-center uk-panel"></div>
@@ -82,10 +102,14 @@
                 <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
                 <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
             </div>
+            {{else}}
+            <h2>You do not have any artwork added. To add to your gallery, please upload an image of your artwork.</h2>
+            {{/if}}
 
         <!-- Modal to add Artwork-->
-            <a class="uk-button uk-button-default" href="#modal_sections" uk-toggle>Add New Artwork</a>
 
+
+            <a class="uk-button uk-button-default" href="#modal_sections" uk-toggle>Add New Artwork</a>
                 <div id="modal_sections" uk-modal>
                     <div class="uk-modal-dialog">
                         <button class="uk-modal-close-default" type="button" uk-close></button>
@@ -93,38 +117,49 @@
                             <h2 class="uk-modal-title">Upload Artwork</h2>
                         </div>
                         <div class="uk-modal-body">
-                        <form class=class="uk-form-stacked">
-
-                            <div class="uk-margin">
-                                    <div uk-form-custom>
-                                        <input type="file" id="file">
-                                        <button class="uk-button uk-button-default" type="button" tabindex="-1">Select</button>
-                                    </div>
-                            </div>
-
+                            <form class="uk-form-stacked" action="/api/upload" method="post" enctype="multipart/form-data">
                                 <div class="uk-margin">
-                                    <label class="uk-form-label" for="form-stacked-text"> Artwork Description</label>
-                                    <div class="uk-form-controls">
-                                        <input class="uk-input" id="form-stacked-text" type="text" placeholder="Enter Description">
+                                    <div class="field">
+                                        <label for="title">Image</label>
+                                        <input type="file" name="image" id="fileElem" accept="image/*"></input>
+                                        <div id="fileList">
+                                            <p>No files selected!</p>
+                                        </div>
+                                </div>
+                                </div>
+                                <div class="uk-margin">
+                                    <div class="field">
+                                        <label class="uk-form-label" for="name">Artwork Name</label>
+                                        <div class="uk-form-controls">
+                                            <input class="uk-input" id="name" name="name" type="text" placeholder="">
+                                        </div>
                                     </div>
                                 </div>
-
-                                <div class="uk-margin">
-                                    <label class="uk-form-label" for="category">Artwork Category</label>
-                                    <div class="uk-form-controls">
-                                        <select class="uk-select" id="category">
-                                            <option>Painting</option>
-                                            <option>Sculpture</option>
-                                            <option>Photographs</option>
-                                        </select>
+                                <div class="uk-margin field">
+                                    <div class="field">
+                                        <label class="uk-form-label" for="description">Artwork Description</label>
+                                        <div class="uk-form-controls">
+                                            <input class="uk-input" id="form-stacked-text" type="text" name="description" placeholder="Enter Description">
+                                        </div>
                                     </div>
                                 </div>
-
-                        </form>
-                        </div>
+                                <div class="uk-margin field">
+                                    <div class="field">
+                                        <label class="uk-form-label" for="category">Artwork Category</label>
+                                        <div class="uk-form-controls">
+                                            <select class="uk-select" id="category" name="category">
+                                                <option>Painting</option>
+                                                <option>Sculpture</option>
+                                                <option>Photography</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
                         <div class="uk-modal-footer uk-text-right">
                             <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
-                            <button class="uk-button uk-button-primary" type="button" id="addNewArt">Save</button>
+                            <input class="uk-button uk-button-primary field" type="submit" id="addNewArt">Save</input>
+                        </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -136,5 +171,37 @@
     
 
 
+//from MDN
+<script>
+const
+    fileElem = document.getElementById("fileElem"),
+    fileList = document.getElementById("fileList");
 
+fileElem.addEventListener("change", handleFiles, false);
 
+function handleFiles() {
+  if (!this.files.length) {
+    fileList.innerHTML = "<p>No file selected!</p>";
+  } else {
+    fileList.innerHTML = "";
+    const list = document.createElement("ul");
+    fileList.appendChild(list);
+    for (let i = 0; i < this.files.length; i++) {
+      const li = document.createElement("li");
+      list.appendChild(li);
+
+      const img = document.createElement("img");
+      img.src = URL.createObjectURL(this.files[i]);
+      img.id = "file";
+      img.height = 60;
+      img.onload = function() {
+        URL.revokeObjectURL(this.src);
+      }
+      li.appendChild(img);
+      const info = document.createElement("span");
+      info.innerHTML = this.files[i].name + ": " + this.files[i].size + " bytes";
+      li.appendChild(info);
+    }
+  }
+}
+</script>
