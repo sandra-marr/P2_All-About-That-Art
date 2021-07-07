@@ -1,27 +1,27 @@
-<div class="uk-section uk-section-muted uk-section-xlarge uk-flex" uk-height-viewport>
-        <div class="uk-grid-match uk-child-width-expand@m uk-grid-large" uk-grid>
+<div class="galleryBackground uk-section uk-section-default uk-section-xlarge uk-flex">
+        <div class="uk-grid-match uk-width-auto@s uk-child-width-expand@s uk-grid-large uk-padding-large" uk-grid>
+
             <div class="paintings">
-                <h2 class="uk-text-center uk-margin-medium-bottom">Paintings</h2>
-                <div class="gallery-cards uk-card uk-card-default uk-card-body uk-height-large">
-                    <img src="{{paintings.path}}"/>
+                <h2 class="sectionCategory uk-text-center uk-margin-small-bottom">Painting</h2>
+                <div class="gallery-cards uk-card uk-card-default uk-card-body uk-height-large uk-width-2xlarge uk-cover-container">
+                    <img src="{{paintings.path}}" uk-cover/>
                 </div>
             </div>
 
             <div class="sculptures">
-                <h2 class="uk-text-center uk-margin-medium-bottom">Sculptures</h2>
-                <div class="gallery-cards uk-card uk-card-default uk-card-body uk-height-large">
-                    <img src="{{sculptures.path}}"/>
+                <h2 class="sectionCategory uk-text-center uk-margin-medium-bottom">Sculpture</h2>
+                <div class="gallery-cards uk-card uk-card-default uk-card-body uk-height-large uk-width-2xlarge uk-cover-container">
+                    <img src="{{sculptures.path}}" uk-cover/>
                 </div>
             </div>
 
             <div class="photographs">
-                <h2 class="uk-text-center uk-margin-medium-bottom">Photography</h2>
-                <div class="gallery-cards uk-card uk-card-default uk-card-body uk-height-large">
-                    <img src="{{photographs.path}}"/>
+                <h2 class="sectionCategory uk-text-center uk-margin-medium-bottom">Photography</h2>
+                <div class="gallery-cards uk-card uk-card-default uk-card-body uk-height-large uk-width-2xlarge uk-cover-container">
+                    <img src="{{photographs.path}}" uk-cover/>
                 </div>
             </div>
+
         </div>
     </div>
-</div>
-
  <script src="/js/gallery.js"></script>
