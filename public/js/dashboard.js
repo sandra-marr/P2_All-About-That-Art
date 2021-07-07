@@ -34,18 +34,13 @@ const newArtHandler = async (event) => {
 const updateBio = async (event) => {
     event.preventDefault();
 
-    const str = window.location.pathname;
-    const id = str.split("/").reverse().join().split(",",1);
-
-    console.log(id);
-
-    const newBio = document.querySelector('#text').value.trim();
+    const bio = document.querySelector('#text').value.trim();
     
   
-    if (newBio) {
-      const response = await fetch(`/api/dashboard/updateBio/${id}`, {
+    if (bio) {
+      const response = await fetch(`/api/dashboard/updateBio`, {
           method: 'PUT',
-          body: JSON.stringify({ newBio, id}),
+          body: JSON.stringify({ bio }),
           headers: { 'Content-Type': 'application/json' },
         });
         if (response.ok) {
