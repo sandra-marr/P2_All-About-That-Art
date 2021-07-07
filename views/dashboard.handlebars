@@ -25,8 +25,10 @@
                     {{/if}}
                 </div>
 
+
                  <!-- Modal to update user info-->
             <a class="uk-button uk-button-default" href="#modal-sections" uk-toggle>Update User Information</a>
+
 
             <div id="modal-sections" uk-modal>
                 <div class="uk-modal-dialog">
@@ -82,7 +84,8 @@
 
             </div>
         </div>
-        <br><br>
+    </div>
+    <br><br>
     <!--container for gallery-->
     <section class="uk-container uk-container-xsmall gallery-section artwork">
                 <!-- Current Artwork slideshow-->
@@ -162,16 +165,17 @@
                             </form>
                         </div>
                     </div>
-                </div>
-
+                </form>
+            </div>
+            <div class="uk-modal-footer uk-text-right">
+                <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                <button class="uk-button uk-button-primary" type="button" id="addNewArt">Save</button>
+            </div>
         </div>
 
     </section>
 <script type="text/javascript" src="/js/dashboard.js"></script>
     
-
-
-//from MDN
 <script>
 const
     fileElem = document.getElementById("fileElem"),
