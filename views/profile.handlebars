@@ -36,8 +36,8 @@
             <!-- card 1 -->
             {{#each user.artworks as |artwork|}}
             <div class="entireCard uk-card uk-card-hover uk-card-small" data-id="{{artwork.id}}">
-                <div class="uk-card-media-top" data-id="{{artwork.id}}">
-                    <img src="{{artwork.path}}" data-id="{{artwork.id}}" alt="{{artwork.description}}">
+                <div class="imageContainer uk-card-media-top" data-id="{{artwork.id}}">
+                    <img src="{{artwork.path}}" data-id="{{artwork.id}}" id="artworkProfileSec" alt="{{artwork.description}}">
                 </div>
                 <div class="uk-card-body">
                     <h3 class="uk-card-title">{{artwork.name}}</h3>
