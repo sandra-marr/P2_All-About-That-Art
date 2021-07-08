@@ -2,12 +2,13 @@
 
 ## **Description**  
 -------------
-_All About That Art_ was built with the idea of wanting to create a virtual art community. Our mission is to inspire individuals to create. We believe in art as therapy and it's benefits. We believe in promoting art and creating a safe place for artist and viewers. Users will now have a community to share art and connect with others who are 'all about that art'. 
+_All About That Art_ was built with the idea of creating a virtual art community. Our mission is to inspire individuals to create. We believe in art as therapy, promoting art and creating a safe place for artist and viewers. Users will now have a community to share art and connect with others who are _all about that art_. 
 
+Users will be able to create profiles, as an _Artist_ or an _Art Viewer_. Users will be able to view, comment, and learn about different artist. Users will also have access to our top picks to see art in person.
 
  ## **How to Use**
  ---------------
-- The user can either start off by selecting a recipe from the different categories displayed on the left-hand side or search for a brewery through the modal that appears by pressing on the  "**FIND A BREWERY**" button. 
+- The user would start on the homepage where they will be able navigate the site to view artist,  "**FIND A BREWERY**" button. 
    **_It's up to the user to decide that!_** 😉
   
 ![Screenshot of entire screen](./assets/images/fullScreen.png)
