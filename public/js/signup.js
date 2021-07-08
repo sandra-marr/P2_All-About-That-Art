@@ -19,7 +19,7 @@ togglePassword.addEventListener('click', function (eyeball)  {
     const isArtist = document.querySelector('#isArtist').checked;
   
     if (user_name && email && password) {
-      const response = await fetch('/api/users/signup', {
+      const response = await fetch('/api/users', {
         method: 'POST',
         body: JSON.stringify({ user_name, email, password, isArtist}),
         headers: { 'Content-Type': 'application/json' },
@@ -29,7 +29,7 @@ togglePassword.addEventListener('click', function (eyeball)  {
         document.location.replace('/dashboard')
       } else{
         alert("An account with that email already exists")}
-        document.location.reload();
+        // document.location.reload();
     } else {
       alert("Please fill in all fields.")
     }
