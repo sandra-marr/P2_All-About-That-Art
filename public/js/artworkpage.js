@@ -24,3 +24,30 @@ const addNewComment = async (event) => {
 
 };
 submitBtn.addEventListener('click', addNewComment);
+
+const ratingBtn = document.querySelector('#ratingbtn')
+
+const addRating = async (event) => {
+  event.preventdefault();
+
+  const str = window.location.pathname;
+  const id = str.split("/").reverse().join().split(",",1);
+
+  const rating = document.querySelector("#rating").value.trim();
+
+  if(typeof(rating) === number){
+    const response = await fetch(`api/art/rating/${id}`, {
+      method: 'POST',
+      body: JSON.stringify({ rating, id }),
+      headers: {'Content-Type': 'application/json'},
+    });
+    if(response.ok) {
+      document.location.reload();
+    } else {
+      alert(response.statusText);
+    }
+  }
+
+}
+
+submitBtn.addEventListener('click', addRating);

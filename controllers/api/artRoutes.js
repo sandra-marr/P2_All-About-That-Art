@@ -50,6 +50,13 @@ router.get('/artwork/:id', withAuth, async (req, res) => {
         
       });
 
+      // const rating = await Comment.findAll({
+      //   attributes: [[sequelize.fn('sum', sequelize.col('rating')), 'total']],
+      //   group: ['art_id'],
+      //   raw: true,
+      //   order: sequelize.literal('total DESC'),
+      // })
+
       const art = artData.get({ plain: true });
   
       if(!artData) {
@@ -60,10 +67,25 @@ router.get('/artwork/:id', withAuth, async (req, res) => {
           art, 
           logged_in: req.session.logged_in });
       }
+      // console.log(rating)
     } catch (err) {
       res.status(500).json(err);
     }
   });
+
+router.post('/rating/:id', async (req, res) => {
+  try {
+    const ratingData = await Rating.create(
+      { 
+        rating: req.body.rating,
+        art_id: req.params.id,
+        user_id: req.session.user_id,
+      })
+      res.status(200).json(ratingData);
+      console.log(res)
+  } catch(err){
+    res.status(500).json(err)}
+});
 
 //req should send the artwork id and the artwork public_id
 router.delete('/delete/:id', async (req, res) => {
