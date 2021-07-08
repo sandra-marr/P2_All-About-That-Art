@@ -52,17 +52,17 @@ router.get("/artist", async (req, res) => {
 router.get("/gallery", async (req, res) => {
   try {
     const paintingData = await Artwork.findOne({
-      where: { category: "painting" },
+      where: { category: "Painting" },
       order: sequelize.random(),
     });
     ``;
     const sculptureData = await Artwork.findOne({
-      where: { category: "sculpture" },
+      where: { category: "Sculpture" },
       order: sequelize.random(),
     });
 
     const photographyData = await Artwork.findOne({
-      where: { category: "photograph" },
+      where: { category: "Photography" },
       order: sequelize.random(),
     });
 
