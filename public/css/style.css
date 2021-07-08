@@ -1,14 +1,8 @@
-/* Colors I am using:
-dark blue #011418;
-lighter blue #09558F;
-white
-*/
-
 * {
   font-family: "Karla", "sans-serif";
 }
 
-/* Header image with slight scrim overlay so overlaying text is visible/readable */
+/* Home Handlebars Styling */
 .homeHeader {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
     url(/assets/header_images/pexels-steve-johnson-1545505.jpg);
@@ -17,7 +11,6 @@ white
   background-repeat: no-repeat;
 }
 
-/* Torn page effect under header image */
 .homeHeader:after {
   content: "";
   display: block;
@@ -34,7 +27,6 @@ white
   padding: 300px 10px 50px;
 }
 
-/* All About That Art header text */
 .topText {
   font-size: 112px;
   letter-spacing: 1px;
@@ -43,8 +35,7 @@ white
   font-family: "Karla";
 }
 
-/* Sign up to view local artist text */
-.head2 {
+.bottomText {
   font-size: 35px;
   letter-spacing: 1px;
   font-weight: 500;
@@ -52,18 +43,16 @@ white
   font-family: "Karla";
 }
 
-/* Call To Action(CTA) button underneath header text */
-.cta {
+.callToActionButton {
   color: #011418;
   background-color: white;
   border-color: white;
-  border-radius: 12px;
+  border-radius: 10px;
   transition: all 0.5s;
   font-size: 20px;
 }
 
-/* CTA button hover */
-.cta:hover {
+.callToActionButton:hover {
   color: white;
   background-color: #011418;
   border-color: #011418;
@@ -74,96 +63,11 @@ img {
   height: auto;
 }
 
-.topnav {
-  background-color: transparent;
-  font-family: "Karla";
-  height: 90px;
-}
-
-/* Navbar link text color */
-.uk-navbar-nav > li > a {
-  color: #011418;
-  transition: none;
-}
-
-.uk-navbar-nav > li > a:hover {
-  color: #09558f;
-  font-weight: bold;
-}
-
-/* Logo */
-.uk-navbar-item.uk-logo {
-  margin-left: -10px;
-  display: block;
-  position: relative;
-  bottom: 15px;
-  width: 160px;
-}
-
-/* Hamburger menu icon color */
-.uk-navbar-toggle {
-  color: #011418;
-}
-
-.uk-navbar-toggle:hover {
-  color: #09558f;
-}
-
-/* Hamburger menu icon side bar */
-.uk-offcanvas-bar {
-  background-color: #011418;
-  opacity: 0.9;
-}
-/* First section home page */
-.first-section {
+.firstSectionHome {
   background-color: white;
   color: #011418;
 }
 
-/* log in/sign up form border radius */
-.loginForm,
-.signupForm {
-  border-radius: 15px;
-}
-
-.welcomeBack,
-.signUpForFree {
-  font-size: 36px;
-}
-
-/* form input fields/button/checkbox */
-
-.uk-button.uk-button-secondary.uk-button-large.uk-width-1-1.uk-text-bold, 
-.uk-input.uk-form-large, .uk-checkbox {
-    border-radius: 10px;
-
-}
-
-/* eye icon on password field */
-#togglePassword {
-  margin-left: -35px;
-  cursor: pointer;
-}
-
-.login-background,
-.signUpBackground {
-  background-color: #011418;
-  font-family: "Karla";
-}
-
-.signUpButton,
-.loginButton {
-  background-color: #09558f;
-}
-
-
-
-.gallery-cards {
-  border-radius: 12px;
-}
-
-
-/* Home page first section */
 .mission {
   color: #09558f;
   font-size: 32px;
@@ -171,15 +75,13 @@ img {
   font-weight: 700;
 }
 
-/* First section, first line */
-.purpose1 {
+.purposeOne {
   color: #09558f;
   font-size: 18px;
   font-weight: 200;
 }
 
-/* First section, second line */
-.purpose2 {
+.purposeTwo {
   font-size: 56px;
   font-weight: 700;
   color: #011418;
@@ -191,36 +93,104 @@ img {
   color: #011418;
 }
 
-/* Featured artist section */
+/* Main Handlebars Styling */
+.topnav {
+  background-color: white;
+  font-family: "Karla";
+  height: 90px;
+}
+
+.uk-navbar-nav > li > a {
+  color: #011418;
+  transition: none;
+}
+
+.uk-navbar-nav > li > a:hover {
+  color: #09558f;
+  font-weight: bold;
+}
+
+.logo {
+  margin-left: -10px;
+  display: block;
+  position: relative;
+  bottom: 15px;
+  width: 160px;
+}
+
+.uk-navbar-toggle {
+  color: #011418;
+  font-size: 24px;
+}
+
+.uk-navbar-toggle:hover {
+  color: #09558f;
+}
+
+.uk-offcanvas-bar {
+  background-color: #011418;
+  opacity: 0.9;
+}
+
+/* Login Signup Handlebars Styling */
+.loginForm, .signupForm {
+  border-radius: 12px;
+}
+
+.welcomeBack, .signUpForFree {
+  font-size: 36px;
+}
+
+.uk-button.uk-button-secondary.uk-button-large.uk-width-1-1.uk-text-bold, 
+.uk-input.uk-form-large, .uk-checkbox {
+    border-radius: 10px;
+
+}
+
+#togglePassword {
+  margin-left: -35px;
+  cursor: pointer;
+}
+
+.loginBackground, .signUpBackground {
+  background-color: #011418;
+  font-family: "Karla";
+}
+
+.signUpButton,.loginButton {
+  background-color: #09558f;
+  font-size: 20px;
+  transition: all 0.5s;
+}
+
 .featured {
   font-size: 56px;
   font-weight: 500;
   color: white;
 }
 
-.featured-image {
-  border-radius: 12px;
+.featuredImage {
+  border-radius: 10px;
+  cursor: pointer;
 }
 
-.featured-artist {
+.featuredArtist {
   background-color: #011418;
   color: white;
 }
 
-.featured-head-text,
-.featured-description {
+.featuredHeaderText,.featuredDescription {
   font-weight: 200;
   font-size: 24px;
 }
 
-/* Last section */
 .join {
   font-size: 56px;
   font-weight: 700;
   color: #09558f;
 }
 
-.join2 {
+.joinTwo {
   font-weight: 200;
   font-size: 24px;
   color: #011418;
@@ -230,8 +200,9 @@ img {
   color: white;
   background-color: #09558f;
   border-color: #09558f;
-  border-radius: 12px;
+  border-radius: 10px;
   font-size: 20px;
+  transition: all 0.5s;
 }
 
 .lastButton:hover {
@@ -240,7 +211,7 @@ img {
   border-color: #011418;
 }
 
-/* Rec page */
+/* Recommendations Handlebars Styling */
 .recommendation {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),
     url(/assets/header_images/pexels-steve-johnson-1545505.jpg);
@@ -260,69 +231,131 @@ img {
 }
 
 .recCards {
-  border-radius: 12px;
+  border-radius: 10px;
   opacity: 0.8;
 }
 
 .recTitle {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 24px;
 }
 
-.reclocations {
+.recLocations {
   font-weight: 500;
   font-size: 20px;
   color: #011418;
 }
 
-.reclinks {
+.recLinks {
   color: #011418;
 }
 
-.reclinks:hover {
+.recLinks:hover {
   color: #09558f;
 }
 
 .recPlaces {
-
     color: white;
     font-weight: 700;
     font-size: 56px;
+
 }
 
-/* Gallery Page Styling */
+/* Gallery Handlebars Styling */
 
-.chooseCategory {
-    font-weight: 500;
-    font-size: 60px;
-    color: white;
+.galleryImageCard,.paintings,.sculptures,.photographs {
+  border-radius: 10px;
 }
 
-.sectionCategory {
-    font-weight: 500;
-    font-size: 50px;
-    color: white;
-}
+.galleryImage {
+  border-radius: 10px;
+} 
 
-.sectionCategory:hover {
-    font-weight: 700;
-    font-size: 50px;
-}
-
-.gallery-cards {
-    border-radius: 10px;
-}
-
-.galleryBackground {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url(/assets/header_images/pexels-steve-johnson-1545505.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-  color: white;
-  font-weight: 700;
+.galleryHeader {
   font-size: 56px;
+  font-weight: 500;
+  color: #011418;
+}
+
+.categoryTitle {
+  font-size: 32px;
+  font-weight: 500;
+  color: #011418;
+}
+
+.categoryTitle:hover {
+  color: #09558f;
+  cursor: pointer;
+}
+
+.galleryOverlay {
+  border-radius: 10 10 0 0;
+}
+
+/* Matrix Gallery Handlebars Styling */
+.matrixImages,.matrixCards {
+  border-radius: 10px;
+}
+
+.matrixImages:hover {
+  cursor: pointer;
+}
+
+.matrixCategoryHeader {
+  font-size: 56px;
+
+  font-weight: 700;
+  color: #011418;
+}
+
+.matrixSubCategory {
+  font-size: 24px;
+  font-weight: 300;
+  color: #09558f;
+}
+
+/* Artwork Gallery Handlebars Styling */
+.artName {
+  font-size: 56px;
+  font-weight: 700;
+  color: #011418;
+}
+
+.commentsHeader {
+  font-size: 56px;
+  font-weight: 300;
+  color: #011418;
+}
+
+.artworkImage {
+  border-radius: 10px;
+}
+
+.artworkDescriptionGallery {
+  color:#011418;
+  font-size: 24px;
+  font-weight: 200;
+}
+
+.addCommentGallery {
+  color: #09558f;
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.artworkSubmitComment {
+  color: white;
+  background-color: #09558f;
+  border-color: #09558f;
+  border-radius: 10px;
+  font-size: 20px;
+  transition: all 0.5s;
+}
+
+.artworkSubmitComment:hover {
+  color: white;
+  background-color: #011418;
+  border-color: #011418;
 }
 
 #entireCard {
@@ -330,19 +363,17 @@ img {
   opacity: 0.8;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 350px;
-  max-height: 650px;
+  max-height: 600px;
   margin: auto;
   text-align: center;
   width: 100%;
   height: auto;
   transform: scale(1);
   transition: all 0.9s ease 0s;
-  padding: 0;
 }
 #entireCard:hover {
   cursor: pointer;
 }
-
 .artwork span {
   text-align: center;
   font-size: 21px;
@@ -350,15 +381,20 @@ img {
   font-weight: bold;
   color: #09558f;
 }
-
+#bioSec {
+  text-align: center;
+  font-size: 21px;
+  cursor: none;
+  font-weight: bold;
+  color: #09558f;
+}
 #userName {
   text-align: center;
-  font-size: 26px;
   cursor: none;
   top: 25px;
   left: 0;
   font-weight: bold;
-  padding: -10px;
+  padding: -40%;
 }
 
 .bioTxt {
@@ -375,9 +411,87 @@ img {
 
 .artSecHeading {
   font-weight: bold;
+  text-align: center;
+  color: white;
 }
 
-.profilePic-Artist img {
+.profilePicArtist {
+  height: 40px;
+  width: 100%;
+  position: absolute;
+  top: 160px;
+  transform: translateX(-50%);
+  text-align: center;
+  line-height: 30px;
+  font-size: 14px;
+  color: #103b5c;
+  cursor: none;
+  display: none;
+}
+
+.artSec {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)),
+    url(/assets/header_images/pexels-steve-johnson-1545505.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#artistDashboard {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)),
+    url(/assets/header_images/pexels-steve-johnson-1545505.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gallerySection {
+  color: #103b5c;
+}
+#profilePg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)),
+    url(/assets/header_images/pexels-steve-johnson-1545505.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#artCardBody #artworkTitle {
+  color: #09558f;
+  font-size: 25px;
+  text-align: center;
+}
+#entireArtCard {
+  border-radius: 12%;
+  padding: 10px;
+  overflow: hidden;
+  margin-right: 50px;
+  max-width: auto;
+  max-height: 370px;
+  width: 260px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
+}
+
+#artInfo {
+  text-align: center;
+  color: #103b5c;
+  font-size: 18px;
+  padding-bottom: 150px;
+}
+
+.profileHeaders {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.artistFonts {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}
+
+#artworkProfileSec {
   height: auto;
   max-width: 100%;
   width: 50px;

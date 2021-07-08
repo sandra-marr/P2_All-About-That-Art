@@ -99,10 +99,12 @@ router.get("/dashboard", withAuth, async (req, res) => {
       logged_in: req.session.logged_in,
       
     });
+  console.log(user)
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
 
 router.get("/recommendations", async (req, res) => {
   try {
@@ -142,3 +144,5 @@ router.get("/signup", (req, res) => {
 });
 
 module.exports = router;
+
+

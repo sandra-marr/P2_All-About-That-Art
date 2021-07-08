@@ -1,27 +1,45 @@
-<div class="galleryBackground uk-section uk-section-default uk-section-xlarge uk-flex">
-        <div class="uk-grid-match uk-width-auto@s uk-child-width-expand@s uk-grid-large uk-padding-large" uk-grid>
+<section class="galleryBackground uk-section uk-section-muted uk-section-xlarge">
+    <div class="uk-container">
+        <h1 class="galleryHeader uk-text-center uk-margin-large-bottom">Select A Category To View</h1>
+            <div class="uk-grid-large uk-child-width-1-3@m" uk-grid uk-height-match="target: > div > .uk-card > .uk-card-body">
 
-            <div class="paintings">
-                <h2 class="sectionCategory uk-text-center uk-margin-small-bottom">Painting</h2>
-                <div class="gallery-cards uk-card uk-card-default uk-card-body uk-height-large uk-width-2xlarge uk-cover-container">
-                    <img src="{{paintings.path}}" uk-cover/>
+                <div>
+                    <div class="paintings uk-card uk-card-default uk-card-large">
+                        <div class="galleryImageCard uk-cover-container">     
+                            <img src="{{paintings.path}}" class="galleryImage" uk-cover/>
+                            <div class="galleryOverlay uk-overlay uk-overlay-default uk-position-top">
+                                <p class="categoryTitle uk-text-center">Painting</p>
+                            </div>
+                            <canvas width="500" height="1000"></canvas>
+                        </div>
+                    </div>
+                </div>
+      
+                <div>
+                    <div class="sculptures uk-card uk-card-default uk-card-large">
+                        <div class="galleryImageCard uk-cover-container">     
+                            <img src="{{sculptures.path}}" class="galleryImage" uk-cover/> 
+                            <div class="galleryOverlay uk-overlay uk-overlay-default uk-position-top">
+                                <p class="categoryTitle uk-text-center">Sculpture</p>
+                            </div>
+                            <canvas width="500" height="1000"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="photographs uk-card uk-card-default uk-card-large">
+                        <div class="galleryImageCard uk-cover-container">     
+                            <img src="{{photographs.path}}" class="galleryImage" uk-cover/> 
+                            <div class="galleryOverlay uk-overlay uk-overlay-default uk-position-top">
+                                <p class="categoryTitle uk-text-center">Photography</p>
+                            </div>
+                            <canvas width="500" height="1000"></canvas>
+                         </div>
+                    </div>
                 </div>
             </div>
-
-            <div class="sculptures">
-                <h2 class="sectionCategory uk-text-center uk-margin-medium-bottom">Sculpture</h2>
-                <div class="gallery-cards uk-card uk-card-default uk-card-body uk-height-large uk-width-2xlarge uk-cover-container">
-                    <img src="{{sculptures.path}}" uk-cover/>
-                </div>
-            </div>
-
-            <div class="photographs">
-                <h2 class="sectionCategory uk-text-center uk-margin-medium-bottom">Photography</h2>
-                <div class="gallery-cards uk-card uk-card-default uk-card-body uk-height-large uk-width-2xlarge uk-cover-container">
-                    <img src="{{photographs.path}}" uk-cover/>
-                </div>
-            </div>
-
-        </div>
     </div>
+</section>
+
  <script src="/js/gallery.js"></script>
