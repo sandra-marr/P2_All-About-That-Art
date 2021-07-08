@@ -2,7 +2,6 @@
   font-family: "Karla", "sans-serif";
 }
 
-/* Home Handlebars Styling */
 .homeHeader {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
     url(/assets/header_images/pexels-steve-johnson-1545505.jpg);
@@ -93,7 +92,6 @@ img {
   color: #011418;
 }
 
-/* Main Handlebars Styling */
 .topnav {
   background-color: white;
   font-family: "Karla";
@@ -132,19 +130,20 @@ img {
   opacity: 0.9;
 }
 
-/* Login Signup Handlebars Styling */
-.loginForm, .signupForm {
+.loginForm,
+.signupForm {
   border-radius: 12px;
 }
 
-.welcomeBack, .signUpForFree {
+.welcomeBack,
+.signUpForFree {
   font-size: 36px;
 }
 
-.uk-button.uk-button-secondary.uk-button-large.uk-width-1-1.uk-text-bold, 
-.uk-input.uk-form-large, .uk-checkbox {
-    border-radius: 10px;
-
+.uk-button.uk-button-secondary.uk-button-large.uk-width-1-1.uk-text-bold,
+.uk-input.uk-form-large,
+.uk-checkbox {
+  border-radius: 10px;
 }
 
 #togglePassword {
@@ -152,12 +151,14 @@ img {
   cursor: pointer;
 }
 
-.loginBackground, .signUpBackground {
+.loginBackground,
+.signUpBackground {
   background-color: #011418;
   font-family: "Karla";
 }
 
-.signUpButton,.loginButton {
+.signUpButton,
+.loginButton {
   background-color: #09558f;
   font-size: 20px;
   transition: all 0.5s;
@@ -179,7 +180,8 @@ img {
   color: white;
 }
 
-.featuredHeaderText,.featuredDescription {
+.featuredHeaderText,
+.featuredDescription {
   font-weight: 200;
   font-size: 24px;
 }
@@ -211,7 +213,6 @@ img {
   border-color: #011418;
 }
 
-/* Recommendations Handlebars Styling */
 .recommendation {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),
     url(/assets/header_images/pexels-steve-johnson-1545505.jpg);
@@ -255,21 +256,21 @@ img {
 }
 
 .recPlaces {
-    color: white;
-    font-weight: 700;
-    font-size: 56px;
-
+  color: white;
+  font-weight: 700;
+  font-size: 56px;
 }
 
-/* Gallery Handlebars Styling */
-
-.galleryImageCard,.paintings,.sculptures,.photographs {
+.galleryImageCard,
+.paintings,
+.sculptures,
+.photographs {
   border-radius: 10px;
 }
 
 .galleryImage {
   border-radius: 10px;
-} 
+}
 
 .galleryHeader {
   font-size: 56px;
@@ -292,8 +293,8 @@ img {
   border-radius: 10 10 0 0;
 }
 
-/* Matrix Gallery Handlebars Styling */
-.matrixImages,.matrixCards {
+.matrixImages,
+.matrixCards {
   border-radius: 10px;
 }
 
@@ -314,33 +315,39 @@ img {
   color: #09558f;
 }
 
-/* Artwork Gallery Handlebars Styling */
 .artName {
   font-size: 56px;
-  font-weight: 700;
-  color: #011418;
+  font-weight: 400px;
+  color: white;
+  text-align: center;
 }
 
 .commentsHeader {
   font-size: 56px;
-  font-weight: 300;
-  color: #011418;
+  font-weight: 300px;
+  color: white;
+  text-align: center;
 }
 
 .artworkImage {
   border-radius: 10px;
+  max-width: 100%;
+  max-height: 100%;
+  width: 630px;
+  height: 400px;
+  box-shadow: 3px 4px 15px 20px rgba(9, 85, 143, 0.6);
 }
 
 .artworkDescriptionGallery {
-  color:#011418;
+  color: white;
   font-size: 24px;
-  font-weight: 200;
+  font-weight: 200px;
 }
 
 .addCommentGallery {
-  color: #09558f;
+  color: white;
   font-size: 26px;
-  font-weight: 500;
+  font-weight: 500px;
 }
 
 .artworkSubmitComment {
@@ -415,18 +422,13 @@ img {
   color: white;
 }
 
-.profilePicArtist {
-  height: 40px;
-  width: 100%;
-  position: absolute;
-  top: 160px;
-  transform: translateX(-50%);
-  text-align: center;
-  line-height: 30px;
-  font-size: 14px;
-  color: #103b5c;
-  cursor: none;
-  display: none;
+#profilePicArtist {
+  height: 125px;
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
+  top: 25px;
+  width: 130px;
 }
 
 .artSec {
@@ -494,8 +496,46 @@ img {
 #artworkProfileSec {
   height: auto;
   max-width: 100%;
-  width: 50px;
-  height: 50px;
+  width: 350px;
+  height: 200px;
+}
+
+p.artistFonts {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  top: 70px;
+  position: relative;
+  margin-top: 50px;
+}
+h3.profileHeaders {
+  position: relative;
+  top: 80px;
+}
+
+h4.profileHeaders {
+  position: relative;
+  top: 15px;
+  margin-top: 70px;
+}
+
+#artworkPg {
+  background-image: linear-gradient(
+      rgba(0.5, 0.5, 0.5, 0.5),
+      rgba(0.5, 0.5, 0.5, 0.5)
+    ),
+    url(/assets/header_images/pexels-steve-johnson-1545505.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#commentSection {
+  background-color: #09558f;
+  text-align: center;
+  color: white;
+  border-radius: 12%;
+  opacity: inherit;
 }
 
 /* Dashboard Styling */
