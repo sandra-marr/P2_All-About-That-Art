@@ -15,7 +15,7 @@
   content: "";
   display: block;
   height: 50px;
-  background-image: url("https://ecorelos.com/wp-content/uploads/2020/04/torn-border2.png");
+  background-image: url("/assets/header_images/torn-border2.png");
   position: static;
   bottom: 100px;
   width: 100%;
@@ -224,7 +224,7 @@ img {
   content: "";
   display: block;
   height: 50px;
-  background-image: url("https://ecorelos.com/wp-content/uploads/2020/04/torn-border2.png");
+  background-image: url("/assets/header_images/torn-border2.png");
   position: relative;
   bottom: -75px;
   width: 100%;
@@ -498,3 +498,126 @@ img {
   height: 50px;
 }
 
+/* Dashboard Styling */
+.updateUserInfo {
+  color: white;
+  background-color: #09558f;
+  border-color: #09558f;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: all 0.5s;
+}
+
+.updateUserInfo:hover {
+  color: white;
+  background-color: #011418;
+  border-color: #011418;
+}
+
+.userNameDashboard {
+  color: #011418;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.updateHeaderDashboard {
+  color: #011418;
+  font-size: 24px;
+}
+
+.aboutTxt {
+  color: #011418;
+  font-size: 24px;
+  font-weight: 200;
+}
+
+.email,.userName,.linkedIn,.instagram,.facebook,.twitter,.isArtistAccountDashboard,.bioDash {
+  color: #011418;
+  font-size: 16px;
+}
+
+.updateBioDashboard {
+  border-radius: 5px;
+  font-weight: 200;
+}
+
+.updateDisplayName,.updateLinkedIn,.updateInstagram,.updateFacebook,.updateTwitter {
+  font-weight: 200;
+  font-size: 16px;
+}
+
+.cancelButtonDashboard,.finalCancelButton,.addNewArtWork,.bottomCancelButton,.dashboardArtSlideShow {
+  border-radius: 10px;
+}
+
+.saveButtonDashboard {
+  color: white;
+  background-color: #09558f;
+  border-color: #09558f;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.5s;
+}
+
+.saveButtonDashboard:hover {
+  color: white;
+  background-color: #011418;
+  border-color: #011418;
+}
+
+.finalSaveButton {
+  color: white;
+  background-color: #09558f;
+  border-color: #09558f;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.5s;
+}
+
+.finalSaveButton:hover {
+  color: white;
+  background-color: #011418;
+  border-color: #011418;
+}
+
+.bottomSaveButton {
+  color: white;
+  background-color: #09558f;
+  border-color: #09558f;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.5s;
+}
+
+.bottomSaveButton:hover {
+  color: white;
+  background-color: #011418;
+  border-color: #011418;
+}
+
+.artworkName,.artworkDescription, .artworkCategory,.imageText {
+  color: #011418;
+  font-size: 18px;
+}
+
+.dashboardArtSlideShow {
+  color: #011418;
+}
+
+.artworkNameInput,.artworkDescriptionInput,.artworkCategoryInput {
+  border-radius: 10px;
+  font-weight: 200;
+}
+
+.uploadArtwork {
+  color: #011418;
+  font-size: 24px;
+}
+
+.addNewArtWork {
+  font-size: 16px;
+}
+
+.uk-modal-dialog,.uk-modal-header,.updateModalForm {
+  border-radius: 10px 10px 10px 10px;
+}
