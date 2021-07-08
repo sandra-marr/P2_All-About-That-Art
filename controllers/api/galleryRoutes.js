@@ -5,7 +5,7 @@ const { Artwork, BlogPost, Comment, Recommendation, User, Image } = require('../
 router.get('/matrix-painting', async (req, res) => {
     try {
       const artworkData = await Artwork.findAll({
-        where: {category: 'painting'}
+        where: {category: 'Painting'}
       });
       
       const artworks = artworkData.map((artwork) =>
@@ -25,7 +25,7 @@ router.get('/matrix-painting', async (req, res) => {
 router.get('/matrix-sculpture', async (req, res) => {
   try {
     const artworkData = await Artwork.findAll({
-      where: {category: 'sculpture'}
+      where: {category: 'Sculpture'}
     });
 
     const artworks = artworkData.map((artwork) =>
@@ -44,7 +44,7 @@ router.get('/matrix-sculpture', async (req, res) => {
 router.get('/matrix-photograph', async (req, res) => {
   try {
     const artworkData = await Artwork.findAll({
-      where: {category: 'photograph'}
+      where: {category: 'Photography'}
     });
 
     const artworks = artworkData.map((artwork) =>
