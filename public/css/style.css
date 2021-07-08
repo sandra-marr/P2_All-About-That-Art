@@ -133,18 +133,20 @@ img {
 }
 
 /* Login Signup Handlebars Styling */
-.loginForm, .signupForm {
+.loginForm,
+.signupForm {
   border-radius: 12px;
 }
 
-.welcomeBack, .signUpForFree {
+.welcomeBack,
+.signUpForFree {
   font-size: 36px;
 }
 
-.uk-button.uk-button-secondary.uk-button-large.uk-width-1-1.uk-text-bold, 
-.uk-input.uk-form-large, .uk-checkbox {
-    border-radius: 10px;
-
+.uk-button.uk-button-secondary.uk-button-large.uk-width-1-1.uk-text-bold,
+.uk-input.uk-form-large,
+.uk-checkbox {
+  border-radius: 10px;
 }
 
 #togglePassword {
@@ -152,12 +154,14 @@ img {
   cursor: pointer;
 }
 
-.loginBackground, .signUpBackground {
+.loginBackground,
+.signUpBackground {
   background-color: #011418;
   font-family: "Karla";
 }
 
-.signUpButton,.loginButton {
+.signUpButton,
+.loginButton {
   background-color: #09558f;
   font-size: 20px;
   transition: all 0.5s;
@@ -179,7 +183,8 @@ img {
   color: white;
 }
 
-.featuredHeaderText,.featuredDescription {
+.featuredHeaderText,
+.featuredDescription {
   font-weight: 200;
   font-size: 24px;
 }
@@ -255,21 +260,23 @@ img {
 }
 
 .recPlaces {
-    color: white;
-    font-weight: 700;
-    font-size: 56px;
-
+  color: white;
+  font-weight: 700;
+  font-size: 56px;
 }
 
 /* Gallery Handlebars Styling */
 
-.galleryImageCard,.paintings,.sculptures,.photographs {
+.galleryImageCard,
+.paintings,
+.sculptures,
+.photographs {
   border-radius: 10px;
 }
 
 .galleryImage {
   border-radius: 10px;
-} 
+}
 
 .galleryHeader {
   font-size: 56px;
@@ -293,7 +300,8 @@ img {
 }
 
 /* Matrix Gallery Handlebars Styling */
-.matrixImages,.matrixCards {
+.matrixImages,
+.matrixCards {
   border-radius: 10px;
 }
 
@@ -332,7 +340,7 @@ img {
 }
 
 .artworkDescriptionGallery {
-  color:#011418;
+  color: #011418;
   font-size: 24px;
   font-weight: 200;
 }
@@ -497,4 +505,3 @@ img {
   width: 50px;
   height: 50px;
 }
-
