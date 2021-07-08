@@ -8,30 +8,41 @@ Users will be able to create profiles, as an _Artist_ or an _Art Viewer_. Users 
 
  ## **How to Use**
  ---------------
-- The user would start on the homepage where they will be able navigate the site to view artist,  "**FIND A BREWERY**" button. 
-   **_It's up to the user to decide that!_** 😉
+- The user would start on the homepage where they will be able navigate the site to view: artist, gallery of the artwork or the recommendations page to see art. The login and sign up button are also found on the homepage. A feature artist work is also included for the users to view.
   
-![Screenshot of entire screen](./assets/images/fullScreen.png)
+![Screenshot of entire homepage](./public/assets/readmeImgs/entireScreen.png)
 
-- The user will select a category for the types of recipes they would like to view. This will generate _nine_ different recipe cards with an image that the user can look through and select the one they would like to prepare. 
+- The user is able to login to their account if they are already signed-up from the _Login Page_. 
 
-![Screenshot of the nine different recipe cards](./assets/images/recipeCard.png)
+![Screenshot of the login page](./public/assets/readmeImgs/loginPg.png)
 
-- When the user clicks on a recipe card, the complete recipe will become viewable. The recipe will contain an image of the recipe, ingredient list and instructions.
+- The user can create an account on the _Sign Up Page_ if they have not already signed up for one.
 
-![Screenshot of an entire recipe](./assets/images/recipeView.png)
+![Screenshot of the Sign Up page](./public/assets/readmeImgs/signUpPg.png)
 
-- The user can search for a list of breweries in their city by clicking on the "**FIND A BREWERY**" button. When the button is clicked, a modal with an input field will appear instructing the user to enter the city they want to search. 
+- Once the user is logged on to their account, they will be taken to their dashboard. The user would be able to update their profile information such as, their personal bio, social media accounts, and username. They would also be able to upload their personal artwork to be displayed in the gallery and their artist profiles.
   
-  ![Screenshot of initial modal](./assets/images/modal.png)
+  ![Screenshot of the user dashboard page](./public/assets/readmeImgs/dashboardPg.png) 
 
-- After the user enters the city and clicks submit, the modal will populate to give the names of three different breweries in their city. 
+  ![Screenshot of upload art page](./public/assets/readmeImgs/uploadArtPg.png) 
 
-![Screenshot of populated modal](./assets/images/seattleModal.png)
+  ![Screenshot of update user info page](./public/assets/readmeImgs/updateUserInfo.png) 
 
-- A user will be able to come back to the FIND A BREWERY modal and find the last city they have searched for. Making it easy to search for that city again.
+- Users can view all the artist who are signed up for an account on the artist page. A user can click on the cards to view their profile page. There the user can view their bio and artwork. 
+
+![Screenshot of artist page](./public/assets/readmeImgs/artistPg.png)
+
+![Screenshot of artist profile page](./public/assets/readmeImgs/artistProfile.png)
+
+- Users can get to the artwork page of any piece of art through their favorite artists' profile or through the gallery categories page. Once there, users can also leave comments for the artwork.
   
-  ![Screenshot of search history](./assets/images/seattleHistory.png)
+![Screenshot of gallery](./public/assets/readmeImgs/gallery.png)
+
+![Screenshot of artwork page](./public/assets/readmeImgs/artworkPg.png)
+
+- Users would also have access to our recommendations for place to see art in person in the Recommendations page.
+  
+![Screenshot of recommendations page](./public/assets/readmeImgs/recs.png)
 
 
 ## **Built With**
@@ -39,29 +50,51 @@ Users will be able to create profiles, as an _Artist_ or an _Art Viewer_. Users 
 - ![CSS](https://img.shields.io/badge/Built%20with-CSS-green)
 - ![HTML](https://img.shields.io/badge/Built%20with-HTML-green)
 - ![Javascript](https://img.shields.io/badge/Built%20with-Javascrpit-green)
-- ![Materialize CSS](https://img.shields.io/badge/Built%20with-Materialize-green)
-
-- Uses two APIs
-  1.  ![Open Brewery DB API](https://img.shields.io/badge/Uses-Open%20Brewery%20DB%20API-brightgreen)
-    - [Open Brewery DB](https://www.openbrewerydb.org/)
-
-  2. ![The Meal DB API](https://img.shields.io/badge/Uses%20-The%20MealDB%20API-brightgreen)
-    - [The Meal DB](https://www.themealdb.com/)
-
+- ![NodeJS](https://img.shields.io/badge/Built%20with-NodeJS-green)
+- ![UIkit](https://img.shields.io/badge/Built%20with-UIkit-green)
+- ![Handlebars](https://img.shields.io/badge/Built%20with-Handlebars-green)
+- ![Cloudinary](https://img.shields.io/badge/Built%20with-Cloudinary-green)
+- 
 ## **Contributors**
 --------------------
   [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 
-- Tami S. [GitHub](https://github.com/Fett-Boba)
+- Sandy M. [GitHub](https://github.com/sandra-marr)
 
-- Christian M. [GitHub](https://github.com/CMartin1336)
+- Allysha J. [GitHub](https://github.com/ajovich)
 
-- Rudy S. [GitHub](hhttps://github.com/Rudys212)
+- Mohamed B. [GitHub](https://github.com/MohamedB-01)
 
-- Tyler H. [GitHub](https://github.com/tylerhance)
+- Rudy S. [GitHub](https://github.com/Rudys212)
+
+## **License**
+--------------------
+-MIT License
+
+Copyright (c) 2021 Sandy Marr
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
 
 ## **Links** 
 ---------------
-- [GitHub Repo Hosted By CMartin1336](https://github.com/CMartin1336/Cook-N-Brew)
+- [GitHub Repo Hosted By Sandy M](https://github.com/sandra-marr/P2_All-About-That-Art)
 
-- [GitHub Deployed Link](https://cmartin1336.github.io/Cook-N-Brew/)
+- [Heroku Deployed Link](https://stark-badlands-81359.herokuapp.com/)

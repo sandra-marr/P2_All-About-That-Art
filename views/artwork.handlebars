@@ -1,33 +1,33 @@
-<div class="uk-section uk-section-default uk-section-med uk-flex uk-height-viewport">
+<div class="uk-section uk-section-default uk-section-med uk-flex uk-height-viewport" id="artworkPg">
     <div class="uk-container uk-margin-large">
         <h1 class="artName uk-heading-divider uk-text-italic">{{art.name}}</h1>
-
         <div class="uk-cover-container">
-            <img class="artworkImage" src="{{art.path}}" alt="{{art.description}}"/>
+            <img class="artworkImage" src="{{art.path}}" alt="{{art.description}}" />
             <p class="artworkDescriptionGallery">{{art.description}}</p>
         </div>
         <form>
             <fieldset class="uk-fieldset">
                 <legend class="addCommentGallery uk-legend">Add a Comment</legend>
                 <div class="uk-margin">
-                    <textarea class="uk-textarea uk-margin-bottom" rows="5" placeholder="Please share your thoughts in a meaningful and supportive manner." id="comment_body"></textarea>
-                    <button class="artworkSubmitComment uk-button uk-button-default" id="newComment">Submit comment</button>
+                    <textarea class="uk-textarea uk-margin-bottom" rows="5"
+                        placeholder="Please share your thoughts in a meaningful and supportive manner."
+                        id="comment_body"></textarea>
+                    <button class="artworkSubmitComment uk-button uk-button-default" id="newComment">Submit
+                        comment</button>
                 </div>
             </fieldset>
         </form>
     </div>
-
     <div class="uk-container .uk-margin-large">
-        <h1 class="commentsHeader uk-heading-divider ">Comments</h1>
+        <h1 class="commentsHeader uk-heading-divider">Comments</h1>
         <div>
-    {{#each art.comments as |comment|}}
-    <div>
-        <p>{{comment.comment_body}}</p>
-        
-        <p>~ {{comment.user.user_name}}</p>
-    </div>
-    {{/each}}
-</div>
+            {{#each art.comments as |comment|}}
+            <div id="commentSection">
+                <p>{{comment.comment_body}}</p>
+                <p>~ {{comment.user.user_name}}</p>
+            </div>
+            {{/each}}
+        </div>
     </div>
 </div>
 
