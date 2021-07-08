@@ -4,78 +4,84 @@
       "description": "This is a painting of my cat, Midnight. She is cute and cuddly.",
       "category": "Painting",
       "user_id": 2,
-      "path": "https://res.cloudinary.com/dh11quph3/image/upload/v1625188754/qtyhlsr1v7z8mzywrjuu.jpg"
+      "path": "https://res.cloudinary.com/dh11quph3/image/upload/v1625188753/AllAboutThatArt/qaqmvkmy7voaggg3kpij.jpg"
     },
     {
       "name": "Lonely",
       "description": "This is a painting of a sad cat.", 
       "category": "Painting",
       "user_id": 2,
-      "path": "https://res.cloudinary.com/dh11quph3/image/upload/v1625198259/yzhpkhovryaiep1gvyvd.jpg"
+      "path": "https://res.cloudinary.com/dh11quph3/image/upload/v1625198258/AllAboutThatArt/mhoi3q03qbj8me91rq93.jpg"
     },
     {
       "name": "Bright Lights",
       "description": "This is a painting of a lighning cat!",
       "category": "Painting",
       "user_id": 2,
-      "path": "https://res.cloudinary.com/dh11quph3/image/upload/v1625198347/pod9ssnkwlhryhwmja6p.jpg"
+      "path": "https://res.cloudinary.com/dh11quph3/image/upload/v1625198346/AllAboutThatArt/t5all3wcgku8tzzqkmrl.jpg"
     },
     {
       "name": "Lighthouse",
       "description": "This is a painting of a lighthouse",
       "category": "Painting",
       "user_id": 1,
-      "path": "https://res.cloudinary.com/dh11quph3/image/upload/v1625198386/xdclzozghd1tqam5cxeo.jpg"
+      "path": "https://res.cloudinary.com/dh11quph3/image/upload/v1625198386/AllAboutThatArt/iewqa6kovjchlhg2ewmo.jpg"
     },
     {
       "name": "Sailing",
       "description": "This is a painting of a sailboat",
       "category": "Painting",
       "user_id": 1,
-      "path": "https://res.cloudinary.com/dh11quph3/image/upload/v1625198422/gkuc2yryl0fyafuiqueh.jpg"
+      "path": "https://res.cloudinary.com/dh11quph3/image/upload/v1625198421/AllAboutThatArt/tc9dtreoc9fsg19mrqkq.jpg"
     },
     {
       "name": "Mountains",
       "description": "This is a painting of the mountains",
       "category": "Painting",
       "user_id": 1,
-      "path": "https://res.cloudinary.com/dh11quph3/image/upload/v1625198445/umgderacdubb3gfrqddf.jpg"
+      "path": "https://res.cloudinary.com/dh11quph3/image/upload/v1625198444/AllAboutThatArt/jzrvjgkxmyjkjq7jsgw0.jpg"
     },
     {
       "name": "Steve the Snail",
       "description": "This is a sculpture of a lego man and a snail.",
       "category": "Sculpture",
       "user_id": 3,
-      "path": "https://res.cloudinary.com/dh11quph3/image/upload/v1625198473/nzqn35razx2v2hh8iwvz.jpg"
+      "path": "https://res.cloudinary.com/dh11quph3/image/upload/v1625198472/AllAboutThatArt/eb3mqr9a6guudikfurug.jpg"
     },
     {
       "name": "Animals",
       "description": "This is a clay sculpture of a fish and stuff.",
       "category": "Sculpture",
       "user_id": 3,
-      "path": "https://res.cloudinary.com/dh11quph3/image/upload/v1625198499/flhwwohtex5s6r5hyybw.jpg"
+      "path": "https://res.cloudinary.com/dh11quph3/image/upload/v1625198498/AllAboutThatArt/vwv0gub6ulebg90lix9w.jpg"
     },
     {
       "name": "Green Jeans",
       "description": "This is a vintage car.",
       "category": "Photography",
       "user_id": 4,
-      "path": "https://res.cloudinary.com/dh11quph3/image/upload/v1625198528/lqyn1kusqui9ilnyczx7.jpg"
+      "path": "https://res.cloudinary.com/dh11quph3/image/upload/v1625198527/AllAboutThatArt/dxqldm9i0afk8mnnzk9h.jpg"
     },
     {
       "name": "Taxi Cab",
       "description": "This is another vintage car.",
       "category": "Photography",
       "user_id": 4,
-      "path": "https://res.cloudinary.com/dh11quph3/image/upload/v1625198557/kkasw86dugb6cr7yn0xh.jpg"
+      "path": "https://res.cloudinary.com/dh11quph3/image/upload/v1625198556/AllAboutThatArt/psrwhabzk2om56x98zow.jpg"
     },
     {
       "name": "Beetles",
       "description": "This is an old VW beetle.",
       "category": "Photography",
       "user_id": 4,
-      "path": "https://res.cloudinary.com/dh11quph3/image/upload/v1625198583/fdzfb9e2niqg78n8dpjm.jpg"
+      "path": "https://res.cloudinary.com/dh11quph3/image/upload/v1625198582/AllAboutThatArt/kchvkcbl1ioim1fb2pe5.jpg"
+    },
+    {
+      "name": "Bentley The Dog",
+      "description": "When a big dog lays down, you're not going anywhere.",
+       "category": "Photography",
+      "user_id": 5,
+      "path": "https://res.cloudinary.com/dh11quph3/image/upload/v1625717764/AllAboutThatArt/fykah2rkb2wgukolnnga.jpg"
     }
 ]
 
-  
