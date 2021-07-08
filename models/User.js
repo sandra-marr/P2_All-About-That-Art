@@ -46,7 +46,7 @@ User.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
-    linkedIn: {
+    linkedin: {
       type: DataTypes.STRING,
       allowNull: true,
     },
