@@ -1,13 +1,10 @@
  <!-- Ajax script here? or use cloudinary?-->
-    <div>
+    <div class="dashboardBackground uk-section-muted uk-section-large">
         <div class="uk-container uk-padding-large uk-margin-large uk-margin-xlarge-top">
             <div class="uk-column-1-1@s uk-column-1-2 uk-column-divider">
                 <img class="uk-align-center" id="profilePic-sec" src="https://img.icons8.com/ios-filled/100/000000/artist.png" height="150" width="150" alt="usersPhoto"/>
-                <h4 class="uk-text-center">Display Name: <span>{{user_name}}</span></h4>
-                <br> <br>
-                <h4 class="aboutTxt uk-text-left">Biography: <br><span>{{bio}}</span></h4>
-                <h4>My Contact Information:</h4>
-                 <div class="socialButtons">
+                <h4 class="uk-text-center"><span>{{user_name}}</span></h4>
+                 <div class="socialButtons uk-text-center">
                     {{#if twitter}}
                     <a href="{{twitter}}" class="uk-icon-button uk-margin-small-right" uk-icon="twitter"></a>
                     {{/if}}
@@ -24,10 +21,13 @@
                     <a href="mailto:{{ email }}" class="uk-icon-button  uk-margin-small-right" uk-icon="mail"></a>
                     {{/if}}
                 </div>
+                <br> <br>
+                <h4 class="aboutTxt uk-text-left uk-padding-small">Bio: <br><span>{{bio}}</span></h4>
+
 
             <br>
             <!-- Modal to update user info-->
-            <a class="updateUserInfo uk-button uk-button-default" href="#modal-sections" uk-toggle>Update User Information</a>
+            <a class="updateUserInfo uk-button uk-button-default uk-margin-left" href="#modal-sections" uk-toggle>Update User Information</a>
 
 
             <div id="modal-sections" uk-modal>
