@@ -494,7 +494,7 @@ img {
 }
 
 #artworkProfileSec {
-  height: auto;
+  object-fit: cover;
   max-width: 100%;
   width: 350px;
   height: 200px;
