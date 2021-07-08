@@ -5,7 +5,6 @@ const multer = require('multer');
 const parser = multer({storage: storage});
 
 router.post('/', parser.single('image'), async (req, res) => {
-    console.log(req)
 
     try { 
         const uploadArt = await cloudinary.uploader.upload(req.file.path);
@@ -28,7 +27,7 @@ router.post('/', parser.single('image'), async (req, res) => {
         console.log(newArtwork)
 
     } catch (err) {
-        console.log(err)
+    console.log(err)
     res.status(500).json(err);
     }
 });
