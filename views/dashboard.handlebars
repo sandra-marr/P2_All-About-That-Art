@@ -1,24 +1,24 @@
  <!-- Ajax script here? or use cloudinary?-->
-    <div class="dashboardBackground uk-section-muted uk-section-large" uk-height-viewport>
+    <div class="dashboardBackground uk-section-muted uk-section-large" id="artistDashboard" uk-height-viewport>
         <div class="uk-container uk-padding-large uk-margin-large uk-margin-xlarge-top">
-            <div class="uk-column-1-1@s uk-column-1-2 uk-column-divider">
+            <div class="uk-column-1-1@s uk-column-1-2 uk-column-divider" style="background-color: white; border-radius: .5em;">
                 <img class="uk-align-center" id="profilePic-sec" src="https://img.icons8.com/ios-filled/100/000000/artist.png" height="150" width="150" alt="usersPhoto"/>
                 <h4 class="userNameDashboard uk-text-center"><span>{{user_name}}</span></h4>
                  <div class="socialButtons uk-text-center">
                     {{#if twitter}}
-                    <a href="{{twitter}}" class="uk-icon-button uk-margin-small-right" uk-icon="twitter"></a>
+                    <a href="{{twitter}}" class="uk-icon-button uk-margin-small-right" target="_blank" uk-icon="twitter"></a>
                     {{/if}}
                     {{#if facebook}}
-                    <a href="{{facebook}}" class="uk-icon-button  uk-margin-small-right" uk-icon="facebook"></a>
+                    <a href="{{facebook}}" class="uk-icon-button  uk-margin-small-right" target="_blank" uk-icon="facebook"></a>
                     {{/if}}
                     {{#if instagram}}
-                    <a href="{{instagram}}" class="uk-icon-button  uk-margin-small-right" uk-icon="instagram"></a>
+                    <a href="{{instagram}}" class="uk-icon-button  uk-margin-small-right" target="_blank" uk-icon="instagram"></a>
                     {{/if}}
                     {{#if linkedin}}
-                    <a href="{{linkedIn}}" class="uk-icon-button  uk-margin-small-right" uk-icon="linkedin"></a>
+                    <a href="{{linkedin}}" class="uk-icon-button  uk-margin-small-right" target="_blank" uk-icon="linkedin"></a>
                     {{/if}}
                     {{#if email}}
-                    <a href="mailto:{{ email }}" class="uk-icon-button  uk-margin-small-right" uk-icon="mail"></a>
+                    <a href="mailto:{{ email }}" class="uk-icon-button  uk-margin-small-right" target="_blank" uk-icon="mail"></a>
                     {{/if}}
                 </div>
                 <br> <br>
@@ -73,13 +73,13 @@
                                     <textarea class="uk-textarea updateBioDashboard" rows="5" id="text">{{bio}}</textarea>
                                 </div>
                             </fieldset>
-                        
-                    </div>
+                    
                     <div class="updateModalForm uk-modal-footer uk-text-right">
                         <button class="cancelButtonDashboard uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
                         <button class="saveButtonDashboard uk-button uk-button-primary" type="button" id="updateInfo">Save</button>
                     </div>
                     </form>
+                    </div>
                 </div>
             </div>
         </div>
