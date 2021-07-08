@@ -1,9 +1,11 @@
 const Artwork = require("./Artwork");
 const BlogPost = require("./BlogPost");
+const { sequelize } = require("./Comment");
 const Comment = require("./Comment");
 const Image = require("./Image");
 const Recommendation = require("./Recommendation");
 const User = require("./User");
+const Rating = require("./Rating");
 
 // Users can upload any amount of artwork
 User.hasMany(Artwork, {
@@ -29,6 +31,11 @@ Comment.belongsTo(User, {
 
 // users can make as many blog posts as they would like
 User.hasMany(BlogPost, {
+  foreignKey: "user_id",
+  onDelete: "CASCADE",
+});
+
+User.hasMany(Rating, {
   foreignKey: "user_id",
   onDelete: "CASCADE",
 });
@@ -72,4 +79,15 @@ Comment.belongsTo(BlogPost, {
   foreignKey: "blog_post_id",
 });
 
-module.exports = { Artwork, BlogPost, Comment, Recommendation, User, Image };
+Rating.belongsTo(Artwork, {
+  foreignKey: "art_id",
+});
+
+// exports.getRating = () => Comment.findAll({
+//   attributes: [[sequelize.fn('sum', sequelize.col('rating')), 'total']],
+//   group: ['art_id'],
+//   raw: true,
+//   order: sequelize.literal('total DESC')
+// })
+
+module.exports = { Artwork, BlogPost, Comment, Recommendation, User, Image, Rating };

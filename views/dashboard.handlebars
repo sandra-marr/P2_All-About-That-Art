@@ -1,82 +1,84 @@
  <!-- Ajax script here? or use cloudinary?-->
-    <div>
-        <div class="uk-container">
-            <div class="uk-column-1-1@s uk-column-1-2 uk-column-divider">
+    <div class="dashboardBackground uk-section-muted uk-section-large" id="artistDashboard" uk-height-viewport>
+        <div class="uk-container uk-padding-large uk-margin-large uk-margin-xlarge-top">
+            <div class="uk-column-1-1@s uk-column-1-2 uk-column-divider" style="background-color: white; border-radius: .5em;">
                 <img class="uk-align-center" id="profilePic-sec" src="https://img.icons8.com/ios-filled/100/000000/artist.png" height="150" width="150" alt="usersPhoto"/>
-                <h4>Display name: <span style="color: blue">{{user_name}}</span></h4>
-                <br> <br>
-                <h4 class="aboutTxt"> Biography: <span style="color: blue">{{bio}}</span></h4>
-                <h4>My Contact Information:</h4>
-                 <div class="socialButtons">
+                <h4 class="userNameDashboard uk-text-center"><span>{{user_name}}</span></h4>
+                 <div class="socialButtons uk-text-center">
                     {{#if twitter}}
-                    <a href="{{twitter}}" class="uk-icon-button uk-margin-small-right" uk-icon="twitter"></a>
+                    <a href="{{twitter}}" class="uk-icon-button uk-margin-small-right" target="_blank" uk-icon="twitter"></a>
                     {{/if}}
                     {{#if facebook}}
-                    <a href="{{facebook}}" class="uk-icon-button  uk-margin-small-right" uk-icon="facebook"></a>
+                    <a href="{{facebook}}" class="uk-icon-button  uk-margin-small-right" target="_blank" uk-icon="facebook"></a>
                     {{/if}}
                     {{#if instagram}}
-                    <a href="{{instagram}}" class="uk-icon-button  uk-margin-small-right" uk-icon="instagram"></a>
+                    <a href="{{instagram}}" class="uk-icon-button  uk-margin-small-right" target="_blank" uk-icon="instagram"></a>
                     {{/if}}
                     {{#if linkedin}}
-                    <a href="{{linkedIn}}" class="uk-icon-button  uk-margin-small-right" uk-icon="linkedin"></a>
+                    <a href="{{linkedin}}" class="uk-icon-button  uk-margin-small-right" target="_blank" uk-icon="linkedin"></a>
                     {{/if}}
                     {{#if email}}
-                    <a href="mailto:{{ email }}" class="uk-icon-button  uk-margin-small-right" uk-icon="mail"></a>
+                    <a href="mailto:{{ email }}" class="uk-icon-button  uk-margin-small-right" target="_blank" uk-icon="mail"></a>
                     {{/if}}
                 </div>
+                <br> <br>
+                <h4 class="aboutTxt uk-text-left uk-padding-small"><span>{{bio}}</span></h4>
 
 
-                 <!-- Modal to update user info-->
-            <a class="uk-button uk-button-default" href="#modal-sections" uk-toggle>Update User Information</a>
+            <br>
+            <!-- Modal to update user info-->
+            <a class="updateUserInfo uk-button uk-button-default uk-margin-left" href="#modal-sections" uk-toggle>Update User Information</a>
 
 
             <div id="modal-sections" uk-modal>
-                <div class="uk-modal-dialog">
+                <div class="dashboardForm uk-modal-dialog">
                     <button class="uk-modal-close-default" type="button" uk-close></button>
                     <div class="uk-modal-header">
-                        <h2 class="uk-modal-title">update user information</h2>
+                        <h2 class="updateHeaderDashboard uk-modal-title">Update User Information</h2>
                     </div>
                     <div class="uk-modal-body">
-                        <form>
+                        <form class="uk-form-stacked">
                             <fieldset class="uk-fieldset">
                                 <div class="uk-margin">
-                                    <label for="email">Email</label>
-                                    <input class="uk-text" value="{{email}}" id="email"></input>
+                                    <label class="email" for="email">Email</label>
+                                    <input class="uk-text uk-form-blank updateEmail" value="{{email}}" id="email" placeholder="example@domain.com"></input>
                                 </div>
                                 <div class="uk-margin">
-                                    <label for="user_name">Display Name</label>
-                                    <input class="uk-text" value="{{user_name}}" id="user_name"></input>
+                                    <label class="userName" for="user_name">Display Name</label>
+                                    <input class="uk-text uk-form-blank updateDisplayName" value="{{user_name}}" id="user_name" placeholder="Display Name"></input>
                                 </div>
                                 <div class="uk-margin">
-                                    <label for="linkedin">LinkedIn</label>
-                                    <input class="uk-text" value="{{linkedin}}" id="linkedin"></input>
+                                    <label class="linkedIn" for="linkedin">LinkedIn</label>
+                                    <input class="uk-text uk-form-blank updateLinkedIn" value="{{linkedin}}" id="linkedin" placeholder="LinkedIn"></input>
                                 </div>
                                 <div class="uk-margin">
-                                    <label for="instagram">Instagram</label>
-                                    <input class="uk-text" value="{{instagram}}" id="instagram"></input>
+                                    <label class="instagram" for="instagram">Instagram</label>
+                                    <input class="uk-text uk-form-blank updateInstagram" value="{{instagram}}" id="instagram" placeholder="Instagram"></input>
                                 </div>
                                 <div class="uk-margin">
-                                    <label for="facebook">Facebook</label>
-                                    <input class="uk-text" value="{{facebook}}" id="facebook"></input>
+                                    <label class="facebook" for="facebook">Facebook</label>
+                                    <input class="uk-text uk-form-blank updateFacebook" value="{{facebook}}" id="facebook" placeholder="Facebook"></input>
                                 </div>
                                 <div class="uk-margin">
-                                    <label for="twitter">twitter</label>
-                                    <input class="uk-text" value="{{twitter}}" id="twitter"></input>
+                                    <label class="twitter" for="twitter">Twitter</label>
+                                    <input class="uk-text uk-form-blank updateTwitter" value="{{twitter}}" id="twitter" placeholder="Twitter"></input>
                                 </div>
                                  <div class="uk-margin">
-                                    <label for="email">Artist Account</label>
+
+                                    <label class="isArtistAccountDashboard" for="email">Artist Account</label>
                                     <input class="uk-checkbox" type="checkbox" id="artist" {{#if isArtist}}checked{{/if}}></input>
                                 </div>
                                 <div class="uk-margin">
-                                    <label for="bio">Bio</label>
-                                    <textarea class="uk-textarea" rows="5" id="text">{{bio}}</textarea>
+                                    <label class="bioDash" for="bio">Bio</label>
+                                    <textarea class="uk-textarea updateBioDashboard" rows="5" id="text">{{bio}}</textarea>
                                 </div>
                             </fieldset>
-                        </form>
+                    
+                    <div class="updateModalForm uk-modal-footer uk-text-right">
+                        <button class="cancelButtonDashboard uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                        <button class="saveButtonDashboard uk-button uk-button-primary" type="button" id="updateInfo">Save</button>
                     </div>
-                    <div class="uk-modal-footer uk-text-right">
-                        <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
-                        <button class="uk-button uk-button-primary" type="button" id="updateInfo">Save</button>
+                    </form>
                     </div>
                 </div>
             </div>
@@ -90,13 +92,13 @@
     <section class="uk-container uk-container-xsmall gallery-section artwork">
                 <!-- Current Artwork slideshow-->
         <div class="uk-container uk-margin-large">
-            <h1 class="uk-heading-small">Current Artwork </h1>
+            <h1 class="uk-heading-small uk-text-center">Current Artwork</h1><br>
             {{#if artworks.length}}   
-            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="sets: true">
-                <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@m">
+            <div class="uk-position-relative uk-visible-toggle uk-light uk-padding-small" tabindex="-1" uk-slider="sets: true">
+                <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@m uk-grid-small" uk-height-match="target: SELECTOR">
                     {{#each artworks as |artwork|}}
                         <li>
-                            <img src="{{artwork.path}}" alt="{{artwork.description}}">
+                            <img class="dashboardArtSlideShow" src="{{artwork.path}}" alt="{{artwork.description}}">
                             <div class="uk-position-center uk-panel"></div>
                         </li>
                     {{/each}}
@@ -110,47 +112,48 @@
             {{/if}}
 
         <!-- Modal to add Artwork-->
-
-
-            <a class="uk-button uk-button-default" href="#modal_sections" uk-toggle>Add New Artwork</a>
-                <div id="modal_sections" uk-modal>
+            <br><br>
+            <a class="addNewArtWork uk-align-center uk-button uk-button-small" href="#modal_sections" uk-toggle>Add New Artwork</a><br>
+                <br><div id="modal_sections" uk-modal>
                     <div class="uk-modal-dialog">
                         <button class="uk-modal-close-default" type="button" uk-close></button>
                         <div class="uk-modal-header">
-                            <h2 class="uk-modal-title">Upload Artwork</h2>
+                            <h2 class="uploadArtwork uk-modal-title">Upload Artwork</h2>
                         </div>
                         <div class="uk-modal-body">
                             <form class="uk-form-stacked" action="/api/upload" method="post" enctype="multipart/form-data">
                                 <div class="uk-margin">
                                     <div class="field">
-                                        <label for="title">Image</label>
+                                        <label class="imageText" for="title">Image</label>
+                                        <br>
                                         <input type="file" name="image" id="fileElem" accept="image/*"></input>
                                         <div id="fileList">
-                                            <p>No files selected!</p>
+                                            <br><p>No files selected!</p>
                                         </div>
                                 </div>
                                 </div>
                                 <div class="uk-margin">
                                     <div class="field">
-                                        <label class="uk-form-label" for="name">Artwork Name</label>
+                                        <label class="uk-form-label artworkName" for="name">Artwork Name</label>
                                         <div class="uk-form-controls">
-                                            <input class="uk-input" id="name" name="name" type="text" placeholder="">
+                                            <input class="artworkNameInput uk-input" id="name" name="name" type="text" placeholder="Enter Artwork Name">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="uk-margin field">
                                     <div class="field">
-                                        <label class="uk-form-label" for="description">Artwork Description</label>
+                                        <label class="uk-form-label artworkDescription" for="description">Artwork Description</label>
                                         <div class="uk-form-controls">
-                                            <input class="uk-input" id="form-stacked-text" type="text" name="description" placeholder="Enter Description">
+                                            <input class="artworkDescriptionInput uk-input" id="form-stacked-text" type="text" name="description" placeholder="Enter Description">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="uk-margin field">
                                     <div class="field">
-                                        <label class="uk-form-label" for="category">Artwork Category</label>
+                                        <label class="uk-form-label artworkCategory" for="category">Artwork Category</label>
                                         <div class="uk-form-controls">
-                                            <select class="uk-select" id="category" name="category">
+                                            <select class="artworkCategoryInput uk-select" id="category" name="category">
+                                                <option value="" disabled selected>Select Artwork Category</option>
                                                 <option>Painting</option>
                                                 <option>Sculpture</option>
                                                 <option>Photography</option>
@@ -158,16 +161,18 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="uk-modal-footer uk-text-right">
-                                    <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
-                                    <input class="uk-button uk-button-primary field" type="submit" id="addNewArt"></input>
-                                </div>
+
+                        <div class="uk-modal-footer uk-text-right">
+                            <button class="finalCancelButton uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                            <button class="finalSaveButton uk-button uk-button-primary field" type="submit" id="addNewArt">Save</input>
+                        </div>
+
+                                
                             </form>
                         </div>
                     </div>
                 </form>
             </div>
-          
         </div>
 
     </section>

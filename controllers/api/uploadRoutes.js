@@ -22,7 +22,7 @@ router.post('/', parser.single('image'), async (req, res) => {
 
         // res.status(200).json(artData)
         res.render('artworkUpload',
-        {artData, logged_in: req.session.logged_in});
+        {artData, logged_in: true, user_id: req.session.user_id});
      
         console.log(newArtwork)
 

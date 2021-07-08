@@ -26,10 +26,22 @@ togglePassword.addEventListener('click', function (eyeball)  {
       });
   
       if (response.ok) {
-        document.location.replace('/dashboard')
-      } else{
-        alert("An account with that email already exists")}
-        document.location.reload();
+        console.log(response);
+
+        const response2 = await fetch('/dashboard', {
+          method: 'GET',
+        });
+
+        if(response2.ok) {
+          alert("You are now logged in. Thank you for joining!")
+          document.location.replace('/dashboard')
+        } else {
+          alert(response2.statusText);
+        }
+      } else {
+        alert("An account with that email already exists")
+      }
+    
     } else {
       alert("Please fill in all fields.")
     }

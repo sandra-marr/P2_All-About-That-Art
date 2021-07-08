@@ -11,19 +11,19 @@
             <h4 class="profileHeaders">Contact: </h4>
             <div class="socialButtons uk-flex uk-flex-center">
                 {{#if user.twitter}}
-                <a href="{{user.twitter}}" class="uk-icon-button uk-margin-small-right" uk-icon="twitter"></a>
+                <a href="{{user.twitter}}" class="uk-icon-button uk-margin-small-right" target="_blank" uk-icon="twitter"></a>
                 {{/if}}
                 {{#if user.facebook}}
-                <a href="{{user.facebook}}" class="uk-icon-button  uk-margin-small-right" uk-icon="facebook"></a>
+                <a href="{{user.facebook}}" class="uk-icon-button  uk-margin-small-right" target="_blank" uk-icon="facebook"></a>
                 {{/if}}
                 {{#if user.instagram}}
-                <a href="{{user.instagram}}" class="uk-icon-button  uk-margin-small-right" uk-icon="instagram"></a>
+                <a href="{{user.instagram}}" class="uk-icon-button  uk-margin-small-right" target="_blank" uk-icon="instagram"></a>
                 {{/if}}
                 {{#if user.linkedin}}
-                <a href="{{user.linkedIn}}" class="uk-icon-button  uk-margin-small-right" uk-icon="linkedin"></a>
+                <a href="{{user.linkedIn}}" class="uk-icon-button  uk-margin-small-right" target="_blank" uk-icon="linkedin"></a>
                 {{/if}}
                 {{#if user.email}}
-                <a href="mailto:{{ user.email }}" class="uk-icon-button  uk-margin-small-right" uk-icon="mail"></a>
+                <a href="mailto:{{ user.email }}" class="uk-icon-button  uk-margin-small-right" target="_blank" uk-icon="mail"></a>
                 {{/if}}
             </div>
         </div>
