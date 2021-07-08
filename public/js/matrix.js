@@ -14,7 +14,7 @@ const artworkHandler = async (event) => {
       alert("Failed to load artwork.");
     }
   } else {
-    alert("Failed to load artwork.");
+    alert("no id");
   }
 };
 

@@ -66,23 +66,20 @@
                                  <div class="uk-margin">
 
                                     <label class="isArtistAccountDashboard" for="email">Artist Account</label>
-                                    <input class="uk-checkbox" type="checkbox" id="artist" default="{{isArtist}}"></input>
-
-                                    <label for="email">Artist Account</label>
                                     <input class="uk-checkbox" type="checkbox" id="artist" {{#if isArtist}}checked{{/if}}></input>
-
                                 </div>
                                 <div class="uk-margin">
                                     <label class="bioDash" for="bio">Bio</label>
                                     <textarea class="uk-textarea updateBioDashboard" rows="5" id="text">{{bio}}</textarea>
                                 </div>
                             </fieldset>
-                        </form>
+                        
                     </div>
                     <div class="updateModalForm uk-modal-footer uk-text-right">
                         <button class="cancelButtonDashboard uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
                         <button class="saveButtonDashboard uk-button uk-button-primary" type="button" id="updateInfo">Save</button>
                     </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -176,12 +173,6 @@
                     </div>
                 </form>
             </div>
-
-            <div class="uk-modal-footer uk-text-right">
-                <button class="bottomCancelButton uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
-                <button class="bottomSaveButton uk-button uk-button-primary" type="button" id="addNewArt">Save</button>
-            </div>
-
         </div>
 
     </section>
