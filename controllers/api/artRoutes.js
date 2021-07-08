@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Artwork , User, Comment } = require('../../models');
 const { cloudinary, storage } = require('../../utils/cloudinary.js');
+const withAuth = require('../../utils/auth');
 
 router.put('/update', async (req, res) => {
     try { 
@@ -24,7 +25,7 @@ router.put('/update', async (req, res) => {
     }
 });
 
-router.get('/artwork/:id', async (req, res) => {
+router.get('/artwork/:id', withAuth, async (req, res) => {
     try {
       const artData = await Artwork.findByPk(req.params.id, {
         include: [

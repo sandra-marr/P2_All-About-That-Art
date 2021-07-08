@@ -39,10 +39,10 @@
                     <img src="{{artwork.path}}" data-id="{{artwork.id}}" id="artworkProfileSec"
                         alt="{{artwork.description}}">
                 </div>
-                <div class="uk-card-body" id="artCardBody">
-                    <h3 class="uk-card-title" id="artworkTitle">{{artwork.name}}</h3>
+                <div class="uk-card-body" id="artCardBody" data-id="{{artwork.id}}">
+                    <h3 class="uk-card-title" id="artworkTitle" data-id="{{artwork.id}}">{{artwork.name}}</h3>
                     <span id="artInfo">
-                        <p>{{artwork.description}}
+                        <p data-id="{{artwork.id}}">{{artwork.description}}
                         </p>
                     </span>
                 </div>
