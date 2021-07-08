@@ -64,8 +64,13 @@
                                     <input class="uk-text uk-form-blank" value="{{twitter}}" id="twitter" placeholder="Twitter"></input>
                                 </div>
                                  <div class="uk-margin">
+
                                     <label class="isArtistAccountDashboard" for="email">Artist Account</label>
                                     <input class="uk-checkbox" type="checkbox" id="artist" default="{{isArtist}}"></input>
+
+                                    <label for="email">Artist Account</label>
+                                    <input class="uk-checkbox" type="checkbox" id="artist" {{#if isArtist}}checked{{/if}}></input>
+
                                 </div>
                                 <div class="uk-margin">
                                     <label class="bioDash" for="bio">Bio</label>
@@ -158,19 +163,24 @@
                                         </div>
                                     </div>
                                 </div>
+
                         <div class="uk-modal-footer uk-text-right">
                             <button class="finalCancelButton uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
                             <button class="finalSaveButton uk-button uk-button-primary field" type="submit" id="addNewArt">Save</input>
                         </div>
+
+                                
                             </form>
                         </div>
                     </div>
                 </form>
             </div>
+
             <div class="uk-modal-footer uk-text-right">
                 <button class="bottomCancelButton uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
                 <button class="bottomSaveButton uk-button uk-button-primary" type="button" id="addNewArt">Save</button>
             </div>
+
         </div>
 
     </section>
