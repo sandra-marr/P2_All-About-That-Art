@@ -15,7 +15,7 @@
   content: "";
   display: block;
   height: 50px;
-  background-image: url("https://ecorelos.com/wp-content/uploads/2020/04/torn-border2.png");
+  background-image: url("/assets/header_images/torn-border2.png");
   position: static;
   bottom: 100px;
   width: 100%;
@@ -224,7 +224,7 @@ img {
   content: "";
   display: block;
   height: 50px;
-  background-image: url("https://ecorelos.com/wp-content/uploads/2020/04/torn-border2.png");
+  background-image: url("/assets/header_images/torn-border2.png");
   position: relative;
   bottom: -75px;
   width: 100%;
@@ -499,7 +499,6 @@ img {
 }
 
 /* Dashboard Styling */
-
 .updateUserInfo {
   color: white;
   background-color: #09558f;
@@ -515,9 +514,21 @@ img {
   border-color: #011418;
 }
 
+.userNameDashboard {
+  color: #011418;
+  font-size: 32px;
+  font-weight: 500;
+}
+
 .updateHeaderDashboard {
   color: #011418;
   font-size: 24px;
+}
+
+.aboutTxt {
+  color: #011418;
+  font-size: 24px;
+  font-weight: 200;
 }
 
 .email,.userName,.linkedIn,.instagram,.facebook,.twitter,.isArtistAccountDashboard,.bioDash {
@@ -580,7 +591,7 @@ img {
 
 .artworkName,.artworkDescription, .artworkCategory,.imageText {
   color: #011418;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .dashboardArtSlideShow {
