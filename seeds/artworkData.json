@@ -58,21 +58,21 @@
     {
       "name": "Green Jeans",
       "description": "This is a vintage car.",
-       "category": "Photography",
+      "category": "Photography",
       "user_id": 4,
       "path": "https://res.cloudinary.com/dh11quph3/image/upload/v1625198527/AllAboutThatArt/dxqldm9i0afk8mnnzk9h.jpg"
     },
     {
       "name": "Taxi Cab",
       "description": "This is another vintage car.",
-       "category": "Photography",
+      "category": "Photography",
       "user_id": 4,
       "path": "https://res.cloudinary.com/dh11quph3/image/upload/v1625198556/AllAboutThatArt/psrwhabzk2om56x98zow.jpg"
     },
     {
       "name": "Beetles",
       "description": "This is an old VW beetle.",
-       "category": "Photography",
+      "category": "Photography",
       "user_id": 4,
       "path": "https://res.cloudinary.com/dh11quph3/image/upload/v1625198582/AllAboutThatArt/kchvkcbl1ioim1fb2pe5.jpg"
     },
