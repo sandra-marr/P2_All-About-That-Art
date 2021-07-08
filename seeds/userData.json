@@ -7,7 +7,7 @@
       "isArtist": true,
       "bio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium ipsam omnis inventore amet ratione adipisci facilis eius alias repudiandae libero officiis voluptatibus dignissimos rem dolor reprehenderit, deserunt tenetur nisi.",
       "media": "Painting",
-      "linkedIn": "sampleLinkedIn",
+      "linkedin": "sampleLinkedIn",
       "instagram": null
     },
     {
@@ -18,7 +18,7 @@
       "isArtist": true,
       "bio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium ipsam omnis inventore amet ratione adipisci facilis eius alias repudiandae libero officiis voluptatibus dignissimos rem dolor reprehenderit, deserunt tenetur nisi.",
       "media": "Painting",
-      "linkedIn": null,
+      "linkedin": null,
       "instagram": "sampleInstagram"
     },
     {
@@ -29,7 +29,7 @@
       "isArtist": true,
       "bio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium ipsam omnis inventore amet ratione adipisci facilis eius alias repudiandae libero officiis voluptatibus dignissimos rem dolor reprehenderit, deserunt tenetur nisi.",
       "media": "Sculpture",
-      "linkedIn": "sampleLinkedIn",
+      "linkedin": "sampleLinkedIn",
       "instagram": "sampleInstagram"
     },
     {
@@ -40,7 +40,7 @@
       "isArtist": true,
       "bio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium ipsam omnis inventore amet ratione adipisci facilis eius alias repudiandae libero officiis voluptatibus dignissimos rem dolor reprehenderit, deserunt tenetur nisi.",
       "media": "Photography",
-      "linkedIn": null,
+      "linkedin": null,
       "instagram": null
     },
     {
@@ -51,7 +51,7 @@
       "isArtist": true,
       "bio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium ipsam omnis inventore amet ratione adipisci facilis eius alias repudiandae libero officiis voluptatibus dignissimos rem dolor reprehenderit, deserunt tenetur nisi.",
       "media": "Photography",
-      "linkedIn": "https://www.linkedin.com/in/sandra-r-marr/",
+      "linkedin": "https://www.linkedin.com/in/sandra-r-marr/",
       "instagram": "https://www.instagram.com/srpeters44/"
     }
 ]
