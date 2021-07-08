@@ -498,3 +498,104 @@ img {
   height: 50px;
 }
 
+/* Dashboard Styling */
+
+.updateUserInfo {
+  color: white;
+  background-color: #09558f;
+  border-color: #09558f;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.5s;
+}
+
+.updateUserInfo:hover {
+  color: white;
+  background-color: #011418;
+  border-color: #011418;
+}
+
+.updateHeaderDashboard {
+  color: #011418;
+  font-size: 24px;
+}
+
+.email,.userName,.linkedIn,.instagram,.facebook,.twitter,.isArtistAccountDashboard,.bioDash {
+  color: #011418;
+  font-size: 16px;
+}
+
+.updateBioDashboard {
+  border-radius: 5px;
+}
+
+.cancelButtonDashboard,.finalCancelButton,.addNewArtWork,.bottomCancelButton,.dashboardArtSlideShow {
+  border-radius: 10px;
+}
+
+.saveButtonDashboard {
+  color: white;
+  background-color: #09558f;
+  border-color: #09558f;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.5s;
+}
+
+.saveButtonDashboard:hover {
+  color: white;
+  background-color: #011418;
+  border-color: #011418;
+}
+
+.finalSaveButton {
+  color: white;
+  background-color: #09558f;
+  border-color: #09558f;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.5s;
+}
+
+.finalSaveButton:hover {
+  color: white;
+  background-color: #011418;
+  border-color: #011418;
+}
+
+.bottomSaveButton {
+  color: white;
+  background-color: #09558f;
+  border-color: #09558f;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.5s;
+}
+
+.bottomSaveButton:hover {
+  color: white;
+  background-color: #011418;
+  border-color: #011418;
+}
+
+.artworkName,.artworkDescription, .artworkCategory,.imageText {
+  color: #011418;
+  font-size: 16px;
+}
+
+.dashboardArtSlideShow {
+  color: #011418;
+}
+
+.artworkNameInput,.artworkDescriptionInput,.artworkCategoryInput {
+  border-radius: 10px;
+}
+
+.uploadArtwork {
+  color: #011418;
+  font-size: 24px;
+}
+
+.addNewArtWork {
+  font-size: 16px;
+}
